@@ -5,18 +5,28 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public float moveSpeed;
+    public Vector2 lastMove;
 
     private Animator anim;
     private bool isMoving;
-    private Vector2 lastMove;
     private Rigidbody2D myRigBod;
+
+    private static bool playerExists;
 
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
         myRigBod = GetComponent<Rigidbody2D>();
 
-        DontDestroyOnLoad(transform.gameObject);
+        if (!playerExists)
+        {
+            playerExists = true;
+            DontDestroyOnLoad(transform.gameObject);
+        } else {
+            Destroy(gameObject);
+        }
+
+
 	}
 	
 	// Update is called once per frame
