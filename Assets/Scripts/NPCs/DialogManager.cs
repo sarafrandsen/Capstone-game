@@ -20,14 +20,6 @@ public class DialogManager : MonoBehaviour {
 		if (dialogActive && Input.GetKeyDown(KeyCode.Space))
         {
             dialogBox.SetActive(false); // close the dialog box obj on screen
-            dialogActive = false; // deactivate dialog
         }
 	}
-
-    public void ShowDialogBox(string dialog)
-    {
-        dialogActive = true; // activate dialog
-        dialogBox.SetActive(true); // open dialog box obj on screen
-        dialogText.text = dialog; // display the text given
-    }
 }
