@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     public float moveSpeed;
     public Vector2 lastMove;
+    public string startPoint;
 
     private Animator anim;
     private bool isMoving;
@@ -62,6 +63,8 @@ public class PlayerController : MonoBehaviour {
         {
             myRigBod.velocity = new Vector2(myRigBod.velocity.x, 0);
         }
+
+        // want to keep from being able to move diagonally--Mathf.Abs()?
 
 
         // this tells it the coordinates to move to

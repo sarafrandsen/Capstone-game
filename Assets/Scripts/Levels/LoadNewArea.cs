@@ -6,10 +6,14 @@ using UnityEngine.SceneManagement;
 public class LoadNewArea : MonoBehaviour {
 
     public string levelToLoad;
+    public string exitPoint;
+
+    private PlayerController thePlayer;
 
 	// Use this for initialization
 	void Start () {
         Debug.Log("new area load");
+        thePlayer = FindObjectOfType<PlayerController>();
 	}
 	
 	// Update is called once per frame
@@ -22,7 +26,7 @@ public class LoadNewArea : MonoBehaviour {
         if (other.gameObject.name == "Player") // if the collider entering the trigger is named "Player"
         {
             SceneManager.LoadScene(levelToLoad); // load scene (as specified in GUI for collider component)
-
+            thePlayer.startPoint = exitPoint;
         }
     }
 }
