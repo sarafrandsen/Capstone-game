@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 27557667}
   - component: {fileID: 27557666}
   m_Layer: 5
-  m_Name: DialogueBox
+  m_Name: DialogBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +136,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 27557664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.41000366, y: -179.2, z: 0}
+  m_LocalPosition: {x: -13.100006, y: -152.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 240478653}
@@ -146,8 +146,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.41, y: -179.2}
-  m_SizeDelta: {x: 585.7, y: 89.6}
+  m_AnchoredPosition: {x: -13.1, y: -152.6}
+  m_SizeDelta: {x: 424.4, y: 40.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &27557666
 MonoBehaviour:
@@ -206,16 +206,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 240478652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.700012, y: -1.3999996, z: 0}
+  m_LocalPosition: {x: -67.5, y: -2.3999996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27557665}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.7, y: -1.4}
-  m_SizeDelta: {x: 549.4, y: 62.8}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -67.5, y: 18}
+  m_SizeDelta: {x: 239.5, y: 40.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &240478654
 MonoBehaviour:
@@ -238,7 +238,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -249,7 +249,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "I'll miss u jammy \n"
+  m_Text: 'text
+
+
+'
 --- !u!222 &240478655
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -324,6 +327,23 @@ Prefab:
       propertyPath: m_Color.a
       value: 0.716
       objectReference: {fileID: 0}
+    - target: {fileID: 212280637711527918, guid: 30c3721cab1c847cb96e428ed7ab9f02,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518468994849372, guid: 30c3721cab1c847cb96e428ed7ab9f02, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.0117158
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518468994849372, guid: 30c3721cab1c847cb96e428ed7ab9f02, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.0117158
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518468994849372, guid: 30c3721cab1c847cb96e428ed7ab9f02, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.0117158
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61738029400784050, guid: 30c3721cab1c847cb96e428ed7ab9f02, type: 2}
     - {fileID: 50739336600074844, guid: 30c3721cab1c847cb96e428ed7ab9f02, type: 2}
@@ -345,7 +365,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.43333337}
@@ -359,8 +379,13 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.27, y: 1.43}
+  m_Size: {x: 0.82, y: 0.86666673}
   m_EdgeRadius: 0
+--- !u!4 &389966961 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4518468994849372, guid: 30c3721cab1c847cb96e428ed7ab9f02,
+    type: 2}
+  m_PrefabInternal: {fileID: 389966956}
 --- !u!1 &558136094
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,7 +410,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 558136094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 235, y: -37, z: 0}
+  m_LocalPosition: {x: 148, y: -16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27557665}
@@ -393,7 +418,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 235, y: -37}
+  m_AnchoredPosition: {x: 148, y: -16}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &558136096
@@ -448,13 +473,14 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 761474688}
+  - component: {fileID: 761474689}
   m_Layer: 5
-  m_Name: DialogueMgr
+  m_Name: DialogMgr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &761474688
 RectTransform:
   m_ObjectHideFlags: 0
@@ -474,6 +500,87 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.000015258789}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &761474689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 761474687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25690e69da59466ab04fde948db8bcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogBox: {fileID: 27557664}
+  dialogText: {fileID: 240478654}
+  dialogActive: 0
+--- !u!1 &776275861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 776275862}
+  - component: {fileID: 776275863}
+  - component: {fileID: 776275864}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &776275862
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 776275861}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.36, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 389966961}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &776275863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 776275861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d32ef360e104eebb7391e740be023b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog: Hey Jamm iluvm
+--- !u!61 &776275864
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 776275861}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.45, y: 1.57}
+  m_EdgeRadius: 0
 --- !u!1 &930545967
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,7 +725,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1165832913}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 330, y: 247.5, z: 0}
+  m_LocalPosition: {x: 277.5, y: 208, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 761474688}
@@ -781,6 +888,11 @@ Prefab:
     - target: {fileID: 4518468994849372, guid: 30c3721cab1c847cb96e428ed7ab9f02, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212280637711527918, guid: 30c3721cab1c847cb96e428ed7ab9f02,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30c3721cab1c847cb96e428ed7ab9f02, type: 2}
