@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public float moveSpeed = 5;
+    public float moveSpeed;
 
     private Animator anim;
     private bool isMoving;
@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
         myRigBod = GetComponent<Rigidbody2D>();
+
+        DontDestroyOnLoad(transform.gameObject);
 	}
 	
 	// Update is called once per frame

@@ -35,6 +35,8 @@ public class CameraController : MonoBehaviour {
     void Start()
     {
         offset = transform.position - followTarget.transform.position;
+
+        DontDestroyOnLoad(transform.gameObject);
     }
 
     private void LateUpdate()
