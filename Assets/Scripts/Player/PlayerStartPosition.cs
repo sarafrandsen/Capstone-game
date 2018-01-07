@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // check position of starting point and set player and camera accordingly
-public class PlayerStartPoint : MonoBehaviour {
+public class PlayerStartPosition : MonoBehaviour {
 
     public Vector2 startDirection; // enter in the GUI the direction player should face
 
@@ -12,6 +12,7 @@ public class PlayerStartPoint : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Debug.Log("player start position");
         thePlayer = FindObjectOfType<PlayerController>();
         thePlayer.transform.position = transform.position;
         thePlayer.lastMove = startDirection; // set the default position the player should face upon entry
