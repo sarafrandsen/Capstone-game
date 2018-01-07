@@ -14,7 +14,6 @@ public class PlayerStartPosition : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        Debug.Log("player start position");
         thePlayer = FindObjectOfType<PlayerController>();
 
         if (thePlayer.startPoint == positionID)

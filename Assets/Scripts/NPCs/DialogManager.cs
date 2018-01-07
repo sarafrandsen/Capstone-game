@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI; // necessary for UI objects like Text
 
 public class DialogManager : MonoBehaviour {
 
@@ -20,6 +20,14 @@ public class DialogManager : MonoBehaviour {
 		if (dialogActive && Input.GetKeyDown(KeyCode.Space))
         {
             dialogBox.SetActive(false); // close the dialog box obj on screen
+            dialogActive = false;
         }
 	}
+
+    public void ShowDialogBox(string dialog)
+    {
+        dialogActive = true;
+        dialogBox.SetActive(true);
+        dialogText.text = dialog;
+    }
 }
