@@ -19,10 +19,10 @@ public class DialogText : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.name == "TempPlayer")
+        if (Input.GetKeyDown(KeyCode.Space) && other.gameObject.name == "TempPlayer")
         {
-            Input.GetKeyUp(KeyCode.Space);
+            Debug.Log("Show");
+            dialogManager.ShowDialogBox(dialog);
         }
-        dialogManager.ShowDialogBox(dialog);
     }
 }
