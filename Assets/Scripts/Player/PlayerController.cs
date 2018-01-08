@@ -5,12 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public float moveSpeed;
+    [HideInInspector]
     public Vector2 lastMove;
     public string startPoint;
 
     private Animator anim;
     private bool isMoving;
     private Rigidbody2D myRigBod;
+    private bool isVertAnimActive = true;
 
     private static bool playerExists;
 
@@ -26,8 +28,6 @@ public class PlayerController : MonoBehaviour {
         } else {
             Destroy(gameObject);
         }
-
-
 	}
 	
 	// Update is called once per frame
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour {
         // get the input from the keyboard
         // absolute value keeps from going diagonal
         float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        float vertical = isVertAnimActive ? Input.GetAxisRaw("Vertical") : 0f;
 
         if (horizontal > 0.5f || horizontal < -0.5f)
         {
@@ -64,8 +64,6 @@ public class PlayerController : MonoBehaviour {
             myRigBod.velocity = new Vector2(myRigBod.velocity.x, 0);
         }
 
-        // want to keep from being able to move diagonally--Mathf.Abs()?
-
 
         // this tells it the coordinates to move to
         anim.SetBool("IsMoving", isMoving);
@@ -73,5 +71,20 @@ public class PlayerController : MonoBehaviour {
         anim.SetFloat("MoveY", vertical);
         anim.SetFloat("LastMoveX", lastMove.x);
         anim.SetFloat("LastMoveY", lastMove.y);
-    }﻿
+    }
+
+    public void SetOrientation(WorldOrientation worldOrientation)
+    {
+        if (worldOrientation == WorldOrientation.Overhead)
+        {
+            isVertAnimActive = true;
+            myRigBod.gravityScale = 0;
+        }
+        else if (worldOrientation == WorldOrientation.SideScroll) {
+            isVertAnimActive = false;
+            myRigBod.gravityScale = 1;
+        }
+
+
+    }
 }

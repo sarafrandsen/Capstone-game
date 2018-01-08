@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d6414b014ce498ca39e346d7d35bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: TempStreetScene
+  levelToLoad: TempWaterScene
   exitPoint: Water
 --- !u!61 &81181632
 BoxCollider2D:
@@ -1021,6 +1021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startDirection: {x: 0, y: 0}
   positionID: Tree
+  worldOriention: 0
 --- !u!4 &1963509449
 Transform:
   m_ObjectHideFlags: 0
