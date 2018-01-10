@@ -8,14 +8,12 @@ public class DialogueManager : MonoBehaviour {
     public Text nameText; // where to put the Name game object in the Inspector
     public Text dialogueText; // where to put the Dialogue game object in the Inspector
 
-    public TextAsset textFile; // TextAsset: literally text file assets
     public PlayerController player; // access the player
     public GameObject dialogueBox; // access the dialogue box game object
 
     public bool dialogueIsActive; // toggle dialogue box
 
     private Queue<string> sentences; // FIFO collection
-    private string[] textLines; // each line of the text asset is assigned to an element
     private int currentLine; // current line on the screen
     private int endAtLine; // line we want to end on
 
@@ -23,14 +21,7 @@ public class DialogueManager : MonoBehaviour {
     {
         sentences = new Queue<string>();
 
-        if (textFile != null) // check if there is a textFile available
-        {
-            textLines = (textFile.text.Split('\n')); // split at line break
-        }
-
         player = FindObjectOfType<PlayerController>(); // using this class on the PlayerController
-
-        endAtLine = textLines.Length - 1;
 
         if (dialogueIsActive)
         {
@@ -50,12 +41,6 @@ public class DialogueManager : MonoBehaviour {
         if (currentLine > endAtLine )
         {
             DisableTextBox();
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            dialogueText.text = textLines[currentLine];
-            currentLine += 1;
         }
     }
 

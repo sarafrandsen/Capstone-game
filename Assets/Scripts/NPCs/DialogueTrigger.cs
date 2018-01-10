@@ -6,6 +6,10 @@ public class DialogueTrigger : MonoBehaviour {
 
     public TextAsset textFile; // TextAsset: literally text file assets
     private string[] textLines; // each line of the text asset is assigned to an element
+    private DialogueManager dialogueManager;
+
+    private int endAtLine; // line we want to end on
+    private int currentLine; // current line on the screen
 
     void Start()
     {
@@ -13,15 +17,27 @@ public class DialogueTrigger : MonoBehaviour {
         {
             textLines = (textFile.text.Split('\n')); // split at line break
         }
+
+        dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.name == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && !dialogueManager.dialogueIsActive)
             {
-                Debug.Log(textLines[0]);
+                Debug.Log(textLines[currentLine]);
+                dialogueManager.EnableTextBox();
+                dialogueManager.dialogueText.text = textLines[currentLine];
+
+                endAtLine = textLines.Length;
+                if (currentLine <= endAtLine)
+                {
+                    currentLine += 1;
+                } else {
+                    dialogueManager.DisableTextBox();
+                }
             }
         }
     }
