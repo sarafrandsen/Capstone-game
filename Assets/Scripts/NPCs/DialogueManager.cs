@@ -75,7 +75,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void DisplayNextSentence()
     {
-        if (sentences.Count == 0)
+        if (sentences.Count == 0) // if there are no more sentences in the queue
         {
             EndDialogue();
             return;
@@ -83,11 +83,26 @@ public class DialogueManager : MonoBehaviour {
 
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
+
+        StopAllCoroutines(); // if a user wants to skip a sentence, stop animating and move on to next sentence
+        StartCoroutine(TypeSentence(sentence));
     }
 
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false); // close box at the end of the dialogue
         Debug.Log("End of conversation");
+    }
+
+    IEnumerator TypeSentence(string sentence) // instead of updating text directly, using coroutine
+    {
+        dialogueText.text = ""; // start with empty string
+
+        // loop through the individual characters in each sentence
+        foreach(char letter in sentence.ToCharArray()) // ToCharArray is a function that converts a string into a character array
+        {
+            dialogueText.text += letter; // add each letter to the text to be displayed
+            yield return null; // wait a frame between each letter
+        }
     }
 }
