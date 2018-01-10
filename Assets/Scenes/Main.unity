@@ -511,7 +511,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Finn
+  m_Text: Name
 --- !u!222 &1269720231
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -775,7 +775,12 @@ Prefab:
       propertyPath: m_Size.y
       value: 0.63
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1010498866546914, guid: fa4ea07b4940f4d5b80c3dd54284732a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114819243847670930, guid: fa4ea07b4940f4d5b80c3dd54284732a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: fa4ea07b4940f4d5b80c3dd54284732a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2047685896 stripped
