@@ -124,7 +124,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dialogue Text
+  m_Text: She is a meanie sometimes,
 --- !u!114 &114683915330393488
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -157,7 +157,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name
+  m_Text: Finn
 --- !u!114 &114807605486905066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -171,10 +171,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 114683915330393488}
   dialogueText: {fileID: 114252129593890914}
-  textFile: {fileID: 4900000, guid: d7e22910d27a9492895caa1a073021d5, type: 3}
   player: {fileID: 0}
   dialogueBox: {fileID: 1525487887320668}
-  dialogueIsActive: 1
+  dialogueIsActive: 0
 --- !u!114 &114967416402237000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -227,7 +226,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1525487887320668}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 229.6, y: 35.600006, z: 0}
+  m_LocalPosition: {x: 230.8, y: 46.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224913939452615474}
@@ -237,8 +236,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 229.6, y: 35.600006}
-  m_SizeDelta: {x: 429.1, y: 50.4}
+  m_AnchoredPosition: {x: 230.8, y: 46.8}
+  m_SizeDelta: {x: 475.3, y: 79.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224913939452615474
 RectTransform:
@@ -253,10 +252,10 @@ RectTransform:
   m_Father: {fileID: 224098642708211518}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -128, y: 31}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: -270, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224926526536582406
 RectTransform:
@@ -265,7 +264,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1464069394366292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0399933, y: 1.7200012, z: 0}
+  m_LocalPosition: {x: 1, y: -6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224098642708211518}
@@ -273,6 +272,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.0400009, y: 1.7200003}
+  m_AnchoredPosition: {x: 1, y: -6}
   m_SizeDelta: {x: -28.480011, y: -6.040001}
   m_Pivot: {x: 0.5, y: 0.5}
