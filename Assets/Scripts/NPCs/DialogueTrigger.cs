@@ -5,20 +5,11 @@ using UnityEngine;
 // trigger new dialogue
 public class DialogueTrigger : MonoBehaviour {
 
-    public Dialogue dialogue;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    //public Dialogue dialogue;
 
-    // feed dialogue to DialogueManager
-    public void TriggerDialogue()
-    {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-    }
+    //// feed dialogue to DialogueManager
+    //public void TriggerDialogue()
+    //{
+    //    FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+    //}
 }

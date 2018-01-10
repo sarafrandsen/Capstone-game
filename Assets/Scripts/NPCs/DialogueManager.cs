@@ -48,8 +48,6 @@ public class DialogueManager : MonoBehaviour {
             return;
         }
 
-
-
         if (currentLine > endAtLine )
         {
             DisableTextBox();
@@ -60,19 +58,6 @@ public class DialogueManager : MonoBehaviour {
             dialogueText.text = textLines[currentLine];
             currentLine += 1;
         }
-    }
-
-    public void StartDialogue(Dialogue dialogue)
-    {
-        nameText.text = dialogue.name;
-        sentences.Clear(); // clear any previous sentences
-
-        foreach (string sentence in dialogue.sentences)
-        {
-            sentences.Enqueue((sentence)); // put each sentence in the array in a queue
-        }
-
-        DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
