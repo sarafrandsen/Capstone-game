@@ -14,7 +14,6 @@ public class DialogueManager : MonoBehaviour {
 
     public bool dialogueIsActive; // toggle dialogue box
 
-
     private Queue<string> sentences; // FIFO collection
     private string[] textLines; // each line of the text asset is assigned to an element
     private int currentLine; // current line on the screen
