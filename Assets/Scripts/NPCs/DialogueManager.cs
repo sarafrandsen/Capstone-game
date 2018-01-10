@@ -5,57 +5,38 @@ using UnityEngine.UI; // necessary for UI objects like Text
 
 public class DialogueManager : MonoBehaviour {
 
-    //   public GameObject dialogBox;
-    //   public Text dialogText;
-    //   public bool dialogActive;
-    //   public float showTime = 0.5f;
-
-    //   private float showCounter;
-
-    //// Use this for initialization
-    //void Start () {
-
-    //}
-
-    //// Update is called once per frame
-    //void Update () {
-    //       // if the dialogue box is up and the user presses 'space'
-    //       if (dialogActive)
-    //       {
-    //           showCounter -= Time.deltaTime;
-
-    //           if (Input.GetKeyDown(KeyCode.Space) && showCounter < 0)
-    //           {
-    //               Debug.Log("Hide");
-    //               dialogBox.SetActive(false); // close the dialog box obj on screen
-    //               dialogActive = false;
-    //           }
-    //       }
-    //}
-
-    //public void ShowDialogBox(string dialog)
-    //{
-    //    if (dialogActive)
-    //    {
-    //        return; 
-    //    }
-
-    //    showCounter = showTime;
-    //    dialogActive = true;
-    //    dialogBox.SetActive(true);
-    //    dialogText.text = dialog;
-    //}
-
-
     public Text nameText;
     public Text dialogueText;
     public Animator animator; // reference animator controller in order to control the dialog box animation
+    public TextAsset textFile; // TextAsset: literally text file assets
+    public string[] textLines; // each line of text asset is assigned to an element
+    public int currentLine;
+    public int endAtLine;
+    public PlayerController player;
+
 
     private Queue<string> sentences; // FIFO collection
 
     void Start()
     {
         sentences = new Queue<string>();
+
+        if (textFile != null) // check if there is a textFile available
+        {
+            textLines = (textFile.text.Split('\n')); // split at line break
+        }
+
+        player = FindObjectOfType<PlayerController>();
+
+        if (endAtLine == 0) // if endAtLine is not defined
+        {
+            endAtLine = textLines.Length - 1; // default to every line
+        }
+    }
+
+    void Update()
+    {
+        dialogueText.text = textLines[currentLine];
     }
 
     public void StartDialogue(Dialogue dialogue)
