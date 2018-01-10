@@ -8,7 +8,7 @@ public class DialogManager : MonoBehaviour {
     public GameObject dialogBox;
     public Text dialogText;
     public bool dialogActive;
-    public float showTime = 1;
+    public float showTime = 0.5f;
 
     private float showCounter;
 
