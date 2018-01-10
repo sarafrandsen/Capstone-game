@@ -5,19 +5,21 @@ using UnityEngine.UI; // necessary for UI objects like Text
 
 public class DialogueManager : MonoBehaviour {
 
-    public Text nameText;
-    public Text dialogueText;
-    //public Animator animator; // reference animator controller in order to control the dialog box animation 
+    public Text nameText; // where to put the Name game object in the Inspector
+    public Text dialogueText; // where to put the Dialogue game object in the Inspector
+
     public TextAsset textFile; // TextAsset: literally text file assets
-    public string[] textLines; // each line of text asset is assigned to an element
-    public int currentLine;
-    public int endAtLine;
-    public PlayerController player;
-    public bool dialogueIsActive;
-    public GameObject dialogueBox;
+
+    public PlayerController player; // access the player
+    public GameObject dialogueBox; // access the dialogue box game object
+
+    public bool dialogueIsActive; // toggle dialogue box
 
 
     private Queue<string> sentences; // FIFO collection
+    private string[] textLines; // each line of the text asset is assigned to an element
+    private int currentLine; // current line on the screen
+    private int endAtLine; // line we want to end on
 
     void Start()
     {
@@ -28,12 +30,13 @@ public class DialogueManager : MonoBehaviour {
             textLines = (textFile.text.Split('\n')); // split at line break
         }
 
-        player = FindObjectOfType<PlayerController>(); // using on the PlayerController
+        player = FindObjectOfType<PlayerController>(); // using this class on the PlayerController
 
-        if (endAtLine == 0) // if endAtLine is not defined
+        if (endAtLine == 0)
         {
-            endAtLine = textLines.Length - 1; // default to every line
+            endAtLine = textLines.Length - 1;
         }
+
 
         if (dialogueIsActive)
         {
@@ -61,12 +64,11 @@ public class DialogueManager : MonoBehaviour {
         {
             DisableTextBox();
         }
+
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
-        //animator.SetBool("IsOpen", true); // open dialogue box when conversation starts 
-
         nameText.text = dialogue.name;
         sentences.Clear(); // clear any previous sentences
 
@@ -82,7 +84,7 @@ public class DialogueManager : MonoBehaviour {
     {
         if (sentences.Count == 0) // if there are no more sentences in the queue
         {
-            EndDialogue();
+            DisableTextBox();
             return;
         }
 
@@ -93,12 +95,6 @@ public class DialogueManager : MonoBehaviour {
         StartCoroutine(TypeSentence(sentence));
     }
 
-    void EndDialogue()
-    {
-        //animator.SetBool("IsOpen", false); // close box at the end of the dialogue
-        Debug.Log("End of conversation");
-    }
-
     public void EnableTextBox()
     {
         dialogueBox.SetActive(true);
@@ -107,6 +103,7 @@ public class DialogueManager : MonoBehaviour {
     public void DisableTextBox()
     {
         dialogueBox.SetActive(false);
+        Debug.Log("End of conversation");
     }
 
     IEnumerator TypeSentence(string sentence) // instead of updating text directly, using coroutine
