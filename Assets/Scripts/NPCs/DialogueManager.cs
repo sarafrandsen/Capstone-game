@@ -9,7 +9,6 @@ public class DialogueManager : MonoBehaviour {
     public Text dialogueText; // where to put the Dialogue game object in the Inspector
 
     public TextAsset textFile; // TextAsset: literally text file assets
-
     public PlayerController player; // access the player
     public GameObject dialogueBox; // access the dialogue box game object
 
@@ -32,11 +31,7 @@ public class DialogueManager : MonoBehaviour {
 
         player = FindObjectOfType<PlayerController>(); // using this class on the PlayerController
 
-        if (endAtLine == 0)
-        {
-            endAtLine = textLines.Length - 1;
-        }
-
+        endAtLine = textLines.Length - 1;
 
         if (dialogueIsActive)
         {
@@ -53,18 +48,18 @@ public class DialogueManager : MonoBehaviour {
             return;
         }
 
-        dialogueText.text = textLines[currentLine];
 
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            currentLine += 1;
-        }
 
-        if (currentLine > endAtLine)
+        if (currentLine > endAtLine )
         {
             DisableTextBox();
         }
 
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            dialogueText.text = textLines[currentLine];
+            currentLine += 1;
+        }
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -103,7 +98,9 @@ public class DialogueManager : MonoBehaviour {
     public void DisableTextBox()
     {
         dialogueBox.SetActive(false);
+        dialogueIsActive = false;
         Debug.Log("End of conversation");
+        return;
     }
 
     IEnumerator TypeSentence(string sentence) // instead of updating text directly, using coroutine
