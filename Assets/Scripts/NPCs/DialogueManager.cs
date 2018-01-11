@@ -14,8 +14,6 @@ public class DialogueManager : MonoBehaviour {
     public bool dialogueIsActive; // toggle dialogue box
 
     private Queue<string> sentences; // FIFO collection
-    private int currentLine; // current line on the screen
-    private int endAtLine; // line we want to end on
 
     void Start()
     {
@@ -36,11 +34,6 @@ public class DialogueManager : MonoBehaviour {
         if (!dialogueIsActive)
         {
             return;
-        }
-
-        if (currentLine > endAtLine )
-        {
-            DisableTextBox();
         }
     }
 
