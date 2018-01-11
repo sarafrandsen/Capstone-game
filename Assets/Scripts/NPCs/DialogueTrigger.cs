@@ -27,14 +27,16 @@ public class DialogueTrigger : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Space) && !dialogueManager.dialogueIsActive)
             {
-                Debug.Log(textLines[currentLine]);
-                dialogueManager.EnableTextBox();
-                dialogueManager.dialogueText.text = textLines[currentLine];
+                
 
                 endAtLine = textLines.Length;
-                if (currentLine <= endAtLine)
+                if (currentLine < endAtLine)
                 {
+                    dialogueManager.EnableTextBox();
+                    dialogueManager.dialogueText.text = textLines[currentLine];
+                    Debug.Log(textLines[currentLine]);
                     currentLine += 1;
+
                 } else {
                     dialogueManager.DisableTextBox();
                 }
