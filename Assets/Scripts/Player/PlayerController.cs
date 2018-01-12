@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public float moveSpeed;
-    [HideInInspector]
-    public Vector2 lastMove;
-    public string startPoint;
+/*////////////////////////////////////////////*/
+	[HideInInspector]
+    public Vector2 lastMove; // where the player faced when they stop moving
+    public float moveSpeed; // movement speed--for velocity, not anim
+    public string startPoint; // where they spawn in a new scene
 
-    private Animator anim;
-    private bool isMoving;
-    private Rigidbody2D myRigBod;
-    private bool isVertAnimActive = true;
+	private Rigidbody2D myRigBod;
+	private Animator anim;
+    private bool isMoving; // used by animator/setting velocity
+    private bool isVertAnimActive = true; // overhead or side scroll
+    private static bool playerExists; // don't want player duplicating b/t scenes
 
-    private static bool playerExists;
-
+/*////////////////////////////////////////////*/
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
@@ -30,19 +31,22 @@ public class PlayerController : MonoBehaviour {
         }
 	}
 	
+/*////////////////////////////////////////////*/
 	// Update is called once per frame
     void Update () {
 
-        isMoving = false;
+        isMoving = false; // don't animate by default
 
         // get the input from the keyboard
-        // absolute value keeps from going diagonal
         float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = isVertAnimActive ? Input.GetAxisRaw("Vertical") : 0f;
+        // if isVertAnimAcive == false, up/down input is disabled
+        float vertical = isVertAnimActive ? Input.GetAxisRaw("Vertical") : 0f; 
 
+        /*////////////////////////////////////////////
+        ////////////////////////////////////////////*/
         if (horizontal > 0.5f || horizontal < -0.5f)
         {
-            myRigBod.velocity = new Vector2(horizontal * moveSpeed, myRigBod.velocity.y);
+            //myRigBod.velocity = new Vector2(horizontal * moveSpeed, myRigBod.velocity.y);
             isMoving = true;
             lastMove = new Vector2(horizontal, 0);
         }
@@ -63,8 +67,10 @@ public class PlayerController : MonoBehaviour {
         {
             myRigBod.velocity = new Vector2(myRigBod.velocity.x, 0);
         }
+        /*////////////////////////////////////////////
+        ////////////////////////////////////////////*/
 
-
+        /*//////////////ANIMATION////////////////*/
         // this tells it the coordinates to move to
         anim.SetBool("IsMoving", isMoving);
         anim.SetFloat("MoveX", horizontal);
@@ -73,18 +79,19 @@ public class PlayerController : MonoBehaviour {
         anim.SetFloat("LastMoveY", lastMove.y);
     }
 
+/*////////////////////////////////////////////*/
+    // overhead or side scroll
+    // WorldOrientation Enum set in PlayerStartPosition class
     public void SetOrientation(WorldOrientation worldOrientation)
     {
         if (worldOrientation == WorldOrientation.Overhead)
         {
-            isVertAnimActive = true;
-            myRigBod.gravityScale = 0;
+            isVertAnimActive = true; // can move up/down
+            myRigBod.gravityScale = 0; // turn off gravity
         }
         else if (worldOrientation == WorldOrientation.SideScroll) {
-            isVertAnimActive = false;
-            myRigBod.gravityScale = 10;
+            isVertAnimActive = false; // cannot move up/down
+            myRigBod.gravityScale = 10; // gravity on
         }
-
-
     }
 }
