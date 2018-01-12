@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-
 /*////////////////////////////////////////////*/
 	[HideInInspector]
     public Vector2 lastMove; // where the player faced when they stop moving
@@ -14,7 +13,7 @@ public class PlayerController : MonoBehaviour {
 	private Animator anim;
     private bool isMoving; // used by animator/setting velocity
     private bool isVertAnimActive = true; // overhead or side scroll
-    private static bool playerExists; // don't want player duplicating b/t scenes
+    private static bool playerExists; // check for player duplicates
 
 /*////////////////////////////////////////////*/
 	// Use this for initialization

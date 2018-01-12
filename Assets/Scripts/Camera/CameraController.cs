@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour {
-    public BoxCollider2D boundsBox;
-    public GameObject followTarget;
+/*////////////////////////////////////////////*/
+    public BoxCollider2D boundsBox; // where camera should stop
+    public GameObject followTarget; // what the camera should center on (player)
 
     private Camera theCamera;
-    private float halfHeight;
-    private float halfWidth;
-    private Vector3 minBounds;
-    private Vector3 maxBounds;
-    private Vector3 offset;
-    private static bool cameraExists;
+    private float halfHeight; // half the view height
+    private float halfWidth; // half the view width
+    private Vector3 minBounds; // lower-left point of boundsBox
+    private Vector3 maxBounds; // upper-right point of boundsBox
+    private Vector3 offset; 
+    private static bool cameraExists; // check for duplicate cameras
 
+/*////////////////////////////////////////////*/
     void Start()
     {
         offset = transform.position - followTarget.transform.position;
@@ -33,12 +35,16 @@ public class CameraController : MonoBehaviour {
         halfWidth = halfHeight * Screen.width / Screen.height;
     }
 
+/*////////////////////////////////////////////*/
+    // keep camera in scene bounds
     private void LateUpdate()
     {
-        transform.position = followTarget.transform.position + offset;
-        // clamp: given a min val and a max val, make sure the current vals do not exceed
+        transform.position = followTarget.transform.position + offset; // follow the target (player)
+        // clamp: given a min val and a max val, make sure the current vals do not exceed them
+        // Clamp(value, min, max)
         float clampedX = Mathf.Clamp(transform.position.x, minBounds.x + halfWidth, maxBounds.x - halfWidth);
         float clampedY = Mathf.Clamp(transform.position.y, minBounds.y + halfHeight, maxBounds.y - halfHeight);
+        // new camera position using the clamped values
         transform.position = new Vector3(clampedX, clampedY, transform.position.z);
 
         if (boundsBox == null)
