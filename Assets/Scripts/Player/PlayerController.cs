@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour {
         }
         else if (worldOrientation == WorldOrientation.SideScroll) {
             isVertAnimActive = false;
-            myRigBod.gravityScale = 1;
+            myRigBod.gravityScale = 10;
         }
 
 
