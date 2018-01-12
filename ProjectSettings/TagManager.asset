@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - NPC
+  - Dialogue1
+  - Dialogue2
+  - Dialogue3
+  - Dialogue4
+  - UI
+  - Door
+  - Border
   layers:
   - Default
   - TransparentFX
@@ -14,8 +22,8 @@ TagManager:
   - 
   - 
   - Background
-  - CharacterLayer
-  - 
+  - NPC
+  - Player
   - 
   - 
   - 
@@ -41,8 +49,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Ground
+  - name: Background
     uniqueID: 3074460163
+    locked: 0
+  - name: NPC
+    uniqueID: 1537622985
     locked: 0
   - name: Player
     uniqueID: 3553279811
