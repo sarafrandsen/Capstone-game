@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour {
     void Start()
     {
         sentences = new Queue<string>();
+        //sentences.Enqueue(dialogueText.text);
 
         player = FindObjectOfType<PlayerController>(); // using this class on the PlayerController
 

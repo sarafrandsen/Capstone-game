@@ -9,31 +9,23 @@ public class DialogueTrigger : MonoBehaviour {
 
     private int endAtLine; // line we want to end on
     private int currentLine; // current line on the screen
-
-    /*////////////////////*/
     private PlayerController playerController;
-    /*////////////////////*/
 
     void Start()
     {
         if (textFile != null) // check if there is a textFile available
         {
             textLines = (textFile.text.Split('\n')); // split at line break
+
         }
         dialogueManager = FindObjectOfType<DialogueManager>();
-
-        /*////////////////////*/
         playerController = FindObjectOfType<PlayerController>();
-        /*////////////////////*/
-
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        /*////////////////////*/
         for (int i = 0; i < playerController.quests.Length; i += 1)
         {
-            /*////////////////////*/
             if (other.name == "Player" && this.tag == playerController.quests[i])
             {
                 if (Input.GetKeyDown(KeyCode.Space) && !dialogueManager.dialogueIsActive)
@@ -49,18 +41,11 @@ public class DialogueTrigger : MonoBehaviour {
                     else
                     {
                         dialogueManager.DisableTextBox();
-
-                        /*////////////////////*/
-                        playerController.isComplete = true;
-                        i += 1;
-
+                        playerController.isComplete = true; // no longer talkable
+                        i += 1; // move on to next quest in array
                     }
                 }
             }
-        /*////////////////////*/
         }
-        /*////////////////////*/
-
     }
-
 }
