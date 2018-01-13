@@ -31,18 +31,15 @@ public class DialogueTrigger : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D other)
     {
         /*////////////////////*/
-        foreach (string quest in playerController.quests)
+        for (int i = 0; i < playerController.quests.Length; i += 1)
         {
-        /*////////////////////*/
-
-            if (other.name == "Player" && this.tag == quest)
+            /*////////////////////*/
+            if (other.name == "Player" && this.tag == playerController.quests[i])
             {
                 if (Input.GetKeyDown(KeyCode.Space) && !dialogueManager.dialogueIsActive)
                 {
-
-
                     endAtLine = textLines.Length;
-                    if (currentLine < endAtLine)
+                    if (currentLine < endAtLine && !playerController.isComplete)
                     {
                         dialogueManager.EnableTextBox();
                         dialogueManager.dialogueText.text = textLines[currentLine];
@@ -55,7 +52,7 @@ public class DialogueTrigger : MonoBehaviour {
 
                         /*////////////////////*/
                         playerController.isComplete = true;
-
+                        i += 1;
 
                     }
                 }
