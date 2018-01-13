@@ -15,6 +15,11 @@ public class PlayerController : MonoBehaviour {
     private bool isVertAnimActive = true; // overhead or side scroll
     private static bool playerExists; // check for player duplicates
 
+    /*////////////////////*/
+    public string[] quests;
+    public bool isComplete;
+    /*////////////////////*/
+
 /*////////////////////////////////////////////*/
 	// Use this for initialization
 	void Start () {
@@ -45,7 +50,7 @@ public class PlayerController : MonoBehaviour {
         ////////////////////////////////////////////*/
         if (horizontal > 0.5f || horizontal < -0.5f)
         {
-            //myRigBod.velocity = new Vector2(horizontal * moveSpeed, myRigBod.velocity.y);
+            myRigBod.velocity = new Vector2(horizontal * moveSpeed, myRigBod.velocity.y);
             isMoving = true;
             lastMove = new Vector2(horizontal, 0);
         }
