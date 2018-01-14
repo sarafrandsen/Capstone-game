@@ -7,12 +7,12 @@ public class QuestTrigger : MonoBehaviour {
     public bool startQuest;
     public bool endQuest;
 
-    private QuestManager questManager;
 
-	// Use this for initialization
-	void Start () {
-        questManager = FindObjectOfType<QuestManager>();
-	}
+    // Use this for initialization
+    void Start()
+    {
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {

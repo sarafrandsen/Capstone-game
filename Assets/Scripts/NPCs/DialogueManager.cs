@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.UI; // necessary for UI objects like Text
 
 public class DialogueManager : MonoBehaviour {
+    /*///////////////////////////////////*/
+    public string key, secret, accessToken;
+    [SerializeField]
+    Twitter.TwitterUser user;
+    /*///////////////////////////////////*/
+
 
     public Text nameText; // where to put the Name game object in the Inspector
     public Text dialogueText; // where to put the Dialogue game object in the Inspector
@@ -17,17 +23,17 @@ public class DialogueManager : MonoBehaviour {
 
     void Start()
     {
-        sentences = new Queue<string>();
+        /*///////////////////////////////////*/
+        accessToken = Twitter.API.GetTwitterAccessToken(key, secret);
+        user = Twitter.API.GetProfileInfo("sara__eff", accessToken, false);
+        /*///////////////////////////////////*/
+
+
+
+        //sentences = new Queue<string>();
         //sentences.Enqueue(dialogueText.text);
-
+        dialogueIsActive = false;
         player = FindObjectOfType<PlayerController>(); // using this class on the PlayerController
-
-        if (dialogueIsActive)
-        {
-            EnableTextBox();
-        } else {
-            DisableTextBox();
-        }
     }
 
     void Update()
@@ -40,11 +46,11 @@ public class DialogueManager : MonoBehaviour {
 
     public void DisplayNextSentence()
     {
-        if (sentences.Count == 0) // if there are no more sentences in the queue
-        {
-            DisableTextBox();
-            return;
-        }
+        //if (sentences.Count == 0) // if there are no more sentences in the queue
+        //{
+        //    DisableTextBox();
+        //    return;
+        //}
 
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
@@ -71,7 +77,7 @@ public class DialogueManager : MonoBehaviour {
         dialogueText.text = ""; // start with empty string
 
         // loop through the individual characters in each sentence
-        foreach(char letter in sentence.ToCharArray()) // ToCharArray is a function that converts a string into a character array
+        foreach(char letter in sentence)
         {
             dialogueText.text += letter; // add each letter to the text to be displayed
             yield return null; // wait a frame between each letter

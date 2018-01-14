@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     private bool isMoving; // used by animator/setting velocity
     private bool isVertAnimActive = true; // overhead or side scroll
     private static bool playerExists; // check for player duplicates
+    //private Camera theCamera;
 
     /*////////////////////*/
     public string[] quests;
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
         myRigBod = GetComponent<Rigidbody2D>();
+        //theCamera = GetComponent<Camera>();
 
         if (!playerExists)
         {
@@ -92,8 +94,7 @@ public class PlayerController : MonoBehaviour {
         {
             isVertAnimActive = true; // can move up/down
             myRigBod.gravityScale = 0; // turn off gravity
-        }
-        else if (worldOrientation == WorldOrientation.SideScroll) {
+        } else if (worldOrientation == WorldOrientation.SideScroll || worldOrientation == WorldOrientation.Parallax) {
             isVertAnimActive = false; // cannot move up/down
             myRigBod.gravityScale = 10; // gravity on
         }

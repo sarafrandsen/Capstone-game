@@ -49,7 +49,7 @@ public class CameraController : MonoBehaviour {
 
         if (boundsBox == null)
         {
-            boundsBox = FindObjectOfType<Bounds>().GetComponent<BoxCollider2D>();
+            boundsBox = FindObjectOfType<CameraBounds>().GetComponent<BoxCollider2D>();
             minBounds = boundsBox.bounds.min;
             maxBounds = boundsBox.bounds.max;
         }
@@ -60,5 +60,30 @@ public class CameraController : MonoBehaviour {
         boundsBox = newBounds;
         minBounds = boundsBox.bounds.min;
         maxBounds = boundsBox.bounds.max;
+    }
+
+    /*////////////////////////////////////////////*/
+    // overhead or side scroll
+    // WorldOrientation Enum set in PlayerStartPosition class
+    public void SetOrientation(WorldOrientation worldOrientation)
+    {
+        if (worldOrientation == WorldOrientation.Overhead)
+        {
+            theCamera.orthographic = true; // camera is orthographic
+            theCamera.orthographicSize = 6;
+            // disable second camera
+        }
+        else if (worldOrientation == WorldOrientation.SideScroll)
+        {
+            theCamera.orthographic = true;
+            theCamera.orthographicSize = 4;
+            // disable second camera
+        } 
+        else
+        {
+            // theCamera.orthographic = true and false;
+            // enable second camera
+            // set fields needed for parallax view
+        }
     }
 }

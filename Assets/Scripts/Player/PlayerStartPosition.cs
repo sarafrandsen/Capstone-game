@@ -39,5 +39,6 @@ public class PlayerStartPosition : MonoBehaviour {
 public enum WorldOrientation
 {
     Overhead,
-    SideScroll
+    SideScroll,
+    Parallax
 }
