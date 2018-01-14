@@ -201,7 +201,7 @@ namespace Twitter
 			//Send a request to the Twitter API for an access token
 			WWW web = new WWW ("https://api.twitter.com/oauth2/token", body, headers);
 			while (!web.isDone) {
-				Debug.Log("Retrieving access token...");
+				//Debug.Log("Retrieving access token...");
 			}
 			if (web.error != null) {
 				//If there was a problem with the request, output the error to the debug log
@@ -236,7 +236,7 @@ namespace Twitter
 			headers ["Authorization"] = "Bearer " + token;
 			WWW web = new WWW (URL, null, headers);
 			while (!web.isDone) {
-				Debug.Log("Processing request...");
+			//	Debug.Log("Processing request...");
 			}
 
 			//We have an error
