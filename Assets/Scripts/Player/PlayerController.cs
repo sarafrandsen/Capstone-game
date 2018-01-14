@@ -61,9 +61,7 @@ public class PlayerController : MonoBehaviour {
             if (horizontal < -0.5f)
             {
                 sprite.flipX = true;
-            } 
-            else if (horizontal > 0.5f) 
-            {
+            } else if (horizontal > 0.5f) {
                 sprite.flipX = false;
             }
         }
