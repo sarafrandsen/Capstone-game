@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
 
 	private Rigidbody2D myRigBod;
 	private Animator anim;
+    private SpriteRenderer sprite;
     private bool isMoving; // used by animator/setting velocity
     private bool isVertAnimActive = true; // overhead or side scroll
     private static bool playerExists; // check for player duplicates
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
         myRigBod = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
         //theCamera = GetComponent<Camera>();
 
         if (!playerExists)
@@ -55,6 +57,15 @@ public class PlayerController : MonoBehaviour {
             myRigBod.velocity = new Vector2(horizontal * moveSpeed, myRigBod.velocity.y);
             isMoving = true;
             lastMove = new Vector2(horizontal, 0);
+
+            if (horizontal < -0.5f)
+            {
+                sprite.flipX = true;
+            } 
+            else if (horizontal > 0.5f) 
+            {
+                sprite.flipX = false;
+            }
         }
 
         if (vertical > 0.5f || vertical < -0.5f)
