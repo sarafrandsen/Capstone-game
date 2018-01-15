@@ -7,6 +7,7 @@ public class LoadNewArea : MonoBehaviour {
 
     public string levelToLoad;
     public string exitPoint;
+    public bool canEnter;
 
     private PlayerController thePlayer;
 
