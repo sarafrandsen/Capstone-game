@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7ee2f115bcad94b0b8c6e651f7f79c38
-timeCreated: 1515967518
+timeCreated: 1515976316
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -54,36 +54,36 @@ TextureImporter:
     21300094: GreenMelt_8
     21300096: GreenMelt_9
     21300098: GreenMelt_10
-    21300100: slime spritesheet calciumtrice_50
-    21300102: slime spritesheet calciumtrice_51
-    21300104: slime spritesheet calciumtrice_52
-    21300106: slime spritesheet calciumtrice_53
-    21300108: slime spritesheet calciumtrice_54
-    21300110: slime spritesheet calciumtrice_55
-    21300112: slime spritesheet calciumtrice_56
-    21300114: slime spritesheet calciumtrice_57
-    21300116: slime spritesheet calciumtrice_58
-    21300118: slime spritesheet calciumtrice_59
-    21300120: slime spritesheet calciumtrice_60
-    21300122: slime spritesheet calciumtrice_61
-    21300124: slime spritesheet calciumtrice_62
-    21300126: slime spritesheet calciumtrice_63
-    21300128: slime spritesheet calciumtrice_64
-    21300130: slime spritesheet calciumtrice_65
-    21300132: slime spritesheet calciumtrice_66
-    21300134: slime spritesheet calciumtrice_67
-    21300136: slime spritesheet calciumtrice_68
-    21300138: slime spritesheet calciumtrice_69
-    21300140: slime spritesheet calciumtrice_70
-    21300142: slime spritesheet calciumtrice_71
-    21300144: slime spritesheet calciumtrice_72
-    21300146: slime spritesheet calciumtrice_73
-    21300148: slime spritesheet calciumtrice_74
-    21300150: slime spritesheet calciumtrice_75
-    21300152: slime spritesheet calciumtrice_76
-    21300154: slime spritesheet calciumtrice_77
-    21300156: slime spritesheet calciumtrice_78
-    21300158: slime spritesheet calciumtrice_79
+    21300100: BlueIdle_1
+    21300102: BlueIdle_2
+    21300104: BlueIdle_3
+    21300106: BlueIdle_4
+    21300108: BlueIdle_5
+    21300110: BlueIdle_6
+    21300112: BlueIdle_7
+    21300114: BlueIdle_8
+    21300116: BlueIdle_9
+    21300118: BlueIdle_10
+    21300120: BlueRoll_1
+    21300122: BlueRoll_2
+    21300124: BlueRoll_3
+    21300126: BlueRoll_4
+    21300128: BlueRoll_5
+    21300130: BlueRoll_6
+    21300132: BlueRoll_7
+    21300134: BlueRoll_8
+    21300136: BlueRoll_9
+    21300138: BlueRoll_10
+    21300140: BlueJump_1
+    21300142: BlueJump_2
+    21300144: BlueJump_3
+    21300146: BlueJump_4
+    21300148: BlueJump_5
+    21300150: BlueJump_6
+    21300152: BlueJump_7
+    21300154: BlueJump_8
+    21300156: BlueJump_9
+    21300158: BlueJump_10
     21300160: slime spritesheet calciumtrice_80
     21300162: slime spritesheet calciumtrice_81
     21300164: slime spritesheet calciumtrice_82
@@ -94,46 +94,46 @@ TextureImporter:
     21300174: slime spritesheet calciumtrice_87
     21300176: slime spritesheet calciumtrice_88
     21300178: slime spritesheet calciumtrice_89
-    21300180: slime spritesheet calciumtrice_90
-    21300182: slime spritesheet calciumtrice_91
-    21300184: slime spritesheet calciumtrice_92
-    21300186: slime spritesheet calciumtrice_93
-    21300188: slime spritesheet calciumtrice_94
-    21300190: slime spritesheet calciumtrice_95
-    21300192: slime spritesheet calciumtrice_96
-    21300194: slime spritesheet calciumtrice_97
-    21300196: slime spritesheet calciumtrice_98
-    21300198: slime spritesheet calciumtrice_99
-    21300200: slime spritesheet calciumtrice_100
-    21300202: slime spritesheet calciumtrice_101
-    21300204: slime spritesheet calciumtrice_102
-    21300206: slime spritesheet calciumtrice_103
-    21300208: slime spritesheet calciumtrice_104
-    21300210: slime spritesheet calciumtrice_105
-    21300212: slime spritesheet calciumtrice_106
-    21300214: slime spritesheet calciumtrice_107
-    21300216: slime spritesheet calciumtrice_108
-    21300218: slime spritesheet calciumtrice_109
-    21300220: slime spritesheet calciumtrice_110
-    21300222: slime spritesheet calciumtrice_111
-    21300224: slime spritesheet calciumtrice_112
-    21300226: slime spritesheet calciumtrice_113
-    21300228: slime spritesheet calciumtrice_114
-    21300230: slime spritesheet calciumtrice_115
-    21300232: slime spritesheet calciumtrice_116
-    21300234: slime spritesheet calciumtrice_117
-    21300236: slime spritesheet calciumtrice_118
-    21300238: slime spritesheet calciumtrice_119
-    21300240: slime spritesheet calciumtrice_120
-    21300242: slime spritesheet calciumtrice_121
-    21300244: slime spritesheet calciumtrice_122
-    21300246: slime spritesheet calciumtrice_123
-    21300248: slime spritesheet calciumtrice_124
-    21300250: slime spritesheet calciumtrice_125
-    21300252: slime spritesheet calciumtrice_126
-    21300254: slime spritesheet calciumtrice_127
-    21300256: slime spritesheet calciumtrice_128
-    21300258: slime spritesheet calciumtrice_129
+    21300180: BlueMelt_1
+    21300182: BlueMelt_2
+    21300184: BlueMelt_3
+    21300186: BlueMelt_4
+    21300188: BlueMelt_5
+    21300190: BlueMelt_6
+    21300192: BlueMelt_7
+    21300194: BlueMelt_8
+    21300196: BlueMelt_9
+    21300198: BlueMelt_10
+    21300200: RedIdle_1
+    21300202: RedIdle_2
+    21300204: RedIdle_3
+    21300206: RedIdle_4
+    21300208: RedIdle_5
+    21300210: RedIdle_6
+    21300212: RedIdle_7
+    21300214: RedIdle_8
+    21300216: RedIdle_9
+    21300218: RedIdle_10
+    21300220: RedRoll_1
+    21300222: RedRoll_2
+    21300224: RedRoll_3
+    21300226: RedRoll_4
+    21300228: RedRoll_5
+    21300230: RedRoll_6
+    21300232: RedRoll_7
+    21300234: RedRoll_8
+    21300236: RedRoll_9
+    21300238: RedRoll_10
+    21300240: RedJump_1
+    21300242: RedJump_2
+    21300244: RedJump_3
+    21300246: RedJump_4
+    21300248: RedJump_5
+    21300250: RedJump_6
+    21300252: RedJump_7
+    21300254: RedJump_8
+    21300256: RedJump_9
+    21300258: RedJump_10
     21300260: slime spritesheet calciumtrice_130
     21300262: slime spritesheet calciumtrice_131
     21300264: slime spritesheet calciumtrice_132
@@ -144,46 +144,46 @@ TextureImporter:
     21300274: slime spritesheet calciumtrice_137
     21300276: slime spritesheet calciumtrice_138
     21300278: slime spritesheet calciumtrice_139
-    21300280: slime spritesheet calciumtrice_140
-    21300282: slime spritesheet calciumtrice_141
-    21300284: slime spritesheet calciumtrice_142
-    21300286: slime spritesheet calciumtrice_143
-    21300288: slime spritesheet calciumtrice_144
-    21300290: slime spritesheet calciumtrice_145
-    21300292: slime spritesheet calciumtrice_146
-    21300294: slime spritesheet calciumtrice_147
-    21300296: slime spritesheet calciumtrice_148
-    21300298: slime spritesheet calciumtrice_149
-    21300300: slime spritesheet calciumtrice_150
-    21300302: slime spritesheet calciumtrice_151
-    21300304: slime spritesheet calciumtrice_152
-    21300306: slime spritesheet calciumtrice_153
-    21300308: slime spritesheet calciumtrice_154
-    21300310: slime spritesheet calciumtrice_155
-    21300312: slime spritesheet calciumtrice_156
-    21300314: slime spritesheet calciumtrice_157
-    21300316: slime spritesheet calciumtrice_158
-    21300318: slime spritesheet calciumtrice_159
-    21300320: slime spritesheet calciumtrice_160
-    21300322: slime spritesheet calciumtrice_161
-    21300324: slime spritesheet calciumtrice_162
-    21300326: slime spritesheet calciumtrice_163
-    21300328: slime spritesheet calciumtrice_164
-    21300330: slime spritesheet calciumtrice_165
-    21300332: slime spritesheet calciumtrice_166
-    21300334: slime spritesheet calciumtrice_167
-    21300336: slime spritesheet calciumtrice_168
-    21300338: slime spritesheet calciumtrice_169
-    21300340: slime spritesheet calciumtrice_170
-    21300342: slime spritesheet calciumtrice_171
-    21300344: slime spritesheet calciumtrice_172
-    21300346: slime spritesheet calciumtrice_173
-    21300348: slime spritesheet calciumtrice_174
-    21300350: slime spritesheet calciumtrice_175
-    21300352: slime spritesheet calciumtrice_176
-    21300354: slime spritesheet calciumtrice_177
-    21300356: slime spritesheet calciumtrice_178
-    21300358: slime spritesheet calciumtrice_179
+    21300280: RedMelt_1
+    21300282: RedMelt_2
+    21300284: RedMelt_3
+    21300286: RedMelt_4
+    21300288: RedMelt_5
+    21300290: RedMelt_6
+    21300292: RedMelt_7
+    21300294: RedMelt_8
+    21300296: RedMelt_9
+    21300298: RedMelt_10
+    21300300: YellowIdle_1
+    21300302: YellowIdle_2
+    21300304: YellowIdle_3
+    21300306: YellowIdle_4
+    21300308: YellowIdle_5
+    21300310: YellowIdle_6
+    21300312: YellowIdle_7
+    21300314: YellowIdle_8
+    21300316: YellowIdle_9
+    21300318: YellowIdle_10
+    21300320: YellowRoll_1
+    21300322: YellowRoll_2
+    21300324: YellowRoll_3
+    21300326: YellowRoll_4
+    21300328: YellowRoll_5
+    21300330: YellowRoll_6
+    21300332: YellowRoll_7
+    21300334: YellowRoll_8
+    21300336: YellowRoll_9
+    21300338: YellowRoll_10
+    21300340: YellowJump_1
+    21300342: YellowJump_2
+    21300344: YellowJump_3
+    21300346: YellowJump_4
+    21300348: YellowJump_5
+    21300350: YellowJump_6
+    21300352: YellowJump_7
+    21300354: YellowJump_8
+    21300356: YellowJump_9
+    21300358: YellowJump_10
     21300360: slime spritesheet calciumtrice_180
     21300362: slime spritesheet calciumtrice_181
     21300364: slime spritesheet calciumtrice_182
@@ -194,16 +194,16 @@ TextureImporter:
     21300374: slime spritesheet calciumtrice_187
     21300376: slime spritesheet calciumtrice_188
     21300378: slime spritesheet calciumtrice_189
-    21300380: slime spritesheet calciumtrice_190
-    21300382: slime spritesheet calciumtrice_191
-    21300384: slime spritesheet calciumtrice_192
-    21300386: slime spritesheet calciumtrice_193
-    21300388: slime spritesheet calciumtrice_194
-    21300390: slime spritesheet calciumtrice_195
-    21300392: slime spritesheet calciumtrice_196
-    21300394: slime spritesheet calciumtrice_197
-    21300396: slime spritesheet calciumtrice_198
-    21300398: slime spritesheet calciumtrice_199
+    21300380: YellowMelt_1
+    21300382: YellowMelt_2
+    21300384: YellowMelt_3
+    21300386: YellowMelt_4
+    21300388: YellowMelt_5
+    21300390: YellowMelt_6
+    21300392: YellowMelt_7
+    21300394: YellowMelt_8
+    21300396: YellowMelt_9
+    21300398: YellowMelt_10
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -996,7 +996,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_50
+      name: BlueIdle_1
       rect:
         serializedVersion: 2
         x: 0
@@ -1010,7 +1010,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_51
+      name: BlueIdle_2
       rect:
         serializedVersion: 2
         x: 32
@@ -1024,7 +1024,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_52
+      name: BlueIdle_3
       rect:
         serializedVersion: 2
         x: 64
@@ -1038,7 +1038,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_53
+      name: BlueIdle_4
       rect:
         serializedVersion: 2
         x: 96
@@ -1052,7 +1052,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_54
+      name: BlueIdle_5
       rect:
         serializedVersion: 2
         x: 128
@@ -1066,7 +1066,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_55
+      name: BlueIdle_6
       rect:
         serializedVersion: 2
         x: 160
@@ -1080,7 +1080,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_56
+      name: BlueIdle_7
       rect:
         serializedVersion: 2
         x: 192
@@ -1094,7 +1094,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_57
+      name: BlueIdle_8
       rect:
         serializedVersion: 2
         x: 224
@@ -1108,7 +1108,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_58
+      name: BlueIdle_9
       rect:
         serializedVersion: 2
         x: 256
@@ -1122,7 +1122,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_59
+      name: BlueIdle_10
       rect:
         serializedVersion: 2
         x: 288
@@ -1136,7 +1136,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_60
+      name: BlueRoll_1
       rect:
         serializedVersion: 2
         x: 0
@@ -1150,7 +1150,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_61
+      name: BlueRoll_2
       rect:
         serializedVersion: 2
         x: 32
@@ -1164,7 +1164,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_62
+      name: BlueRoll_3
       rect:
         serializedVersion: 2
         x: 64
@@ -1178,7 +1178,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_63
+      name: BlueRoll_4
       rect:
         serializedVersion: 2
         x: 96
@@ -1192,7 +1192,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_64
+      name: BlueRoll_5
       rect:
         serializedVersion: 2
         x: 128
@@ -1206,7 +1206,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_65
+      name: BlueRoll_6
       rect:
         serializedVersion: 2
         x: 160
@@ -1220,7 +1220,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_66
+      name: BlueRoll_7
       rect:
         serializedVersion: 2
         x: 192
@@ -1234,7 +1234,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_67
+      name: BlueRoll_8
       rect:
         serializedVersion: 2
         x: 224
@@ -1248,7 +1248,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_68
+      name: BlueRoll_9
       rect:
         serializedVersion: 2
         x: 256
@@ -1262,7 +1262,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_69
+      name: BlueRoll_10
       rect:
         serializedVersion: 2
         x: 288
@@ -1276,7 +1276,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_70
+      name: BlueJump_1
       rect:
         serializedVersion: 2
         x: 0
@@ -1290,7 +1290,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_71
+      name: BlueJump_2
       rect:
         serializedVersion: 2
         x: 32
@@ -1304,7 +1304,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_72
+      name: BlueJump_3
       rect:
         serializedVersion: 2
         x: 64
@@ -1318,7 +1318,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_73
+      name: BlueJump_4
       rect:
         serializedVersion: 2
         x: 96
@@ -1332,7 +1332,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_74
+      name: BlueJump_5
       rect:
         serializedVersion: 2
         x: 128
@@ -1346,7 +1346,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_75
+      name: BlueJump_6
       rect:
         serializedVersion: 2
         x: 160
@@ -1360,7 +1360,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_76
+      name: BlueJump_7
       rect:
         serializedVersion: 2
         x: 192
@@ -1374,7 +1374,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_77
+      name: BlueJump_8
       rect:
         serializedVersion: 2
         x: 224
@@ -1388,7 +1388,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_78
+      name: BlueJump_9
       rect:
         serializedVersion: 2
         x: 256
@@ -1402,7 +1402,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_79
+      name: BlueJump_10
       rect:
         serializedVersion: 2
         x: 288
@@ -1556,7 +1556,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_90
+      name: BlueMelt_1
       rect:
         serializedVersion: 2
         x: 0
@@ -1570,7 +1570,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_91
+      name: BlueMelt_2
       rect:
         serializedVersion: 2
         x: 32
@@ -1584,7 +1584,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_92
+      name: BlueMelt_3
       rect:
         serializedVersion: 2
         x: 64
@@ -1598,7 +1598,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_93
+      name: BlueMelt_4
       rect:
         serializedVersion: 2
         x: 96
@@ -1612,7 +1612,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_94
+      name: BlueMelt_5
       rect:
         serializedVersion: 2
         x: 128
@@ -1626,7 +1626,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_95
+      name: BlueMelt_6
       rect:
         serializedVersion: 2
         x: 160
@@ -1640,7 +1640,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_96
+      name: BlueMelt_7
       rect:
         serializedVersion: 2
         x: 192
@@ -1654,7 +1654,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_97
+      name: BlueMelt_8
       rect:
         serializedVersion: 2
         x: 224
@@ -1668,7 +1668,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_98
+      name: BlueMelt_9
       rect:
         serializedVersion: 2
         x: 256
@@ -1682,7 +1682,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_99
+      name: BlueMelt_10
       rect:
         serializedVersion: 2
         x: 288
@@ -1696,7 +1696,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_100
+      name: RedIdle_1
       rect:
         serializedVersion: 2
         x: 0
@@ -1710,7 +1710,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_101
+      name: RedIdle_2
       rect:
         serializedVersion: 2
         x: 32
@@ -1724,7 +1724,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_102
+      name: RedIdle_3
       rect:
         serializedVersion: 2
         x: 64
@@ -1738,7 +1738,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_103
+      name: RedIdle_4
       rect:
         serializedVersion: 2
         x: 96
@@ -1752,7 +1752,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_104
+      name: RedIdle_5
       rect:
         serializedVersion: 2
         x: 128
@@ -1766,7 +1766,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_105
+      name: RedIdle_6
       rect:
         serializedVersion: 2
         x: 160
@@ -1780,7 +1780,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_106
+      name: RedIdle_7
       rect:
         serializedVersion: 2
         x: 192
@@ -1794,7 +1794,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_107
+      name: RedIdle_8
       rect:
         serializedVersion: 2
         x: 224
@@ -1808,7 +1808,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_108
+      name: RedIdle_9
       rect:
         serializedVersion: 2
         x: 256
@@ -1822,7 +1822,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_109
+      name: RedIdle_10
       rect:
         serializedVersion: 2
         x: 288
@@ -1836,7 +1836,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_110
+      name: RedRoll_1
       rect:
         serializedVersion: 2
         x: 0
@@ -1850,7 +1850,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_111
+      name: RedRoll_2
       rect:
         serializedVersion: 2
         x: 32
@@ -1864,7 +1864,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_112
+      name: RedRoll_3
       rect:
         serializedVersion: 2
         x: 64
@@ -1878,7 +1878,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_113
+      name: RedRoll_4
       rect:
         serializedVersion: 2
         x: 96
@@ -1892,7 +1892,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_114
+      name: RedRoll_5
       rect:
         serializedVersion: 2
         x: 128
@@ -1906,7 +1906,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_115
+      name: RedRoll_6
       rect:
         serializedVersion: 2
         x: 160
@@ -1920,7 +1920,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_116
+      name: RedRoll_7
       rect:
         serializedVersion: 2
         x: 192
@@ -1934,7 +1934,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_117
+      name: RedRoll_8
       rect:
         serializedVersion: 2
         x: 224
@@ -1948,7 +1948,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_118
+      name: RedRoll_9
       rect:
         serializedVersion: 2
         x: 256
@@ -1962,7 +1962,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_119
+      name: RedRoll_10
       rect:
         serializedVersion: 2
         x: 288
@@ -1976,7 +1976,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_120
+      name: RedJump_1
       rect:
         serializedVersion: 2
         x: 0
@@ -1990,7 +1990,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_121
+      name: RedJump_2
       rect:
         serializedVersion: 2
         x: 32
@@ -2004,7 +2004,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_122
+      name: RedJump_3
       rect:
         serializedVersion: 2
         x: 64
@@ -2018,7 +2018,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_123
+      name: RedJump_4
       rect:
         serializedVersion: 2
         x: 96
@@ -2032,7 +2032,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_124
+      name: RedJump_5
       rect:
         serializedVersion: 2
         x: 128
@@ -2046,7 +2046,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_125
+      name: RedJump_6
       rect:
         serializedVersion: 2
         x: 160
@@ -2060,7 +2060,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_126
+      name: RedJump_7
       rect:
         serializedVersion: 2
         x: 192
@@ -2074,7 +2074,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_127
+      name: RedJump_8
       rect:
         serializedVersion: 2
         x: 224
@@ -2088,7 +2088,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_128
+      name: RedJump_9
       rect:
         serializedVersion: 2
         x: 256
@@ -2102,7 +2102,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_129
+      name: RedJump_10
       rect:
         serializedVersion: 2
         x: 288
@@ -2256,7 +2256,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_140
+      name: RedMelt_1
       rect:
         serializedVersion: 2
         x: 0
@@ -2270,7 +2270,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_141
+      name: RedMelt_2
       rect:
         serializedVersion: 2
         x: 32
@@ -2284,7 +2284,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_142
+      name: RedMelt_3
       rect:
         serializedVersion: 2
         x: 64
@@ -2298,7 +2298,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_143
+      name: RedMelt_4
       rect:
         serializedVersion: 2
         x: 96
@@ -2312,7 +2312,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_144
+      name: RedMelt_5
       rect:
         serializedVersion: 2
         x: 128
@@ -2326,7 +2326,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_145
+      name: RedMelt_6
       rect:
         serializedVersion: 2
         x: 160
@@ -2340,7 +2340,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_146
+      name: RedMelt_7
       rect:
         serializedVersion: 2
         x: 192
@@ -2354,7 +2354,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_147
+      name: RedMelt_8
       rect:
         serializedVersion: 2
         x: 224
@@ -2368,7 +2368,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_148
+      name: RedMelt_9
       rect:
         serializedVersion: 2
         x: 256
@@ -2382,7 +2382,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_149
+      name: RedMelt_10
       rect:
         serializedVersion: 2
         x: 288
@@ -2396,7 +2396,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_150
+      name: YellowIdle_1
       rect:
         serializedVersion: 2
         x: 0
@@ -2410,7 +2410,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_151
+      name: YellowIdle_2
       rect:
         serializedVersion: 2
         x: 32
@@ -2424,7 +2424,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_152
+      name: YellowIdle_3
       rect:
         serializedVersion: 2
         x: 64
@@ -2438,7 +2438,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_153
+      name: YellowIdle_4
       rect:
         serializedVersion: 2
         x: 96
@@ -2452,7 +2452,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_154
+      name: YellowIdle_5
       rect:
         serializedVersion: 2
         x: 128
@@ -2466,7 +2466,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_155
+      name: YellowIdle_6
       rect:
         serializedVersion: 2
         x: 160
@@ -2480,7 +2480,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_156
+      name: YellowIdle_7
       rect:
         serializedVersion: 2
         x: 192
@@ -2494,7 +2494,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_157
+      name: YellowIdle_8
       rect:
         serializedVersion: 2
         x: 224
@@ -2508,7 +2508,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_158
+      name: YellowIdle_9
       rect:
         serializedVersion: 2
         x: 256
@@ -2522,7 +2522,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_159
+      name: YellowIdle_10
       rect:
         serializedVersion: 2
         x: 288
@@ -2536,7 +2536,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_160
+      name: YellowRoll_1
       rect:
         serializedVersion: 2
         x: 0
@@ -2550,7 +2550,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_161
+      name: YellowRoll_2
       rect:
         serializedVersion: 2
         x: 32
@@ -2564,7 +2564,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_162
+      name: YellowRoll_3
       rect:
         serializedVersion: 2
         x: 64
@@ -2578,7 +2578,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_163
+      name: YellowRoll_4
       rect:
         serializedVersion: 2
         x: 96
@@ -2592,7 +2592,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_164
+      name: YellowRoll_5
       rect:
         serializedVersion: 2
         x: 128
@@ -2606,7 +2606,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_165
+      name: YellowRoll_6
       rect:
         serializedVersion: 2
         x: 160
@@ -2620,7 +2620,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_166
+      name: YellowRoll_7
       rect:
         serializedVersion: 2
         x: 192
@@ -2634,7 +2634,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_167
+      name: YellowRoll_8
       rect:
         serializedVersion: 2
         x: 224
@@ -2648,7 +2648,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_168
+      name: YellowRoll_9
       rect:
         serializedVersion: 2
         x: 256
@@ -2662,7 +2662,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_169
+      name: YellowRoll_10
       rect:
         serializedVersion: 2
         x: 288
@@ -2676,7 +2676,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_170
+      name: YellowJump_1
       rect:
         serializedVersion: 2
         x: 0
@@ -2690,7 +2690,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_171
+      name: YellowJump_2
       rect:
         serializedVersion: 2
         x: 32
@@ -2704,7 +2704,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_172
+      name: YellowJump_3
       rect:
         serializedVersion: 2
         x: 64
@@ -2718,7 +2718,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_173
+      name: YellowJump_4
       rect:
         serializedVersion: 2
         x: 96
@@ -2732,7 +2732,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_174
+      name: YellowJump_5
       rect:
         serializedVersion: 2
         x: 128
@@ -2746,7 +2746,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_175
+      name: YellowJump_6
       rect:
         serializedVersion: 2
         x: 160
@@ -2760,7 +2760,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_176
+      name: YellowJump_7
       rect:
         serializedVersion: 2
         x: 192
@@ -2774,7 +2774,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_177
+      name: YellowJump_8
       rect:
         serializedVersion: 2
         x: 224
@@ -2788,7 +2788,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_178
+      name: YellowJump_9
       rect:
         serializedVersion: 2
         x: 256
@@ -2802,7 +2802,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_179
+      name: YellowJump_10
       rect:
         serializedVersion: 2
         x: 288
@@ -2956,7 +2956,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_190
+      name: YellowMelt_1
       rect:
         serializedVersion: 2
         x: 0
@@ -2970,7 +2970,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_191
+      name: YellowMelt_2
       rect:
         serializedVersion: 2
         x: 32
@@ -2984,7 +2984,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_192
+      name: YellowMelt_3
       rect:
         serializedVersion: 2
         x: 64
@@ -2998,7 +2998,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_193
+      name: YellowMelt_4
       rect:
         serializedVersion: 2
         x: 96
@@ -3012,7 +3012,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_194
+      name: YellowMelt_5
       rect:
         serializedVersion: 2
         x: 128
@@ -3026,7 +3026,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_195
+      name: YellowMelt_6
       rect:
         serializedVersion: 2
         x: 160
@@ -3040,7 +3040,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_196
+      name: YellowMelt_7
       rect:
         serializedVersion: 2
         x: 192
@@ -3054,7 +3054,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_197
+      name: YellowMelt_8
       rect:
         serializedVersion: 2
         x: 224
@@ -3068,7 +3068,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_198
+      name: YellowMelt_9
       rect:
         serializedVersion: 2
         x: 256
@@ -3082,7 +3082,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: slime spritesheet calciumtrice_199
+      name: YellowMelt_10
       rect:
         serializedVersion: 2
         x: 288
