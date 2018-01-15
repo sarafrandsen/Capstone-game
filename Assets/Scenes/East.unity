@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Main
-  exitPoint: NorthMain
+  exitPoint: EastMain
   canEnter: 0
 --- !u!61 &973606533
 BoxCollider2D:
@@ -459,6 +459,21 @@ Prefab:
       propertyPath: m_SortingLayer
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 95001150150166144, guid: 29b2518cf8cd24d7cb2147d1beb75dbe,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: df0b5f493d03448359537f89cd3f4180, type: 2}
+    - target: {fileID: 212963690744820108, guid: 29b2518cf8cd24d7cb2147d1beb75dbe,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300004, guid: b35635b26f0ef40e3bf5ec1abe4ad473,
+        type: 3}
+    - target: {fileID: 1146432155566724, guid: 29b2518cf8cd24d7cb2147d1beb75dbe, type: 2}
+      propertyPath: m_Name
+      value: Question
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29b2518cf8cd24d7cb2147d1beb75dbe, type: 2}
   m_IsPrefabParent: 0
@@ -558,6 +573,21 @@ Prefab:
       propertyPath: m_Offset.y
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 212497623049498360, guid: 8b617774d29034769bcb1bb7ab212432,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300300, guid: 7ee2f115bcad94b0b8c6e651f7f79c38,
+        type: 3}
+    - target: {fileID: 95428912748100990, guid: 8b617774d29034769bcb1bb7ab212432,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 061eff9ddc8aa4773993ced90619fe5a, type: 2}
+    - target: {fileID: 1400602954477596, guid: 8b617774d29034769bcb1bb7ab212432, type: 2}
+      propertyPath: m_Name
+      value: YellowSlime
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b617774d29034769bcb1bb7ab212432, type: 2}
   m_IsPrefabParent: 0
@@ -595,7 +625,7 @@ GameObject:
   - component: {fileID: 1367046590}
   - component: {fileID: 1367046589}
   m_Layer: 8
-  m_Name: NorthEntrance
+  m_Name: EastEntrance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -626,7 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: {x: 1, y: 0}
-  positionID: NorthEntrance
+  positionID: EastEntrance
   worldOriention: 1
 --- !u!61 &1367046590
 BoxCollider2D:
