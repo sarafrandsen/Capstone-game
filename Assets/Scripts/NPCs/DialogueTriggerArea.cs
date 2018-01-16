@@ -7,6 +7,7 @@ public class DialogueTriggerArea : MonoBehaviour {
     private string[] textLines; // each line of the text asset is assigned to an index
 
     private DialogueManager dialogueManager;
+    private Animator anim;
     private int currentLine; // current line on the screen
 	private int endLine; // last line in text
 
@@ -20,36 +21,49 @@ public class DialogueTriggerArea : MonoBehaviour {
         }
 
         dialogueManager = FindObjectOfType<DialogueManager>();
+        anim = GetComponent<Animator>();
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.name == "Player")
+        if (other.name == "Player"&&  Input.GetKeyDown(KeyCode.Space))
         {
-            // play bubble animation while inside box collider until dialogue starts
+            // end bubble anim
+            endLine = textLines.Length;
+			dialogueManager.EnableTextBox(); // open dialogue box
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (currentLine < endLine)
             {
-                // end bubble anim
-                endLine = textLines.Length;
-				dialogueManager.EnableTextBox(); // open dialogue box
-
-                if (currentLine < endLine)
-                {
-                    dialogueManager.DisplayNextSentence(textLines[currentLine]);
-                    Debug.Log(textLines[currentLine]);
-                    currentLine += 1; // next line in dialogue
-                }
-                else
-                {
-                    dialogueManager.DisableTextBox(); // close dialogue box
-                    currentLine = 0;
-                    // play melt anim
-                    // destroy game object (to get rid of rigid body)
-                    if (onConversationEnd != null)
-                        onConversationEnd();
-                }
+                dialogueManager.DisplayNextSentence(textLines[currentLine]);
+                Debug.Log(textLines[currentLine]);
+                currentLine += 1; // next line in dialogue
+            }
+            else
+            {
+                dialogueManager.DisableTextBox(); // close dialogue box
+                currentLine = 0;
+                // play melt anim
+                // destroy game object (to get rid of rigid body)
+                if (onConversationEnd != null)
+                    onConversationEnd();
             }
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.name == "Player")
+        { 
+            // begin bubble anim
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.name == "Player")
+        {
+            // end bubble anim
+        }
+    }
+
 }

@@ -21,9 +21,19 @@ public class SlimeController : MonoBehaviour
 
     void ConversationEnd()
     {
+        StartCoroutine(MeltBeforeDisappear());
+
+    }
+
+    IEnumerator MeltBeforeDisappear()
+    {
+        anim.SetBool("DialogueComplete", true); // slime melt anim
+
         string slime = this.tag;
         gameData.fireDoors[slime] = true; // change value in GameData dictionary
-        anim.SetBool("DialogueComplete", true); // slime melt anim
+
+        yield return new WaitForSeconds(1.5f);
         this.gameObject.SetActive(false); // takes object off screen
+ 
     }
 }

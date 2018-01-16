@@ -674,7 +674,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: North
   exitPoint: NorthEntrance
-  canEnter: 0
 --- !u!114 &968173161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,12 +909,12 @@ Prefab:
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 305.5
+      value: 258.5
       objectReference: {fileID: 0}
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 229
+      value: 194
       objectReference: {fileID: 0}
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}
@@ -1116,7 +1115,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: West
   exitPoint: WestEntrance
-  canEnter: 0
 --- !u!114 &1520551911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1264,7 +1262,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: South
   exitPoint: SouthEntrance
-  canEnter: 0
 --- !u!114 &1896688828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1421,7 +1418,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: East
   exitPoint: EastEntrance
-  canEnter: 0
 --- !u!114 &1981750285
 MonoBehaviour:
   m_ObjectHideFlags: 0
