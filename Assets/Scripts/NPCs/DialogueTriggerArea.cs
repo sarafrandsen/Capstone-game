@@ -4,47 +4,46 @@ using UnityEngine;
 
 public class DialogueTriggerArea : MonoBehaviour {
     public TextAsset textFile; // TextAsset: literally text file assets
-    private string[] textLines; // each line of the text asset is assigned to an element
-    private DialogueManager dialogueManager;
+    private string[] textLines; // each line of the text asset is assigned to an index
 
-    private int endAtLine; // line we want to end on
+    private DialogueManager dialogueManager;
     private int currentLine; // current line on the screen
-    private PlayerController playerController;
+	private int endLine; // last line in text
 
     void Start()
     {
         if (textFile != null) // check if there is a textFile available
         {
             textLines = (textFile.text.Split('\n')); // split at line break
-
         }
+
         dialogueManager = FindObjectOfType<DialogueManager>();
-        playerController = FindObjectOfType<PlayerController>();
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        for (int i = 0; i < playerController.quests.Length; i += 1)
+        if (other.name == "Player")
         {
-            if (other.name == "Player" && tag == playerController.quests[i])
+            // play bubble animation while inside box collider until dialogue starts
+
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (Input.GetKeyDown(KeyCode.Space) && !dialogueManager.dialogueIsActive)
+                // end bubble anim
+                endLine = textLines.Length;
+				dialogueManager.EnableTextBox(); // open dialogue box
+
+                if (currentLine < endLine)
                 {
-                    endAtLine = textLines.Length;
-                    if (currentLine < endAtLine && !playerController.isComplete) // quest is not complete
-                    {
-                        dialogueManager.EnableTextBox();
-                        dialogueManager.dialogueText.text = textLines[currentLine];
-                        Debug.Log(textLines[currentLine]);
-                        currentLine += 1;
-                    }
-                    else
-                    {
-                        dialogueManager.DisableTextBox();
-                        playerController.isComplete = true; // no longer talkable
-                        Destroy(GameObject.FindWithTag(playerController.quests[i]));
-                        i += 1; // move on to next quest in array
-                    }
+                    dialogueManager.DisplayNextSentence(textLines[currentLine]);
+                    Debug.Log(textLines[currentLine]);
+                    currentLine += 1; // next line in dialogue
+                }
+                else
+                {
+                    dialogueManager.DisableTextBox(); // close dialogue box
+                    currentLine = 0;
+                    // play melt anim
+                    // destroy game object (to get rid of rigid body)
                 }
             }
         }

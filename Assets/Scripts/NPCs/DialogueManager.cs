@@ -10,16 +10,13 @@ public class DialogueManager : MonoBehaviour {
     Twitter.TwitterUser user;
     /*///////////////////////////////////*/
 
-
-    public Text nameText; // where to put the Name game object in the Inspector
+	public GameObject dialogueBox; // access the dialogue box object
+    public Text nameText; // where to put the character's name in inspector
     public Text dialogueText; // where to put the Dialogue game object in the Inspector
 
-    public PlayerController player; // access the player
-    public GameObject dialogueBox; // access the dialogue box game object
+    public PlayerController player; // access the player object
 
     public bool dialogueIsActive; // toggle dialogue box
-
-    private Queue<string> sentences; // FIFO collection
 
     void Start()
     {
@@ -28,40 +25,20 @@ public class DialogueManager : MonoBehaviour {
         user = Twitter.API.GetProfileInfo("sara__eff", accessToken, false);
         /*///////////////////////////////////*/
 
-
-
-        //sentences = new Queue<string>();
-        //sentences.Enqueue(dialogueText.text);
-        dialogueIsActive = false;
+        DisableTextBox();
         player = FindObjectOfType<PlayerController>(); // using this class on the PlayerController
     }
 
-    void Update()
+    public void DisplayNextSentence(string nextSentence)
     {
-        if (!dialogueIsActive)
-        {
-            return;
-        }
-    }
-
-    public void DisplayNextSentence()
-    {
-        //if (sentences.Count == 0) // if there are no more sentences in the queue
-        //{
-        //    DisableTextBox();
-        //    return;
-        //}
-
-        string sentence = sentences.Dequeue();
-        dialogueText.text = sentence;
-
         StopAllCoroutines(); // if a user wants to skip a sentence, stop animating and move on to next sentence
-        StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(TypeSentence(nextSentence));
     }
 
     public void EnableTextBox()
     {
         dialogueBox.SetActive(true);
+        dialogueIsActive = true;
     }
 
     public void DisableTextBox()
@@ -69,7 +46,6 @@ public class DialogueManager : MonoBehaviour {
         dialogueBox.SetActive(false);
         dialogueIsActive = false;
         Debug.Log("End of conversation");
-        return;
     }
 
     IEnumerator TypeSentence(string sentence) // instead of updating text directly, using coroutine
