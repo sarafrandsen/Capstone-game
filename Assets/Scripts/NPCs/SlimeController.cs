@@ -22,11 +22,11 @@ public class SlimeController : MonoBehaviour
     void ConversationEnd()
     {
         StartCoroutine(MeltBeforeDisappear());
-
     }
 
     IEnumerator MeltBeforeDisappear()
     {
+        yield return new WaitForSeconds(1.0f);
         anim.SetBool("DialogueComplete", true); // slime melt anim
 
         string slime = this.tag;
@@ -34,6 +34,5 @@ public class SlimeController : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
         this.gameObject.SetActive(false); // takes object off screen
- 
     }
 }

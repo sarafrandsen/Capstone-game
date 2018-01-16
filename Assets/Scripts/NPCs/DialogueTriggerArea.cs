@@ -34,6 +34,7 @@ public class DialogueTriggerArea : MonoBehaviour {
 
             if (currentLine < endLine)
             {
+                other.GetComponent<Animator>().speed = 0;
                 dialogueManager.DisplayNextSentence(textLines[currentLine]);
                 Debug.Log(textLines[currentLine]);
                 currentLine += 1; // next line in dialogue
@@ -45,7 +46,10 @@ public class DialogueTriggerArea : MonoBehaviour {
                 // play melt anim
                 // destroy game object (to get rid of rigid body)
                 if (onConversationEnd != null)
+                {
                     onConversationEnd();
+                }
+                other.GetComponent<Animator>().speed = 1;
             }
         }
     }
@@ -53,7 +57,7 @@ public class DialogueTriggerArea : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.name == "Player")
-        { 
+        {
             // begin bubble anim
         }
     }

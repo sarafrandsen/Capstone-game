@@ -5,6 +5,7 @@ using UnityEngine;
 public class FireObject : MonoBehaviour {
     private GameData gameData;
     private Animator anim;
+    private BoxCollider2D boxCollider;
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +14,7 @@ public class FireObject : MonoBehaviour {
 
         gameData = FindObjectOfType<GameData>();
         anim = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
 
         // check in GameData if true or false
         // false means still accessible
@@ -28,6 +30,6 @@ public class FireObject : MonoBehaviour {
         // change animation to empty fire 
         anim.SetBool("FireExtinguished", true);
         // disable 'load new area' script
-        this.GetComponent<LoadNewArea>().enabled = false;
+        boxCollider.isTrigger = false;
     }
 }
