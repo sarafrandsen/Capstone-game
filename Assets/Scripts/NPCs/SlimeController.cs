@@ -15,6 +15,8 @@ public class SlimeController : MonoBehaviour
         dialogueTriggerArea.onConversationEnd = ConversationEnd;
         gameData = FindObjectOfType<GameData>();
         anim = GetComponent<Animator>();
+
+        Debug.Log(tag);
     }
 
     void ConversationEnd()

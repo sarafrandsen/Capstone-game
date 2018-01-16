@@ -11,7 +11,7 @@ public class FireObject : MonoBehaviour {
         // opening dialogue with instructions
         // set dialogue as active?
 
-
+        gameData = FindObjectOfType<GameData>();
         anim = GetComponent<Animator>();
 
         // check in GameData if true or false
