@@ -69,21 +69,11 @@ public class CameraController : MonoBehaviour {
     {
         if (worldOrientation == WorldOrientation.Overhead)
         {
-            theCamera.orthographic = true; // camera is orthographic
             theCamera.orthographicSize = 6;
-            // disable second camera
         }
         else if (worldOrientation == WorldOrientation.SideScroll)
         {
-            theCamera.orthographic = true;
             theCamera.orthographicSize = 4;
-            // disable second camera
-        } 
-        else
-        {
-            // theCamera.orthographic = true and false;
-            // enable second camera
-            // set fields needed for parallax view
         }
     }
 }

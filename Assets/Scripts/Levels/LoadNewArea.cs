@@ -15,11 +15,6 @@ public class LoadNewArea : MonoBehaviour {
 	void Start () {
         thePlayer = FindObjectOfType<PlayerController>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     void OnTriggerEnter2D(Collider2D other) // we know it'll be a collider, and will reference it as 'other'
     {

@@ -26,7 +26,6 @@ public class PlayerStartPosition : MonoBehaviour {
 
             theCamera = FindObjectOfType<CameraController>();
             theCamera.transform.position = new Vector3(transform.position.x, transform.position.y, theCamera.transform.position.z); // set default position camera should point
-
         }
     }
 	
@@ -39,6 +38,5 @@ public class PlayerStartPosition : MonoBehaviour {
 public enum WorldOrientation
 {
     Overhead,
-    SideScroll,
-    Parallax
+    SideScroll
 }

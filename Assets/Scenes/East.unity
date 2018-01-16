@@ -468,7 +468,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300004, guid: b35635b26f0ef40e3bf5ec1abe4ad473,
+      objectReference: {fileID: 21300010, guid: b35635b26f0ef40e3bf5ec1abe4ad473,
         type: 3}
     - target: {fileID: 1146432155566724, guid: 29b2518cf8cd24d7cb2147d1beb75dbe, type: 2}
       propertyPath: m_Name
@@ -607,6 +607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff36ee44bcbf0446ebb3a2f7195203a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueTriggerArea: {fileID: 1305905774}
   canInteract: 0
   dialogueComplete: 0
 --- !u!4 &1346385124 stripped

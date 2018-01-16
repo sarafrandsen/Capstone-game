@@ -17,11 +17,6 @@ public class PlayerController : MonoBehaviour {
     private static bool playerExists; // check for player duplicates
     //private Camera theCamera;
 
-    /*////////////////////*/
-    public string[] quests;
-    public bool isComplete;
-    /*////////////////////*/
-
 /*////////////////////////////////////////////*/
 	// Use this for initialization
 	void Start () {
@@ -103,7 +98,7 @@ public class PlayerController : MonoBehaviour {
         {
             isVertAnimActive = true; // can move up/down
             myRigBod.gravityScale = 0; // turn off gravity
-        } else if (worldOrientation == WorldOrientation.SideScroll || worldOrientation == WorldOrientation.Parallax) {
+        } else if (worldOrientation == WorldOrientation.SideScroll) {
             isVertAnimActive = false; // cannot move up/down
             myRigBod.gravityScale = 10; // gravity on
         }
