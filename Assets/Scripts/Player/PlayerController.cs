@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
     void Update () {
 
-        isMoving = false; // don't animate by default
+        isMoving = false; // idle anim
 
         // get the input from the keyboard
         float horizontal = Input.GetAxisRaw("Horizontal");

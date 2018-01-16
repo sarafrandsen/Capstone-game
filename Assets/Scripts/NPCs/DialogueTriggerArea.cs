@@ -10,6 +10,8 @@ public class DialogueTriggerArea : MonoBehaviour {
     private int currentLine; // current line on the screen
 	private int endLine; // last line in text
 
+    public System.Action onConversationEnd;
+
     void Start()
     {
         if (textFile != null) // check if there is a textFile available
@@ -44,6 +46,8 @@ public class DialogueTriggerArea : MonoBehaviour {
                     currentLine = 0;
                     // play melt anim
                     // destroy game object (to get rid of rigid body)
+                    if (onConversationEnd != null)
+                        onConversationEnd();
                 }
             }
         }
