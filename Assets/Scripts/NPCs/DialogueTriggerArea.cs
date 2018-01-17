@@ -8,6 +8,7 @@ public class DialogueTriggerArea : MonoBehaviour {
 
     private DialogueManager dialogueManager;
     private Animator anim;
+    //private Animation bubble;
     private int currentLine; // current line on the screen
 	private int endLine; // last line in text
 
@@ -22,6 +23,7 @@ public class DialogueTriggerArea : MonoBehaviour {
 
         dialogueManager = FindObjectOfType<DialogueManager>();
         anim = GetComponent<Animator>();
+        //bubble = GetComponent<Animation>();
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -59,6 +61,7 @@ public class DialogueTriggerArea : MonoBehaviour {
         if (other.name == "Player")
         {
             // begin bubble anim
+            //bubble.Play(); 
         }
     }
 

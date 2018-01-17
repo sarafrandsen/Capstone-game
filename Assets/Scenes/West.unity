@@ -587,6 +587,10 @@ Prefab:
       propertyPath: m_Name
       value: BlueSlime
       objectReference: {fileID: 0}
+    - target: {fileID: 1400602954477596, guid: 8b617774d29034769bcb1bb7ab212432, type: 2}
+      propertyPath: m_TagString
+      value: West
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b617774d29034769bcb1bb7ab212432, type: 2}
   m_IsPrefabParent: 0
@@ -606,7 +610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff36ee44bcbf0446ebb3a2f7195203a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueTriggerArea: {fileID: 0}
+  dialogueTriggerArea: {fileID: 1305905774}
 --- !u!4 &1346385124 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4442502352546818, guid: 8b617774d29034769bcb1bb7ab212432,
@@ -852,12 +856,12 @@ Prefab:
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 305.5
+      value: 258.5
       objectReference: {fileID: 0}
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 229
+      value: 194
       objectReference: {fileID: 0}
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}

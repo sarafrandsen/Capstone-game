@@ -127,12 +127,12 @@ Prefab:
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 305.5
+      value: 258
       objectReference: {fileID: 0}
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 229
+      value: 193.5
       objectReference: {fileID: 0}
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}
@@ -706,6 +706,10 @@ Prefab:
     - target: {fileID: 1400602954477596, guid: 8b617774d29034769bcb1bb7ab212432, type: 2}
       propertyPath: m_Name
       value: YellowSlime
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400602954477596, guid: 8b617774d29034769bcb1bb7ab212432, type: 2}
+      propertyPath: m_TagString
+      value: East
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b617774d29034769bcb1bb7ab212432, type: 2}

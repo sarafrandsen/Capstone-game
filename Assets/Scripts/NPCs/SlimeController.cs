@@ -26,7 +26,7 @@ public class SlimeController : MonoBehaviour
 
     IEnumerator MeltBeforeDisappear()
     {
-        yield return new WaitForSeconds(1.0f);
+        //yield return new WaitForSeconds(1.0f);
         anim.SetBool("DialogueComplete", true); // slime melt anim
 
         string slime = this.tag;
