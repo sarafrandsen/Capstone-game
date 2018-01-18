@@ -10,16 +10,12 @@ public class DialogueManager : MonoBehaviour {
     Twitter.TwitterUser user;
     [SerializeField]
     public Twitter.Tweet[] tweets;
-
-
-
     /*///////////////////////////////////*/
 
 	public GameObject dialogueBox; // access the dialogue box object
     public Text nameText; // where to put the character's name in inspector
     public Text dialogueText; // where to put the Dialogue game object in the Inspector
-
-    public PlayerController player; // access the player object
+    public GameObject profileImage; // Twitter profile image
 
     void Start()
     {
@@ -28,14 +24,9 @@ public class DialogueManager : MonoBehaviour {
         user = Twitter.API.GetProfileInfo("jameydeorio", accessToken, false);
         tweets = Twitter.API.GetUserTimeline("jameydeorio", 1, accessToken);
         Debug.Log(tweets[0].text);
-
-
-
-
         /*///////////////////////////////////*/
 
         DisableTextBox();
-        player = FindObjectOfType<PlayerController>(); // using this class on the PlayerController
     }
 
     public void DisplayNextSentence(string nextSentence)
