@@ -12,6 +12,8 @@ public class DialogueTriggerArea : MonoBehaviour {
     private int currentLine; // current line on the screen
 	private int endLine; // last line in text
 
+    private CameraController theCamera;
+
     public System.Action onConversationEnd;
 
     void Start()
@@ -24,6 +26,8 @@ public class DialogueTriggerArea : MonoBehaviour {
         dialogueManager = FindObjectOfType<DialogueManager>();
         anim = GetComponent<Animator>();
         //bubble = GetComponent<Animation>();
+
+        theCamera = FindObjectOfType<CameraController>();
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -37,7 +41,8 @@ public class DialogueTriggerArea : MonoBehaviour {
             if (currentLine < endLine)
             {
                 other.GetComponent<Animator>().speed = 0;
-                dialogueManager.DisplayNextSentence(textLines[currentLine]);
+
+                dialogueManager.DisplayNextSentence(dialogueManager.tweets[0].text);
                 Debug.Log(textLines[currentLine]);
                 currentLine += 1; // next line in dialogue
             }

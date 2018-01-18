@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 5b8c5274abbfb47029a88cc1ad990499
+timeCreated: 1516219142
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: HeartbitXX2Px
+  fontNames:
+  - HeartbitXX2Px
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

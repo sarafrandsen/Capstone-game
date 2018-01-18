@@ -8,6 +8,11 @@ public class DialogueManager : MonoBehaviour {
     public string key, secret, accessToken;
     [SerializeField]
     Twitter.TwitterUser user;
+    [SerializeField]
+    public Twitter.Tweet[] tweets;
+
+
+
     /*///////////////////////////////////*/
 
 	public GameObject dialogueBox; // access the dialogue box object
@@ -16,13 +21,17 @@ public class DialogueManager : MonoBehaviour {
 
     public PlayerController player; // access the player object
 
-    public bool dialogueIsActive; // toggle dialogue box
-
     void Start()
     {
         /*///////////////////////////////////*/
         accessToken = Twitter.API.GetTwitterAccessToken(key, secret);
-        user = Twitter.API.GetProfileInfo("sara__eff", accessToken, false);
+        user = Twitter.API.GetProfileInfo("jameydeorio", accessToken, false);
+        tweets = Twitter.API.GetUserTimeline("jameydeorio", 1, accessToken);
+        Debug.Log(tweets[0].text);
+
+
+
+
         /*///////////////////////////////////*/
 
         DisableTextBox();
@@ -38,13 +47,11 @@ public class DialogueManager : MonoBehaviour {
     public void EnableTextBox()
     {
         dialogueBox.SetActive(true);
-        dialogueIsActive = true;
     }
 
     public void DisableTextBox()
     {
         dialogueBox.SetActive(false);
-        dialogueIsActive = false;
         Debug.Log("End of conversation");
     }
 
