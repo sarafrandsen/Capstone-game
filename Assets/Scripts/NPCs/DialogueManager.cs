@@ -8,40 +8,40 @@ public class DialogueManager : MonoBehaviour {
     /*///////////////////////////////////*/
     public string key, secret, accessToken;
     [SerializeField]
-    public Twitter.TwitterUser userJamey;
+    public Twitter.TwitterUser userMagicBot;
+
     [SerializeField]
-    public Twitter.Tweet[] tweetsJamey;
-    public string nameJamey;
-    public string urlJamey;
-	public string tweetJamey;
+    public Twitter.Tweet[] tweetsMagicBot;
+    public string nameMagicBot;
+    public string urlMagicBot;
+	public string tweetMagicBot;
 
     /*///////////////////////////////////*/
 
+    public GameObject profileImage;
 	public GameObject dialogueBox; // access the dialogue box object
     public Text nameText; // where to put the character's name in inspector
     public Text dialogueText; // where to put the Dialogue game object in the Inspector
-    public GameObject profileImage; // Twitter profile image
 
     public void Start()
     {
         /*///////////////////////////////////*/
         accessToken = Twitter.API.GetTwitterAccessToken(key, secret);
-        userJamey = Twitter.API.GetProfileInfo("jameydeorio", accessToken, false);
-        tweetsJamey = Twitter.API.GetUserTimeline("jameydeorio", 200, accessToken);
+        userMagicBot = Twitter.API.GetProfileInfo("magicrealismbot", accessToken, false);
+        tweetsMagicBot = Twitter.API.GetUserTimeline("magicrealismbot", 200, accessToken);
 
 
-        nameJamey = userJamey.screen_name; // get the user name
-        urlJamey = userJamey.profile_image_url; // get the profile image
-        urlJamey.Replace("_normal", ""); // original size, not 48x48
+        nameMagicBot = userMagicBot.screen_name; // get the user name
+        urlMagicBot = userMagicBot.profile_image_url.Replace("_normal", ""); // get the profile image // original size, not 48x48
         /*///////////////////////////////////*/
 
         DisableTextBox();
     }
 
-    public void Update()
+    public void Update() // should probably not be in Update
     {
-        int randomIndex = UnityEngine.Random.Range(0, tweetsJamey.Length); // random index for tweet
-		tweetJamey = tweetsJamey[randomIndex].text; // text of the random tweet
+        int randomIndex = UnityEngine.Random.Range(0, tweetsMagicBot.Length); // random index for tweet
+		tweetMagicBot = tweetsMagicBot[randomIndex].text; // text of the random tweet
     }
 
     public void DisplayNextSentence(string nextSentence)
@@ -53,11 +53,13 @@ public class DialogueManager : MonoBehaviour {
     public void EnableTextBox()
     {
         dialogueBox.SetActive(true);
+        profileImage.SetActive(true);
     }
 
     public void DisableTextBox()
     {
         dialogueBox.SetActive(false);
+        profileImage.SetActive(false);
         Debug.Log("End of conversation");
     }
 

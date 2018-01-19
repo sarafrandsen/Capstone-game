@@ -37,15 +37,23 @@ public class DialogueTriggerArea : MonoBehaviour {
             // end bubble anim
             endLine = textLines.Length;
 			dialogueManager.EnableTextBox(); // open dialogue box
-            dialogueManager.nameText.text = "@" + dialogueManager.nameJamey;
+            dialogueManager.nameText.text = "@" + dialogueManager.nameMagicBot;
 
             if (currentLine < endLine)
             {
+                // pause player animation
                 other.GetComponent<Animator>().speed = 0;
 
-                dialogueManager.DisplayNextSentence(dialogueManager.tweetJamey);
-                Debug.Log(textLines[currentLine]);
+				// scripted dialogue
+                dialogueManager.DisplayNextSentence(textLines[currentLine]);
+                Debug.Log(currentLine);
                 currentLine += 1; // next line in dialogue
+            } 
+            else if (currentLine == endLine) 
+            {
+                // show random tweet
+                dialogueManager.DisplayNextSentence(dialogueManager.tweetMagicBot);
+                currentLine += 1;
             }
             else
             {
