@@ -53,13 +53,13 @@ public class DialogueManager : MonoBehaviour {
     public void EnableTextBox()
     {
         dialogueBox.SetActive(true);
-        profileImage.SetActive(true);
+        profileImage.GetComponent<Image>().enabled = true;
     }
 
     public void DisableTextBox()
     {
         dialogueBox.SetActive(false);
-        profileImage.SetActive(false);
+        profileImage.GetComponent<Image>().enabled = false;
         Debug.Log("End of conversation");
     }
 
