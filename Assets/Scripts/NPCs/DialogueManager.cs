@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // necessary for UI objects like Text
@@ -7,9 +8,13 @@ public class DialogueManager : MonoBehaviour {
     /*///////////////////////////////////*/
     public string key, secret, accessToken;
     [SerializeField]
-    Twitter.TwitterUser user;
+    public Twitter.TwitterUser userJamey;
     [SerializeField]
-    public Twitter.Tweet[] tweets;
+    public Twitter.Tweet[] tweetsJamey;
+    public string nameJamey;
+    public string urlJamey;
+	public string tweetJamey;
+
     /*///////////////////////////////////*/
 
 	public GameObject dialogueBox; // access the dialogue box object
@@ -17,16 +22,26 @@ public class DialogueManager : MonoBehaviour {
     public Text dialogueText; // where to put the Dialogue game object in the Inspector
     public GameObject profileImage; // Twitter profile image
 
-    void Start()
+    public void Start()
     {
         /*///////////////////////////////////*/
         accessToken = Twitter.API.GetTwitterAccessToken(key, secret);
-        user = Twitter.API.GetProfileInfo("jameydeorio", accessToken, false);
-        tweets = Twitter.API.GetUserTimeline("jameydeorio", 1, accessToken);
-        Debug.Log(tweets[0].text);
+        userJamey = Twitter.API.GetProfileInfo("jameydeorio", accessToken, false);
+        tweetsJamey = Twitter.API.GetUserTimeline("jameydeorio", 200, accessToken);
+
+
+        nameJamey = userJamey.screen_name; // get the user name
+        urlJamey = userJamey.profile_image_url; // get the profile image
+        urlJamey.Replace("_normal", ""); // original size, not 48x48
         /*///////////////////////////////////*/
 
         DisableTextBox();
+    }
+
+    public void Update()
+    {
+        int randomIndex = UnityEngine.Random.Range(0, tweetsJamey.Length); // random index for tweet
+		tweetJamey = tweetsJamey[randomIndex].text; // text of the random tweet
     }
 
     public void DisplayNextSentence(string nextSentence)

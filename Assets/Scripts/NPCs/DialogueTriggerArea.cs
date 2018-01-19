@@ -37,12 +37,13 @@ public class DialogueTriggerArea : MonoBehaviour {
             // end bubble anim
             endLine = textLines.Length;
 			dialogueManager.EnableTextBox(); // open dialogue box
+            dialogueManager.nameText.text = "@" + dialogueManager.nameJamey;
 
             if (currentLine < endLine)
             {
                 other.GetComponent<Animator>().speed = 0;
 
-                dialogueManager.DisplayNextSentence(dialogueManager.tweets[0].text);
+                dialogueManager.DisplayNextSentence(dialogueManager.tweetJamey);
                 Debug.Log(textLines[currentLine]);
                 currentLine += 1; // next line in dialogue
             }
@@ -50,8 +51,6 @@ public class DialogueTriggerArea : MonoBehaviour {
             {
                 dialogueManager.DisableTextBox(); // close dialogue box
                 currentLine = 0;
-                // play melt anim
-                // destroy game object (to get rid of rigid body)
                 if (onConversationEnd != null)
                 {
                     onConversationEnd();
