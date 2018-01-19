@@ -26,22 +26,18 @@ public class DialogueManager : MonoBehaviour {
     public void Start()
     {
         /*///////////////////////////////////*/
-        accessToken = Twitter.API.GetTwitterAccessToken(key, secret);
+        accessToken = Twitter.API.GetTwitterAccessToken(key, secret); // generate access token
         userMagicBot = Twitter.API.GetProfileInfo("magicrealismbot", accessToken, false);
-        tweetsMagicBot = Twitter.API.GetUserTimeline("magicrealismbot", 200, accessToken);
-
+        tweetsMagicBot = Twitter.API.GetUserTimeline("magicrealismbot", 100, accessToken);
 
         nameMagicBot = userMagicBot.screen_name; // get the user name
         urlMagicBot = userMagicBot.profile_image_url.Replace("_normal", ""); // get the profile image // original size, not 48x48
+		
+        int randomIndex = UnityEngine.Random.Range(0, tweetsMagicBot.Length); // random index for tweet
+		tweetMagicBot = tweetsMagicBot[randomIndex].text; // text of the random tweet
         /*///////////////////////////////////*/
 
         DisableTextBox();
-    }
-
-    public void Update() // should probably not be in Update
-    {
-        int randomIndex = UnityEngine.Random.Range(0, tweetsMagicBot.Length); // random index for tweet
-		tweetMagicBot = tweetsMagicBot[randomIndex].text; // text of the random tweet
     }
 
     public void DisplayNextSentence(string nextSentence)

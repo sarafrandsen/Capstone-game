@@ -28,11 +28,6 @@ public class PlayerStartPosition : MonoBehaviour {
             theCamera.transform.position = new Vector3(transform.position.x, transform.position.y, theCamera.transform.position.z); // set default position camera should point
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
 
 public enum WorldOrientation

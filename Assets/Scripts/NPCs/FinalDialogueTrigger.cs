@@ -51,7 +51,7 @@ public class FinalDialogueTrigger : MonoBehaviour {
                 dialogueManager.DisplayNextSentence(textLines[currentLine]);
                 currentLine += 1; // next line in dialogue
             }
-            else if (currentLine > endLine)
+            else if (currentLine >= endLine)
             {
                 if (currentStory < gameData.storiesCollected.Count)
                 {
@@ -60,10 +60,11 @@ public class FinalDialogueTrigger : MonoBehaviour {
                     gameData.storiesCollected.Add(dialogueManager.tweetMagicBot);
                     currentStory += 1;
                 }
-                else if (currentStory > gameData.storiesCollected.Count)
+                else
                 {
                     dialogueManager.DisableTextBox(); // close dialogue box
                     currentLine = 0;
+                    currentStory = 0;
                     if (onConversationEnd != null)
                     {
                         onConversationEnd();

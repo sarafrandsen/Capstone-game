@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff36ee44bcbf0446ebb3a2f7195203a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueTriggerArea: {fileID: 0}
+  dialogueTriggerArea: {fileID: 875315113}
 --- !u!1001 &54559605
 Prefab:
   m_ObjectHideFlags: 0
@@ -144,12 +144,12 @@ Prefab:
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 299.5
+      value: 261.5
       objectReference: {fileID: 0}
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 224.5
+      value: 196
       objectReference: {fileID: 0}
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}

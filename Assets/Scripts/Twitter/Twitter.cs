@@ -28,7 +28,7 @@ namespace Twitter
 		//Profile/Tweet creation date
 		public string created_at;
 		//Formated date time
-		public Twitter_DateTime FormatedDateTime;
+		//public Twitter_DateTime FormatedDateTime;
 		//The ID of the user of tweet
 		public string id;
 		//Language
@@ -39,14 +39,14 @@ namespace Twitter
 			char[] delim = { ' ', ':' };
 			string[] chunks = created_at.Split(delim);
 
-			FormatedDateTime.Weekday = chunks [0];
-			FormatedDateTime.Month = chunks [1];
-			FormatedDateTime.Day = int.Parse(chunks [2]);
-			FormatedDateTime.Hour = int.Parse(chunks [3]);
-			FormatedDateTime.Minute = int.Parse(chunks [4]);
-			FormatedDateTime.Second = int.Parse(chunks [5]);
-			FormatedDateTime.Offset = chunks [6];
-			FormatedDateTime.Year = int.Parse(chunks [7]);
+			//FormatedDateTime.Weekday = chunks [0];
+			//FormatedDateTime.Month = chunks [1];
+			//FormatedDateTime.Day = int.Parse(chunks [2]);
+			//FormatedDateTime.Hour = int.Parse(chunks [3]);
+			//FormatedDateTime.Minute = int.Parse(chunks [4]);
+			//FormatedDateTime.Second = int.Parse(chunks [5]);
+			//FormatedDateTime.Offset = chunks [6];
+			//FormatedDateTime.Year = int.Parse(chunks [7]);
 		}
 	}
 
@@ -77,7 +77,7 @@ namespace Twitter
 	[System.Serializable]
 	public class Tweet : classTweetBase
 	{
-		public Retweet retweeted_status;
+		//public Retweet retweeted_status;
 	}
 
 	[System.Serializable]
@@ -122,7 +122,7 @@ namespace Twitter
 		//Number of tweets
 		public int statuses_count;
 		//The last tweet from the users profile (not counting pinned tweets)
-		public Tweet status;
+		//public Tweet status;
 		//Backgrond colour of the user's profile page
 		public string profile_background_color;
 		//URL of user avatar
@@ -166,8 +166,8 @@ namespace Twitter
 				try {
 					output [i] = JsonUtility.FromJson<Tweet>(turnMeIntoTweets [i]);
 					output [i].FormatCreationTime();
-					if (output [i].retweeted_status.created_at != null)
-						output [i].retweeted_status.FormatCreationTime();
+					//if (output [i].retweeted_status.created_at != null)
+					//	output [i].retweeted_status.FormatCreationTime();
 				}
 				catch {
 					Debug.Log("JSON failed in reading tweet");
@@ -260,11 +260,11 @@ namespace Twitter
 			TwitterUser output = JsonUtility.FromJson<TwitterUser>(s);
 			if (output != null) {
 				output.FormatCreationTime();
-				if (output.status.created_at != null) {
-					output.status.FormatCreationTime();
-					if (output.status.retweeted_status.created_at != null)
-						output.status.retweeted_status.FormatCreationTime();
-				}
+				//if (output.status.created_at != null) {
+				//	output.status.FormatCreationTime();
+					//if (output.status.retweeted_status.created_at != null)
+					//	output.status.retweeted_status.FormatCreationTime();
+				//}
 				if (output.screen_name == " ")
 					output.screen_name = "Somebody with a non-ascii name";
 				Debug.Log(output.screen_name + " profile retrieved");
@@ -320,8 +320,8 @@ namespace Twitter
 				          WebRequest("https://api.twitter.com/1.1/statuses/show.json?id=" + ID,token)
 			          );
 			t.FormatCreationTime();
-			if (t.retweeted_status.created_at != null)
-				t.retweeted_status.FormatCreationTime();
+			//if (t.retweeted_status.created_at != null)
+			//	t.retweeted_status.FormatCreationTime();
 			return t;
 		}
 

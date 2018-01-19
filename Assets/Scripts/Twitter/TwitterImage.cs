@@ -6,12 +6,10 @@ using UnityEngine.UI;
 public class TwitterImage : MonoBehaviour
 {
     private Image profileImage;
-    private DialogueManager dialogueManager;
 
     void Start()
     {
         profileImage = GetComponent<Image>();
-        dialogueManager = FindObjectOfType<DialogueManager>();
 
         StartCoroutine(LoadProfileImage());
     }
@@ -21,8 +19,6 @@ public class TwitterImage : MonoBehaviour
         //string url = dialogueManager.urlMagicBot;
         string url = "http://pbs.twimg.com/profile_images/668872745329885184/67TNOs2A.png";
         var www = new WWW(url);
-        Debug.Log("Profile image download in progress");
-        Debug.Log(url);
         yield return www;
 
         Texture2D texture = new Texture2D(100, 100);
