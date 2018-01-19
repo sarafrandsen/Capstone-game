@@ -6,7 +6,7 @@ public class GameData : MonoBehaviour {
     [HideInInspector]
     public Dictionary<string, bool> fireDoors;
     [SerializeField]
-    public Dictionary<string, string> storiesCollected;
+    public List<string> storiesCollected;
 
     private static bool gameDataExists; // game data state saved between scenes
 
@@ -30,17 +30,6 @@ public class GameData : MonoBehaviour {
             { "West", false },
         };
 
-        storiesCollected = new Dictionary<string, string>() {
-            { "North", "" },
-            { "East", "" },
-            { "South", "" },
-            { "West", "" },
-            { "Test", "" }
-        };
+        storiesCollected = new List<string>();
 	}
-
-    void Update() {
-        
-		Debug.Log(storiesCollected["Test"]);
-    }
 }

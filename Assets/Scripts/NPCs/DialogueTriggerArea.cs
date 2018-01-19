@@ -54,7 +54,7 @@ public class DialogueTriggerArea : MonoBehaviour {
             {
                 // show random tweet
                 dialogueManager.DisplayNextSentence(dialogueManager.tweetMagicBot);
-                gameData.storiesCollected[tag] = dialogueManager.tweetMagicBot;
+                gameData.storiesCollected.Add(dialogueManager.tweetMagicBot);
                 currentLine += 1;
             }
             else
