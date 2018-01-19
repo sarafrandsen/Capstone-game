@@ -11,6 +11,8 @@ TagManager:
   - South
   - East
   - West
+  - Dialogue1
+  - Test
   layers:
   - Default
   - TransparentFX
