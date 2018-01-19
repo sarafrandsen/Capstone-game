@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FinalDialogueTriggerArea : MonoBehaviour {
+public class FinalDialogueTrigger : MonoBehaviour {
     public TextAsset textFile; // TextAsset: literally text file assets
     private string[] textLines; // each line of the text asset is assigned to an index
 
@@ -51,7 +51,7 @@ public class FinalDialogueTriggerArea : MonoBehaviour {
                 dialogueManager.DisplayNextSentence(textLines[currentLine]);
                 currentLine += 1; // next line in dialogue
             }
-            else if (currentLine == endLine)
+            else if (currentLine > endLine)
             {
                 if (currentStory < gameData.storiesCollected.Count)
                 {
