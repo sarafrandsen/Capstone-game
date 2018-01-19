@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour {
 
     [SerializeField]
     public Twitter.Tweet[] tweetsMagicBot;
+
     public string nameMagicBot;
     public string urlMagicBot;
 	public string tweetMagicBot;
