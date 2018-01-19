@@ -60,7 +60,6 @@ public class DialogueManager : MonoBehaviour {
     {
         dialogueBox.SetActive(false);
         profileImage.GetComponent<Image>().enabled = false;
-        Debug.Log("End of conversation");
     }
 
     IEnumerator TypeSentence(string sentence) // instead of updating text directly, using coroutine

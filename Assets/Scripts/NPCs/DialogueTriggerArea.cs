@@ -13,6 +13,7 @@ public class DialogueTriggerArea : MonoBehaviour {
 	private int endLine; // last line in text
 
     private CameraController theCamera;
+    private GameData gameData;
 
     public System.Action onConversationEnd;
 
@@ -28,6 +29,7 @@ public class DialogueTriggerArea : MonoBehaviour {
         //bubble = GetComponent<Animation>();
 
         theCamera = FindObjectOfType<CameraController>();
+        gameData = FindObjectOfType<GameData>();
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -46,13 +48,13 @@ public class DialogueTriggerArea : MonoBehaviour {
 
 				// scripted dialogue
                 dialogueManager.DisplayNextSentence(textLines[currentLine]);
-                Debug.Log(currentLine);
                 currentLine += 1; // next line in dialogue
             } 
             else if (currentLine == endLine) 
             {
                 // show random tweet
                 dialogueManager.DisplayNextSentence(dialogueManager.tweetMagicBot);
+                gameData.storiesCollected[tag] = dialogueManager.tweetMagicBot;
                 currentLine += 1;
             }
             else
