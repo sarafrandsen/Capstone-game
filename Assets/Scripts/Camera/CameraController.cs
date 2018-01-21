@@ -73,7 +73,7 @@ public class CameraController : MonoBehaviour {
         }
         else if (worldOrientation == WorldOrientation.SideScroll)
         {
-            theCamera.orthographicSize = 4;
+            theCamera.orthographicSize = 10;
         }
     }
 }
