@@ -18,6 +18,7 @@ public class NpcMovement : MonoBehaviour
     private Vector2 minWalkAreaPt; // lower left corner of box area (min val)
     private Vector2 maxWalkAreaPt; // upper right corner of box area (max val)
     private bool hasWalkArea;
+    private SpriteRenderer sprite;
 
     // Use this for initialization
     void Start()
@@ -47,16 +48,7 @@ public class NpcMovement : MonoBehaviour
             // switch statements: given a var, here are the options available for it
             switch (walkDirection)
             {
-                case 0: // North
-                    npcRigBod.velocity = new Vector2(0, moveSpeed);
-
-                    if (hasWalkArea && transform.position.y > maxWalkAreaPt.y)
-                    {
-                        StopMoving();
-                    }
-                    break;
-
-                case 1: // East
+                case 0: // East
                     npcRigBod.velocity = new Vector2(moveSpeed, 0);
 
                     if (hasWalkArea && transform.position.x > maxWalkAreaPt.x)
@@ -64,16 +56,9 @@ public class NpcMovement : MonoBehaviour
                         StopMoving();
                     }
                     break;
-                case 2: // South
-                    npcRigBod.velocity = new Vector2(0, -moveSpeed);
-
-                    if (hasWalkArea && transform.position.y < minWalkAreaPt.y)
-                    {
-                        StopMoving();
-                    }
-                    break;
-                case 3: // West
+                case 1: // West
                     npcRigBod.velocity = new Vector2(-moveSpeed, 0);
+                    //GetComponent<Sprite>().flipX = true;
 
                     if (hasWalkArea && transform.position.x < minWalkAreaPt.x)
                     {
@@ -103,7 +88,7 @@ public class NpcMovement : MonoBehaviour
     // randomly choose the direction they will move in
     public void SetDirection()
     {
-        walkDirection = Random.Range(0, 4); // non-inclusive
+        walkDirection = Random.Range(0, 2); // non-inclusive
         isMoving = true;
         walkCounter = walkTime;
     }

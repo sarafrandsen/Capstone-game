@@ -12,7 +12,7 @@ TagManager:
   - East
   - West
   - Dialogue1
-  - Test
+  - Environment
   layers:
   - Default
   - TransparentFX
@@ -25,7 +25,7 @@ TagManager:
   - Background
   - NPC
   - Player
-  - 
+  - Environment
   - 
   - 
   - 

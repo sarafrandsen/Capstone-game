@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: aa5aeaec30bb842dca25c118d3f95d23
-timeCreated: 1515979119
+timeCreated: 1516567841
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -54,19 +54,19 @@ TextureImporter:
     21300094: rat and bat spritesheet calciumtrice_47
     21300096: rat and bat spritesheet calciumtrice_48
     21300098: rat and bat spritesheet calciumtrice_49
-    21300100: rat and bat spritesheet calciumtrice_50
-    21300102: rat and bat spritesheet calciumtrice_51
-    21300104: rat and bat spritesheet calciumtrice_52
-    21300106: rat and bat spritesheet calciumtrice_53
-    21300108: rat and bat spritesheet calciumtrice_54
-    21300110: rat and bat spritesheet calciumtrice_55
-    21300112: rat and bat spritesheet calciumtrice_56
-    21300114: rat and bat spritesheet calciumtrice_57
-    21300116: rat and bat spritesheet calciumtrice_58
-    21300118: rat and bat spritesheet calciumtrice_59
-    21300120: rat and bat spritesheet calciumtrice_60
-    21300122: rat and bat spritesheet calciumtrice_61
-    21300124: rat and bat spritesheet calciumtrice_62
+    21300100: bat1
+    21300102: bat2
+    21300104: bat3
+    21300106: bat4
+    21300108: bat5
+    21300110: bat6
+    21300112: bat7
+    21300114: bat8
+    21300116: bat9
+    21300118: bat10
+    21300120: bat12
+    21300122: bat13
+    21300124: bat14
     21300126: rat and bat spritesheet calciumtrice_63
     21300128: rat and bat spritesheet calciumtrice_64
     21300130: rat and bat spritesheet calciumtrice_65
@@ -896,7 +896,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat and bat spritesheet calciumtrice_50
+      name: bat1
       rect:
         serializedVersion: 2
         x: 0
@@ -910,7 +910,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat and bat spritesheet calciumtrice_51
+      name: bat2
       rect:
         serializedVersion: 2
         x: 32
@@ -924,7 +924,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat and bat spritesheet calciumtrice_52
+      name: bat3
       rect:
         serializedVersion: 2
         x: 64
@@ -938,7 +938,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat and bat spritesheet calciumtrice_53
+      name: bat4
       rect:
         serializedVersion: 2
         x: 96
@@ -952,7 +952,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat and bat spritesheet calciumtrice_54
+      name: bat5
       rect:
         serializedVersion: 2
         x: 128
@@ -966,7 +966,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat and bat spritesheet calciumtrice_55
+      name: bat6
       rect:
         serializedVersion: 2
         x: 160
@@ -980,7 +980,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat and bat spritesheet calciumtrice_56
+      name: bat7
       rect:
         serializedVersion: 2
         x: 192
@@ -994,7 +994,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat and bat spritesheet calciumtrice_57
+      name: bat8
       rect:
         serializedVersion: 2
         x: 224
@@ -1008,7 +1008,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat and bat spritesheet calciumtrice_58
+      name: bat9
       rect:
         serializedVersion: 2
         x: 256
@@ -1022,7 +1022,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat and bat spritesheet calciumtrice_59
+      name: bat10
       rect:
         serializedVersion: 2
         x: 288
@@ -1036,7 +1036,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat and bat spritesheet calciumtrice_60
+      name: bat12
       rect:
         serializedVersion: 2
         x: 0
@@ -1050,7 +1050,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat and bat spritesheet calciumtrice_61
+      name: bat13
       rect:
         serializedVersion: 2
         x: 32
@@ -1064,7 +1064,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat and bat spritesheet calciumtrice_62
+      name: bat14
       rect:
         serializedVersion: 2
         x: 64
