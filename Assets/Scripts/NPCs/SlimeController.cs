@@ -50,13 +50,13 @@ public class SlimeController : MonoBehaviour
         if (fireToFocusOn != null)
         {
             // Move camera to fire
-            theCamera.doPanning = true;
+            //theCamera.doPanning = true;
             theCamera.PanToFollow(fireToFocusOn, 5);
 
             // Fire starts
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(1.0f);
             fireToFocusOn.GetComponent<Animator>().SetBool("FireExtinguished", false);
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(1.0f);
         }
 
         // Reset camera
