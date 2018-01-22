@@ -8,6 +8,8 @@ public class GameData : MonoBehaviour {
     [SerializeField]
     public List<string> storiesCollected;
 
+    public bool cheatMode = false;
+
     private static bool gameDataExists; // game data state saved between scenes
 
     // Use this for initialization
@@ -31,5 +33,14 @@ public class GameData : MonoBehaviour {
         };
 
         storiesCollected = new List<string>();
+
+        if (cheatMode)
+        {
+            fireDoors["North"] = fireDoors["East"] = fireDoors["South"] = fireDoors["West"] = true;
+            storiesCollected.Add("A good story");
+            storiesCollected.Add("A better story");
+            storiesCollected.Add("A best story");
+            storiesCollected.Add("A worst story");
+        }
 	}
 }

@@ -57,7 +57,6 @@ public class FinalDialogueTrigger : MonoBehaviour {
                 {
                     // show random tweet
                     dialogueManager.DisplayNextSentence(gameData.storiesCollected[currentStory]);
-                    gameData.storiesCollected.Add(dialogueManager.tweetMagicBot);
                     currentStory += 1;
                 }
                 else
