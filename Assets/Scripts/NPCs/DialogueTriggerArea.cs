@@ -15,6 +15,7 @@ public class DialogueTriggerArea : MonoBehaviour {
     private CameraController theCamera;
     private GameData gameData;
 
+    public System.Action onConversationBegin;
     public System.Action onConversationEnd;
 
     void Start()
@@ -36,6 +37,11 @@ public class DialogueTriggerArea : MonoBehaviour {
     {
         if (other.name == "Player"&&  Input.GetKeyDown(KeyCode.Space))
         {
+            if (currentLine == 0 && onConversationBegin != null)
+            {
+                onConversationBegin();
+            }
+
             // end bubble anim
             endLine = textLines.Length;
 			dialogueManager.EnableTextBox(); // open dialogue box

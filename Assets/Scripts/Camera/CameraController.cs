@@ -15,6 +15,11 @@ public class CameraController : MonoBehaviour {
     private Vector3 offset; 
     private static bool cameraExists; // check for duplicate cameras
 
+    private bool doPanning = false;
+    private float zoomTarget;
+    private float zoomVelocity;
+    private Vector3 panVelocity;
+
 /*////////////////////////////////////////////*/
     void Start()
     {
@@ -33,6 +38,8 @@ public class CameraController : MonoBehaviour {
         theCamera = GetComponent<Camera>();
         halfHeight = theCamera.orthographicSize;
         halfWidth = halfHeight * Screen.width / Screen.height;
+
+        zoomTarget = theCamera.orthographicSize;
     }
 
 /*////////////////////////////////////////////*/
@@ -52,8 +59,17 @@ public class CameraController : MonoBehaviour {
         float clampedX = Mathf.Clamp(transform.position.x, minBounds.x + halfWidth, maxBounds.x - halfWidth);
         float clampedY = Mathf.Clamp(transform.position.y, minBounds.y + halfHeight, maxBounds.y - halfHeight);
         // new camera position using the clamped values
-        transform.position = new Vector3(clampedX, clampedY, transform.position.z);
 
+        if (doPanning)
+        {
+            Vector3 newTargetPos = new Vector3(clampedX, clampedY, transform.position.z);
+            transform.position = Vector3.SmoothDamp(transform.position, newTargetPos, ref panVelocity, 0.2f);
+            theCamera.orthographicSize = Mathf.SmoothDamp(theCamera.orthographicSize, zoomTarget, ref zoomVelocity, 0.2f);
+        }
+        else
+        {
+            transform.position = new Vector3(clampedX, clampedY, transform.position.z);
+        }
     }
 
     public void SetBounds(BoxCollider2D newBounds)
@@ -68,15 +84,32 @@ public class CameraController : MonoBehaviour {
     // WorldOrientation Enum set in PlayerStartPosition class
     public void SetOrientation(WorldOrientation worldOrientation, GameObject newFollowTarget)
     {
-        followTarget = newFollowTarget;
-
         if (worldOrientation == WorldOrientation.Overhead)
         {
-            theCamera.orthographicSize = 6;
+            PopToFollow(newFollowTarget, 6);
         }
         else if (worldOrientation == WorldOrientation.SideScroll)
         {
-            theCamera.orthographicSize = 15;
+            PopToFollow(newFollowTarget, 15);
         }
+    }
+
+    public void PopToFollow(GameObject newFollowTarget, float newSize)
+    {
+        panVelocity = Vector3.zero;
+        zoomVelocity = 0;
+        
+        followTarget = newFollowTarget;
+        theCamera.orthographicSize = newSize;
+
+        doPanning = false;
+    }
+
+    public void PanToFollow(GameObject newFollowTarget, float newSize)
+    {
+        zoomTarget = newSize;
+        followTarget = newFollowTarget;
+
+        doPanning = true;
     }
 }

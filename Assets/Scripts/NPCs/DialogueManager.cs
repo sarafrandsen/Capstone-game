@@ -24,6 +24,8 @@ public class DialogueManager : MonoBehaviour {
     public Text nameText; // where to put the character's name in inspector
     public Text dialogueText; // where to put the Dialogue game object in the Inspector
 
+    private CameraController theCamera;
+
     public void Start()
     {
         /*///////////////////////////////////*/
@@ -37,6 +39,8 @@ public class DialogueManager : MonoBehaviour {
         int randomIndex = UnityEngine.Random.Range(0, tweetsMagicBot.Length); // random index for tweet
 		tweetMagicBot = tweetsMagicBot[randomIndex].text; // text of the random tweet
         /*///////////////////////////////////*/
+
+        theCamera = FindObjectOfType<CameraController>();
 
         DisableTextBox();
     }

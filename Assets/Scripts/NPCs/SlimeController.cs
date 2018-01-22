@@ -8,15 +8,28 @@ public class SlimeController : MonoBehaviour
 
     private GameData gameData;
     private Animator anim;
+    private CameraController theCamera;
+
+    private float oldZoomSize;
+    private GameObject oldFollowTarget;
 
     // Use this for initialization
     void Start()
     {
+        dialogueTriggerArea.onConversationBegin = ConversationBegin;
         dialogueTriggerArea.onConversationEnd = ConversationEnd;
         gameData = FindObjectOfType<GameData>();
         anim = GetComponent<Animator>();
+        theCamera = FindObjectOfType<CameraController>();
 
         Debug.Log(tag);
+    }
+
+    void ConversationBegin()
+    {
+        oldZoomSize = theCamera.GetComponent<Camera>().orthographicSize;
+        oldFollowTarget = theCamera.followTarget;
+        theCamera.PopToFollow(this.gameObject, 5);
     }
 
     void ConversationEnd()
@@ -34,5 +47,12 @@ public class SlimeController : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
         this.gameObject.SetActive(false); // takes object off screen
+
+        // Move camera to fire
+
+        // Fire starts
+
+        // Reset camera
+        theCamera.PopToFollow(oldFollowTarget, oldZoomSize);
     }
 }
