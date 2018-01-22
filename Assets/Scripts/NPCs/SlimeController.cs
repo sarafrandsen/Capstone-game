@@ -28,7 +28,7 @@ public class SlimeController : MonoBehaviour
     {
         oldZoomSize = theCamera.GetComponent<Camera>().orthographicSize;
         oldFollowTarget = theCamera.followTarget;
-        theCamera.PopToFollow(this.gameObject, 5);
+        theCamera.PanToFollow(this.gameObject, 5);
     }
 
     void ConversationEnd()
@@ -50,7 +50,8 @@ public class SlimeController : MonoBehaviour
         if (fireToFocusOn != null)
         {
             // Move camera to fire
-            theCamera.PopToFollow(fireToFocusOn, 5);
+            theCamera.doPanning = true;
+            theCamera.PanToFollow(fireToFocusOn, 5);
 
             // Fire starts
             yield return new WaitForSeconds(2.0f);
@@ -59,7 +60,7 @@ public class SlimeController : MonoBehaviour
         }
 
         // Reset camera
-        theCamera.PopToFollow(oldFollowTarget, oldZoomSize);
+        theCamera.PanToFollow(oldFollowTarget, oldZoomSize);
         this.gameObject.SetActive(false); // takes object off screen
     }
 }

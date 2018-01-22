@@ -15,10 +15,13 @@ public class CameraController : MonoBehaviour {
     private Vector3 offset; 
     private static bool cameraExists; // check for duplicate cameras
 
-    private bool doPanning = false;
+    public bool doPanning = false;
     private float zoomTarget;
     private float zoomVelocity;
     private Vector3 panVelocity;
+
+
+
 
 /*////////////////////////////////////////////*/
     void Start()
@@ -63,8 +66,7 @@ public class CameraController : MonoBehaviour {
         if (doPanning)
         {
             Vector3 newTargetPos = new Vector3(clampedX, clampedY, transform.position.z);
-            transform.position = Vector3.SmoothDamp(transform.position, newTargetPos, ref panVelocity, 1f);
-            //theCamera.orthographicSize = Mathf.SmoothDamp(theCamera.orthographicSize, zoomTarget, ref zoomVelocity, 0.2f);
+            transform.position = Vector3.Lerp(transform.position, newTargetPos, 1f);
         }
         else
         {
@@ -108,7 +110,7 @@ public class CameraController : MonoBehaviour {
     public void PanToFollow(GameObject newFollowTarget, float newSize)
     {
         panVelocity = Vector3.zero;
-        zoomVelocity = 0;
+        zoomVelocity = 0.1f;
         
         //zoomTarget = newSize;
         theCamera.orthographicSize = newSize;
