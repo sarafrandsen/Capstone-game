@@ -18,7 +18,7 @@ public class CameraController : MonoBehaviour {
 /*////////////////////////////////////////////*/
     void Start()
     {
-        offset = transform.position - followTarget.transform.position;
+        offset = new Vector3(0, 0, -10);
 
         if (!cameraExists)
         {
@@ -40,6 +40,13 @@ public class CameraController : MonoBehaviour {
     private void LateUpdate()
     {
         transform.position = followTarget.transform.position + offset; // follow the target (player)
+		if (boundsBox == null)
+		{
+			boundsBox = FindObjectOfType<CameraBounds>().GetComponent<BoxCollider2D>();
+			minBounds = boundsBox.bounds.min;
+			maxBounds = boundsBox.bounds.max;
+		}
+
         // clamp: given a min val and a max val, make sure the current vals do not exceed them
         // Clamp(value, min, max)
         float clampedX = Mathf.Clamp(transform.position.x, minBounds.x + halfWidth, maxBounds.x - halfWidth);
@@ -47,12 +54,6 @@ public class CameraController : MonoBehaviour {
         // new camera position using the clamped values
         transform.position = new Vector3(clampedX, clampedY, transform.position.z);
 
-        if (boundsBox == null)
-        {
-            boundsBox = FindObjectOfType<CameraBounds>().GetComponent<BoxCollider2D>();
-            minBounds = boundsBox.bounds.min;
-            maxBounds = boundsBox.bounds.max;
-        }
     }
 
     public void SetBounds(BoxCollider2D newBounds)
@@ -65,15 +66,17 @@ public class CameraController : MonoBehaviour {
     /*////////////////////////////////////////////*/
     // overhead or side scroll
     // WorldOrientation Enum set in PlayerStartPosition class
-    public void SetOrientation(WorldOrientation worldOrientation)
+    public void SetOrientation(WorldOrientation worldOrientation, GameObject newFollowTarget)
     {
+        followTarget = newFollowTarget;
+
         if (worldOrientation == WorldOrientation.Overhead)
         {
             theCamera.orthographicSize = 6;
         }
         else if (worldOrientation == WorldOrientation.SideScroll)
         {
-            theCamera.orthographicSize = 10;
+            theCamera.orthographicSize = 15;
         }
     }
 }

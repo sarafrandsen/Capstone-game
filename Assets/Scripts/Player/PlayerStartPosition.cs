@@ -8,6 +8,7 @@ public class PlayerStartPosition : MonoBehaviour {
     public Vector2 startDirection; // enter in the GUI the direction player should face
     public string positionID;
     public WorldOrientation worldOriention = WorldOrientation.Overhead;
+    public GameObject followTarget;
 
     private PlayerController thePlayer;
     private CameraController theCamera;
@@ -25,6 +26,7 @@ public class PlayerStartPosition : MonoBehaviour {
             thePlayer.SetOrientation(worldOriention);
 
             theCamera = FindObjectOfType<CameraController>();
+            theCamera.SetOrientation(worldOriention, (followTarget != null) ? followTarget : thePlayer.gameObject);
             theCamera.transform.position = new Vector3(transform.position.x, transform.position.y, theCamera.transform.position.z); // set default position camera should point
         }
     }
