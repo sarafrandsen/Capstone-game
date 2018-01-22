@@ -8,21 +8,17 @@ public class CameraController : MonoBehaviour {
     public GameObject followTarget; // what the camera should center on (player)
 
     private Camera theCamera;
+	private static bool cameraExists; // check for duplicate cameras
     private float halfHeight; // half the view height
     private float halfWidth; // half the view width
     private Vector3 minBounds; // lower-left point of boundsBox
     private Vector3 maxBounds; // upper-right point of boundsBox
-    private Vector3 offset; 
-    private static bool cameraExists; // check for duplicate cameras
+    private Vector3 offset; // z-axis (-10)
 
-    public bool doPanning = false;
+	public bool doPanning = false;
     private float zoomTarget;
     private float zoomVelocity;
     private Vector3 panVelocity;
-
-
-
-    public GameObject newFollowTarget;
 /*////////////////////////////////////////////*/
     void Start()
     {
@@ -46,10 +42,11 @@ public class CameraController : MonoBehaviour {
     }
 
 /*////////////////////////////////////////////*/
-    // keep camera in scene bounds
     private void LateUpdate()
     {
-        transform.position = followTarget.transform.position + offset; // follow the target (player)
+        transform.position = followTarget.transform.position + offset; // follow the target (player or BG)
+
+		// keep camera in scene bounds
 		if (boundsBox == null)
 		{
 			boundsBox = FindObjectOfType<CameraBounds>().GetComponent<BoxCollider2D>();
@@ -61,16 +58,19 @@ public class CameraController : MonoBehaviour {
         // Clamp(value, min, max)
         float clampedX = Mathf.Clamp(transform.position.x, minBounds.x + halfWidth, maxBounds.x - halfWidth);
         float clampedY = Mathf.Clamp(transform.position.y, minBounds.y + halfHeight, maxBounds.y - halfHeight);
-        // new camera position using the clamped values
 
+		// new camera position using the clamped values
         if (doPanning)
         {
-            Vector3 newTargetPos = Vector3.Lerp(followTarget.transform.position, newFollowTarget.transform.position, Time.deltaTime * 2f);
-            transform.position = Vector3.SmoothDamp(transform.position, newTargetPos, ref panVelocity, 1f);
+            transform.position = Vector3.SmoothDamp(transform.position, , ref panVelocity, 1f);
         }
         else
         {
             doPanning = false;
+
+            Vector3 newTargetPos = new Vector3(clampedX, clampedY, transform.position.z);
+            transform.position = Vector3.SmoothDamp(transform.position, newTargetPos, ref panVelocity, 1f);
+            theCamera.orthographicSize = Mathf.SmoothDamp(theCamera.orthographicSize, zoomTarget, ref zoomVelocity, 0.2f);
         }
     }
 
