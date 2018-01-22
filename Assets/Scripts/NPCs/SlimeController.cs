@@ -5,6 +5,7 @@ using UnityEngine;
 public class SlimeController : MonoBehaviour
 {
     public DialogueTriggerArea dialogueTriggerArea;
+    public GameObject fireToFocusOn;
 
     private GameData gameData;
     private Animator anim;
@@ -21,8 +22,6 @@ public class SlimeController : MonoBehaviour
         gameData = FindObjectOfType<GameData>();
         anim = GetComponent<Animator>();
         theCamera = FindObjectOfType<CameraController>();
-
-        Debug.Log(tag);
     }
 
     void ConversationBegin()
@@ -34,6 +33,7 @@ public class SlimeController : MonoBehaviour
 
     void ConversationEnd()
     {
+        dialogueTriggerArea.enabled = !dialogueTriggerArea.enabled;   
         StartCoroutine(MeltBeforeDisappear());
     }
 
@@ -46,13 +46,20 @@ public class SlimeController : MonoBehaviour
         gameData.fireDoors[slime] = true; // change value in GameData dictionary
 
         yield return new WaitForSeconds(1.5f);
-        this.gameObject.SetActive(false); // takes object off screen
 
-        // Move camera to fire
+        if (fireToFocusOn != null)
+        {
+            // Move camera to fire
+            theCamera.PopToFollow(fireToFocusOn, 5);
 
-        // Fire starts
+            // Fire starts
+            yield return new WaitForSeconds(2.0f);
+            fireToFocusOn.GetComponent<Animator>().SetBool("FireExtinguished", false);
+            yield return new WaitForSeconds(2.0f);
+        }
 
         // Reset camera
         theCamera.PopToFollow(oldFollowTarget, oldZoomSize);
+        this.gameObject.SetActive(false); // takes object off screen
     }
 }

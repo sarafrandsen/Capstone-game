@@ -63,8 +63,8 @@ public class CameraController : MonoBehaviour {
         if (doPanning)
         {
             Vector3 newTargetPos = new Vector3(clampedX, clampedY, transform.position.z);
-            transform.position = Vector3.SmoothDamp(transform.position, newTargetPos, ref panVelocity, 0.2f);
-            theCamera.orthographicSize = Mathf.SmoothDamp(theCamera.orthographicSize, zoomTarget, ref zoomVelocity, 0.2f);
+            transform.position = Vector3.SmoothDamp(transform.position, newTargetPos, ref panVelocity, 1f);
+            //theCamera.orthographicSize = Mathf.SmoothDamp(theCamera.orthographicSize, zoomTarget, ref zoomVelocity, 0.2f);
         }
         else
         {
@@ -107,7 +107,11 @@ public class CameraController : MonoBehaviour {
 
     public void PanToFollow(GameObject newFollowTarget, float newSize)
     {
-        zoomTarget = newSize;
+        panVelocity = Vector3.zero;
+        zoomVelocity = 0;
+        
+        //zoomTarget = newSize;
+        theCamera.orthographicSize = newSize;
         followTarget = newFollowTarget;
 
         doPanning = true;
