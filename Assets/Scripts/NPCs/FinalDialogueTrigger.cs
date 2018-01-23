@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinalDialogueTrigger : MonoBehaviour {
     public TextAsset textFile; // TextAsset: literally text file assets
@@ -61,17 +62,35 @@ public class FinalDialogueTrigger : MonoBehaviour {
                 }
                 else
                 {
-                    dialogueManager.DisableTextBox(); // close dialogue box
-                    currentLine = 0;
-                    currentStory = 0;
-                    if (onConversationEnd != null)
-                    {
-                        onConversationEnd();
-                    }
-                    other.GetComponent<Animator>().speed = 1;
+					gameData.GetComponent<AudioSource>().Stop();
+                    SceneManager.LoadScene("Credits");
+                    // TODO: StartCoroutine(Fade(fadeTime:2));
                 }
             }
         }
+    }
+
+    private IEnumerator Fade(float fadeTime)
+    {
+        // NOTE: Don't let fadeTime be 0.
+        AudioSource gameDataAudioSource = gameData.GetComponent<AudioSource>();
+
+        float time = 0f;
+        while (time < fadeTime)
+        {
+            time += Time.deltaTime;
+            float t = time / fadeTime;
+            gameDataAudioSource.volume =  1 - t;
+
+            // TODO: Get a reference to a screen-wide UI image.
+            //UnityEngine.UI.Image dummy;
+            //dummy.canvasRenderer.SetAlpha(t);
+
+            yield return null;
+        }
+
+        gameDataAudioSource.Stop();
+        SceneManager.LoadScene("Credits");
     }
 
     private void OnTriggerEnter2D(Collider2D other)

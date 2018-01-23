@@ -10,6 +10,7 @@ public class GameData : MonoBehaviour {
 
     public bool cheatMode = false;
 
+
     private static bool gameDataExists; // game data state saved between scenes
 
     // Use this for initialization
@@ -42,5 +43,6 @@ public class GameData : MonoBehaviour {
             storiesCollected.Add("A best story");
             storiesCollected.Add("A worst story");
         }
+
 	}
 }
