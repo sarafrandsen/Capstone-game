@@ -35,43 +35,46 @@ public class DialogueTriggerArea : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.name == "Player"&&  Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey("joystick button 0"))
         {
-            if (currentLine == 0 && onConversationBegin != null)
+            if (other.name == "Player")
             {
-                onConversationBegin();
-            }
-
-            // end bubble anim
-            endLine = textLines.Length;
-			dialogueManager.EnableTextBox(); // open dialogue box
-            dialogueManager.nameText.text = "@" + dialogueManager.nameMagicBot;
-
-            if (currentLine < endLine)
-            {
-                // pause player animation
-                other.GetComponent<Animator>().speed = 0;
-
-				// scripted dialogue
-                dialogueManager.DisplayNextSentence(textLines[currentLine]);
-                currentLine += 1; // next line in dialogue
-            } 
-            else if (currentLine == endLine) 
-            {
-                // show random tweet
-                dialogueManager.DisplayNextSentence(dialogueManager.tweetMagicBot);
-                gameData.storiesCollected.Add(dialogueManager.tweetMagicBot);
-                currentLine += 1;
-            }
-            else
-            {
-                dialogueManager.DisableTextBox(); // close dialogue box
-                currentLine = 0;
-                if (onConversationEnd != null)
+                if (currentLine == 0 && onConversationBegin != null)
                 {
-                    onConversationEnd();
+                    onConversationBegin();
                 }
-                other.GetComponent<Animator>().speed = 1;
+
+                // end bubble anim
+                endLine = textLines.Length;
+                dialogueManager.EnableTextBox(); // open dialogue box
+                dialogueManager.nameText.text = "@" + dialogueManager.nameMagicBot;
+
+                if (currentLine < endLine)
+                {
+                    // pause player animation
+                    other.GetComponent<Animator>().speed = 0;
+
+                    // scripted dialogue
+                    dialogueManager.DisplayNextSentence(textLines[currentLine]);
+                    currentLine += 1; // next line in dialogue
+                }
+                else if (currentLine == endLine)
+                {
+                    // show random tweet
+                    dialogueManager.DisplayNextSentence(dialogueManager.tweetMagicBot);
+                    gameData.storiesCollected.Add(dialogueManager.tweetMagicBot);
+                    currentLine += 1;
+                }
+                else
+                {
+                    dialogueManager.DisableTextBox(); // close dialogue box
+                    currentLine = 0;
+                    if (onConversationEnd != null)
+                    {
+                        onConversationEnd();
+                    }
+                    other.GetComponent<Animator>().speed = 1;
+                }
             }
         }
     }

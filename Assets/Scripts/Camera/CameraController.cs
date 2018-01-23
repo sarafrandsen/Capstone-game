@@ -49,8 +49,6 @@ public class CameraController : MonoBehaviour
     /*////////////////////////////////////////////*/
     private void LateUpdate()
     {
-        transform.position = followTarget.transform.position + offset; // follow the target (player or BG)
-
         // keep camera in scene bounds
         if (boundsBox == null)
         {
@@ -72,6 +70,10 @@ public class CameraController : MonoBehaviour
             {
                 doPanning = false; // New - Jonathan
             }
+        }
+        else
+        {
+            transform.position = followTarget.transform.position + offset; // follow the target (player or BG)
         }
         //else
         //{
