@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FinalDialogueTrigger : MonoBehaviour {
     public TextAsset textFile; // TextAsset: literally text file assets
@@ -16,6 +17,7 @@ public class FinalDialogueTrigger : MonoBehaviour {
 
     private CameraController theCamera;
     private GameData gameData;
+    private Image dummyImage;
 
     public System.Action onConversationEnd;
 
@@ -32,6 +34,7 @@ public class FinalDialogueTrigger : MonoBehaviour {
 
         theCamera = FindObjectOfType<CameraController>();
         gameData = FindObjectOfType<GameData>();
+        dummyImage = FindObjectOfType<Image>();
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -64,7 +67,7 @@ public class FinalDialogueTrigger : MonoBehaviour {
                 {
 					gameData.GetComponent<AudioSource>().Stop();
                     SceneManager.LoadScene("Credits");
-                    // TODO: StartCoroutine(Fade(fadeTime:2));
+                    StartCoroutine(Fade(fadeTime:2));
                 }
             }
         }
@@ -83,9 +86,11 @@ public class FinalDialogueTrigger : MonoBehaviour {
             gameDataAudioSource.volume =  1 - t;
 
             // TODO: Get a reference to a screen-wide UI image.
-            //UnityEngine.UI.Image dummy;
-            //dummy.canvasRenderer.SetAlpha(t);
 
+            dummyImage.canvasRenderer.SetAlpha(t);
+            CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
+
+            canvasGroup.alpha -= t;
             yield return null;
         }
 

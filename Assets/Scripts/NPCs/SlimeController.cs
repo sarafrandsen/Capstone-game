@@ -54,7 +54,7 @@ public class SlimeController : MonoBehaviour
             // Fire starts
             yield return new WaitForSeconds(2.0f);
             fireToFocusOn.GetComponent<Animator>().SetBool("FireExtinguished", false);
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(2.5f);
         }
 
         // Reset camera
