@@ -19,6 +19,9 @@ public class CameraController : MonoBehaviour
     public bool doPanning = false;
     private Vector3 panStart; //New - Jonathan
     private Vector3 panEnd; //New - Jonathan
+    private float zoomStart;
+    private float zoomEnd;
+
     //private float zoomTarget;
     //private float zoomVelocity;
     //private Vector3 panVelocity;
@@ -46,6 +49,8 @@ public class CameraController : MonoBehaviour
         //zoomTarget = theCamera.orthographicSize;
     }
 
+    private float t = 0f;
+
     /*////////////////////////////////////////////*/
     private void LateUpdate()
     {
@@ -65,7 +70,10 @@ public class CameraController : MonoBehaviour
         // new camera position using the clamped values
         if (doPanning)
         {
-            transform.position = Vector3.Lerp(panStart, panEnd, Time.deltaTime * 1f); // New -Jonathan
+            t += Time.deltaTime;
+            t = Mathf.Min(t, 1f);
+            transform.position = Vector3.Lerp(panStart, panEnd, t); // New -Jonathan
+            theCamera.orthographicSize = Mathf.Lerp(zoomStart, zoomEnd, t);
             if (transform.position == panEnd) // New - Jonathan
             {
                 doPanning = false; // New - Jonathan
@@ -122,14 +130,18 @@ public class CameraController : MonoBehaviour
     {
         //panVelocity = Vector3.zero;
         //zoomVelocity = 0.1f;
+		panStart = followTarget.transform.position; // New -Jonathan
+        panStart.z = -10f;
+		panEnd = newFollowTarget.transform.position; // New - Jonathan
+        panEnd.z = -10f;
 
         //zoomTarget = newSize;
-        theCamera.orthographicSize = newSize;
+		//theCamera.orthographicSize = newSize;
+        zoomStart = theCamera.orthographicSize;
+        zoomEnd = newSize;
         followTarget = newFollowTarget;
 
-        panStart = followTarget.transform.position; // New -Jonathan
-        panEnd = newFollowTarget.transform.position; // New - Jonathan
-
         doPanning = true;
+        t = 0f;
     }
 }

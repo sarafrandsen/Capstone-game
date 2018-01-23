@@ -11,12 +11,18 @@ public class DialogueTriggerArea : MonoBehaviour {
     //private Animation bubble;
     private int currentLine; // current line on the screen
 	private int endLine; // last line in text
+    private bool turnedOff = false;
 
     private CameraController theCamera;
     private GameData gameData;
 
     public System.Action onConversationBegin;
     public System.Action onConversationEnd;
+
+    public void TurnOff()
+    {
+        turnedOff = true;
+    }
 
     void Start()
     {
@@ -35,7 +41,10 @@ public class DialogueTriggerArea : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetKey("joystick button 0"))
+        if (turnedOff)
+            return;
+        
+        if (Input.GetKeyDown("joystick button 0") || Input.GetKeyDown(KeyCode.Space))
         {
             if (other.name == "Player")
             {

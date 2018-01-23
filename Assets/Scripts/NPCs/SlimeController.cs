@@ -28,12 +28,12 @@ public class SlimeController : MonoBehaviour
     {
         oldZoomSize = theCamera.GetComponent<Camera>().orthographicSize;
         oldFollowTarget = theCamera.followTarget;
-        theCamera.PanToFollow(this.gameObject, 5);
+        theCamera.PopToFollow(this.gameObject, 5);
     }
 
     void ConversationEnd()
     {
-        dialogueTriggerArea.enabled = !dialogueTriggerArea.enabled;   
+        dialogueTriggerArea.TurnOff();   
         StartCoroutine(MeltBeforeDisappear());
     }
 
@@ -60,7 +60,7 @@ public class SlimeController : MonoBehaviour
         }
 
         // Reset camera
-        theCamera.PanToFollow(oldFollowTarget, oldZoomSize);
+        theCamera.PopToFollow(oldFollowTarget, oldZoomSize);
         this.gameObject.SetActive(false); // takes object off screen
     }
 }
