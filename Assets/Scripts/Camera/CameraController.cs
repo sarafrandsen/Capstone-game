@@ -21,10 +21,6 @@ public class CameraController : MonoBehaviour
     private Vector3 panEnd; //New - Jonathan
     private float zoomStart;
     private float zoomEnd;
-
-    //private float zoomTarget;
-    //private float zoomVelocity;
-    //private Vector3 panVelocity;
     /*////////////////////////////////////////////*/
     void Start()
     {
@@ -45,8 +41,6 @@ public class CameraController : MonoBehaviour
         theCamera = GetComponent<Camera>();
         halfHeight = theCamera.orthographicSize;
         halfWidth = halfHeight * Screen.width / Screen.height;
-
-        //zoomTarget = theCamera.orthographicSize;
     }
 
     private float t = 0f;
@@ -83,14 +77,6 @@ public class CameraController : MonoBehaviour
         {
             transform.position = followTarget.transform.position + offset; // follow the target (player or BG)
         }
-        //else
-        //{
-        //    doPanning = false;
-
-        //    Vector3 newTargetPos = new Vector3(clampedX, clampedY, transform.position.z);
-        //    transform.position = Vector3.SmoothDamp(transform.position, newTargetPos, ref panVelocity, 1f);
-        //    theCamera.orthographicSize = Mathf.SmoothDamp(theCamera.orthographicSize, zoomTarget, ref zoomVelocity, 0.2f);
-        //}
     }
 
     public void SetBounds(BoxCollider2D newBounds)
@@ -117,9 +103,6 @@ public class CameraController : MonoBehaviour
 
     public void PopToFollow(GameObject newFollowTarget, float newSize)
     {
-        //panVelocity = Vector3.zero;
-        //zoomVelocity = 0;
-
         followTarget = newFollowTarget;
         theCamera.orthographicSize = newSize;
 
@@ -128,15 +111,11 @@ public class CameraController : MonoBehaviour
 
     public void PanToFollow(GameObject newFollowTarget, float newSize)
     {
-        //panVelocity = Vector3.zero;
-        //zoomVelocity = 0.1f;
-		panStart = followTarget.transform.position; // New -Jonathan
+		panStart = followTarget.transform.position;
         panStart.z = -10f;
-		panEnd = newFollowTarget.transform.position; // New - Jonathan
+		panEnd = newFollowTarget.transform.position;
         panEnd.z = -10f;
 
-        //zoomTarget = newSize;
-		//theCamera.orthographicSize = newSize;
         zoomStart = theCamera.orthographicSize;
         zoomEnd = newSize;
         followTarget = newFollowTarget;
