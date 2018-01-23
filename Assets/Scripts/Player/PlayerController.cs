@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
     public Vector2 lastMove; // where the player faced when they stop moving
     public float moveSpeed; // movement speed--for velocity, not anim
     public string startPoint; // where they spawn in a new scene
+    public bool canMove;
 
 	private Rigidbody2D myRigBod;
 	private Animator anim;
@@ -39,6 +40,12 @@ public class PlayerController : MonoBehaviour {
     void Update () {
 
         isMoving = false; // idle anim
+
+        if (!canMove)
+        {
+            myRigBod.velocity = Vector2.zero;
+            return;
+        }
 
         // get the input from the keyboard
         float horizontal = Input.GetAxisRaw("Horizontal");

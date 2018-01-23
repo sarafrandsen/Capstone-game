@@ -25,6 +25,7 @@ public class DialogueManager : MonoBehaviour {
     public Text dialogueText; // where to put the Dialogue game object in the Inspector
 
     private CameraController theCamera;
+    private PlayerController thePlayer;
 
     public void Start()
     {
@@ -41,6 +42,7 @@ public class DialogueManager : MonoBehaviour {
         /*///////////////////////////////////*/
 
         theCamera = FindObjectOfType<CameraController>();
+        thePlayer = FindObjectOfType<PlayerController>();
 
         DisableTextBox();
     }
@@ -55,12 +57,14 @@ public class DialogueManager : MonoBehaviour {
     {
         dialogueBox.SetActive(true);
         profileImage.GetComponent<Image>().enabled = true;
+        thePlayer.canMove = false;
     }
 
     public void DisableTextBox()
     {
         dialogueBox.SetActive(false);
         profileImage.GetComponent<Image>().enabled = false;
+        thePlayer.canMove = true;
     }
 
     IEnumerator TypeSentence(string sentence) // instead of updating text directly, using coroutine

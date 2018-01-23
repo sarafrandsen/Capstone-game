@@ -87,10 +87,8 @@ public class FinalDialogueTrigger : MonoBehaviour {
 
             // TODO: Get a reference to a screen-wide UI image.
 
-            dummyImage.canvasRenderer.SetAlpha(t);
-            CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
+            dummyImage.color = new Color(0f, 0f, 0f, t);
 
-            canvasGroup.alpha -= t;
             yield return null;
         }
 
