@@ -45,18 +45,16 @@ public class SlimeController : MonoBehaviour
         string slime = this.tag;
         gameData.fireDoors[slime] = true; // change value in GameData dictionary
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.0f);
 
         if (fireToFocusOn != null)
         {
-            // Move camera to fire
-            //theCamera.doPanning = true;
             theCamera.PanToFollow(fireToFocusOn, 5);
 
             // Fire starts
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(1.5f);
             fireToFocusOn.GetComponent<Animator>().SetBool("FireExtinguished", false);
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(1.5f);
         }
 
         // Reset camera

@@ -68,9 +68,9 @@ public class CameraController : MonoBehaviour
             t = Mathf.Min(t, 1f);
             transform.position = Vector3.Lerp(panStart, panEnd, t); // New -Jonathan
             theCamera.orthographicSize = Mathf.Lerp(zoomStart, zoomEnd, t);
-            if (transform.position == panEnd) // New - Jonathan
+            if (transform.position == panEnd)
             {
-                doPanning = false; // New - Jonathan
+                doPanning = false;
             }
         }
         else

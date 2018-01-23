@@ -87,22 +87,4 @@ public class DialogueTriggerArea : MonoBehaviour {
             }
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.name == "Player")
-        {
-            // begin bubble anim
-            //bubble.Play(); 
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.name == "Player")
-        {
-            // end bubble anim
-        }
-    }
-
 }
