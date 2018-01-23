@@ -28,7 +28,7 @@ public class FireObject : MonoBehaviour {
 
     void ExtinguishFire() {
         // change animation to empty fire 
-        anim.SetBool("FireExtinguished", true);
+        anim.SetBool("FireExtinguished", false);
         // disable 'load new area' script
         boxCollider.isTrigger = false;
     }
