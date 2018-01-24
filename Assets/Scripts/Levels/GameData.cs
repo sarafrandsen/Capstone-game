@@ -16,12 +16,6 @@ public class GameData : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        if (this.showInstructions)
-        {
-            this.dialogueManager.ShowInstructions();
-            this.showInstructions = false;
-        }
-
         if (!gameDataExists)
         {
             gameDataExists = true;
