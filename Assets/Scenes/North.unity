@@ -127,12 +127,12 @@ Prefab:
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 360.5
+      value: 262.5
       objectReference: {fileID: 0}
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 270.5
+      value: 197
       objectReference: {fileID: 0}
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}
@@ -386,6 +386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTriggerArea: {fileID: 380515338}
   fireToFocusOn: {fileID: 1644820438}
+  thePlayer: {fileID: 0}
 --- !u!1 &973606531
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,12 +880,12 @@ Prefab:
     - target: {fileID: 68518561118420318, guid: cb434b603b2304a449e7755d2caa4c9f,
         type: 2}
       propertyPath: m_Points.Array.data[0].x
-      value: 10.75
+      value: 17.99
       objectReference: {fileID: 0}
     - target: {fileID: 68518561118420318, guid: cb434b603b2304a449e7755d2caa4c9f,
         type: 2}
       propertyPath: m_Points.Array.data[1].x
-      value: -9.5
+      value: -17.28
       objectReference: {fileID: 0}
     - target: {fileID: 68041159357208222, guid: cb434b603b2304a449e7755d2caa4c9f,
         type: 2}

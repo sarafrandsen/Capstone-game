@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour {
         } else {
             Destroy(gameObject);
         }
+        canMove = true;
 	}
 	
 /*////////////////////////////////////////////*/

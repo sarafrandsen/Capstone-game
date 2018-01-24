@@ -6,6 +6,7 @@ public class DialogueTriggerArea : MonoBehaviour {
     public TextAsset textFile; // TextAsset: literally text file assets
     private string[] textLines; // each line of the text asset is assigned to an index
 
+    private PlayerController thePlayer;
     private DialogueManager dialogueManager;
     private int currentLine; // current line on the screen
 	private int endLine; // last line in text
@@ -28,8 +29,10 @@ public class DialogueTriggerArea : MonoBehaviour {
             textLines = (textFile.text.Split('\n')); // split at line break
         }
 
+        thePlayer = FindObjectOfType<PlayerController>();
         dialogueManager = FindObjectOfType<DialogueManager>();
         gameData = FindObjectOfType<GameData>();
+        thePlayer.canMove = true;
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -75,6 +78,7 @@ public class DialogueTriggerArea : MonoBehaviour {
                         onConversationEnd();
                     }
                     other.GetComponent<Animator>().speed = 1;
+                    thePlayer.canMove = true;
                 }
             }
         }

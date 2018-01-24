@@ -494,6 +494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTriggerArea: {fileID: 1596291532}
   fireToFocusOn: {fileID: 1644820438}
+  thePlayer: {fileID: 0}
 --- !u!1 &1367046587
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,7 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090d680eed4da43a5bc43e4bd235fa0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDirection: {x: 1, y: 0}
+  startDirection: {x: -1, y: 0}
   positionID: WestEntrance
   worldOriention: 1
   followTarget: {fileID: 75659516}
@@ -799,12 +800,12 @@ Prefab:
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 360.5
+      value: 262.5
       objectReference: {fileID: 0}
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 270.5
+      value: 197
       objectReference: {fileID: 0}
     - target: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
         type: 2}

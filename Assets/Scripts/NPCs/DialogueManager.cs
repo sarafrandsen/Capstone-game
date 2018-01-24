@@ -62,7 +62,7 @@ public class DialogueManager : MonoBehaviour {
     {
         dialogueBox.SetActive(false);
         profileImage.GetComponent<Image>().enabled = false;
-        thePlayer.canMove = true;
+
     }
 
     IEnumerator TypeSentence(string sentence) // instead of updating text directly, using coroutine

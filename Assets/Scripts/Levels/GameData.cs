@@ -10,12 +10,18 @@ public class GameData : MonoBehaviour {
 
     public bool cheatMode = false;
 
-
+    private static bool showInstructions; // instructions scene
     private static bool gameDataExists; // game data state saved between scenes
 
     // Use this for initialization
     void Start()
     {
+        if (this.showInstructions)
+        {
+            this.dialogueManager.ShowInstructions();
+            this.showInstructions = false;
+        }
+
         if (!gameDataExists)
         {
             gameDataExists = true;

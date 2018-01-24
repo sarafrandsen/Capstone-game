@@ -6,6 +6,7 @@ public class SlimeController : MonoBehaviour
 {
     public DialogueTriggerArea dialogueTriggerArea;
     public GameObject fireToFocusOn;
+    public PlayerController thePlayer;
 
     private GameData gameData;
     private Animator anim;
@@ -19,6 +20,7 @@ public class SlimeController : MonoBehaviour
     {
         dialogueTriggerArea.onConversationBegin = ConversationBegin;
         dialogueTriggerArea.onConversationEnd = ConversationEnd;
+        thePlayer = FindObjectOfType<PlayerController>();
         gameData = FindObjectOfType<GameData>();
         anim = GetComponent<Animator>();
         theCamera = FindObjectOfType<CameraController>();
@@ -28,7 +30,7 @@ public class SlimeController : MonoBehaviour
     {
         oldZoomSize = theCamera.GetComponent<Camera>().orthographicSize;
         oldFollowTarget = theCamera.followTarget;
-        theCamera.PopToFollow(this.gameObject, 5);
+        theCamera.PopToFollow(thePlayer.gameObject, 5);
     }
 
     void ConversationEnd()
