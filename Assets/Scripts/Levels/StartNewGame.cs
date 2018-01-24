@@ -67,13 +67,7 @@ public class StartNewGame : MonoBehaviour {
             }
             else
             {
-                //dialogueManager.dialogueBox.SetActive(false); // close dialogue box
-                //currentLine = 0;
-                //if (onConversationEnd != null)
-                //{
-					SceneManager.LoadScene(levelToLoad); // load scene (as specified in GUI for collider component
-                    //onConversationEnd();
-                //}
+				SceneManager.LoadScene(levelToLoad);
             }
         }
     }
