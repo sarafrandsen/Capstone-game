@@ -179,7 +179,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press 'A' to start
+  m_Text: Insert coin to start
 --- !u!222 &63071027
 CanvasRenderer:
   m_ObjectHideFlags: 0

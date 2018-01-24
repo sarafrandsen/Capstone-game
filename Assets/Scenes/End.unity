@@ -293,22 +293,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224180156483200372, guid: d066476d48eb4443c95f71dad094f382,
     type: 2}
   m_PrefabInternal: {fileID: 54559605}
---- !u!1 &54559607 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1167494898608792, guid: d066476d48eb4443c95f71dad094f382,
-    type: 2}
-  m_PrefabInternal: {fileID: 54559605}
---- !u!225 &54559608
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 54559607}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &159153008
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

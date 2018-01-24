@@ -31,17 +31,19 @@ public class GameData : MonoBehaviour {
             { "East", false },
             { "South", false },
             { "West", false },
+            { "NorthWest", false },
         };
 
         storiesCollected = new List<string>();
 
         if (cheatMode)
         {
-            fireDoors["North"] = fireDoors["East"] = fireDoors["South"] = fireDoors["West"] = true;
+            fireDoors["North"] = fireDoors["East"] = fireDoors["South"] = fireDoors["West"] = fireDoors["NorthWest"] = true;
             storiesCollected.Add("A good story");
             storiesCollected.Add("A better story");
             storiesCollected.Add("A best story");
             storiesCollected.Add("A worst story");
+            storiesCollected.Add("A terrible story");
         }
 
 	}

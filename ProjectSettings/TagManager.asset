@@ -13,6 +13,7 @@ TagManager:
   - West
   - Dialogue1
   - Environment
+  - NorthWest
   layers:
   - Default
   - TransparentFX
