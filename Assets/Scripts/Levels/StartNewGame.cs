@@ -25,19 +25,25 @@ public class StartNewGame : MonoBehaviour {
             instructionLines = (instructionsFile.text.Split('\n')); // split at line break
         }
 
+        //if (Scene.name == "Instructions")
+        //{
+        //    ShowInstructions();
+        //}
+
         dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
-	void Update () {
-        if (levelToLoad == "Instructions" && (Input.GetKeyDown(KeyCode.Space) || Input.GetKey("joystick button 0")))
-        {
-            SceneManager.LoadScene(levelToLoad); // load scene (as specified in GUI for collider component
-        } 
-        else 
-        {
-            ShowInstructions();
-        }
-	}
+    void Update () {
+		if (levelToLoad == "Instructions" && (Input.GetKeyDown(KeyCode.Space) || Input.GetKey("joystick button 0")))
+		{
+			// fade
+			SceneManager.LoadScene(levelToLoad);
+		} 
+		else 
+		{
+			ShowInstructions();
+		}
+    }
 
     public void ShowInstructions()
     {
@@ -61,14 +67,13 @@ public class StartNewGame : MonoBehaviour {
             }
             else
             {
-            dialogueManager.dialogueBox.SetActive(false); // close dialogue box
-                currentLine = 0;
-                if (onConversationEnd != null)
-                {
-                    onConversationEnd();
-                    SceneManager.LoadScene(levelToLoad); // load scene (as specified in GUI for collider component
-       
-                }
+                //dialogueManager.dialogueBox.SetActive(false); // close dialogue box
+                //currentLine = 0;
+                //if (onConversationEnd != null)
+                //{
+					SceneManager.LoadScene(levelToLoad); // load scene (as specified in GUI for collider component
+                    //onConversationEnd();
+                //}
             }
         }
     }
