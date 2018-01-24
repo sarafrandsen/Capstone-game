@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class FinalDialogueTrigger : MonoBehaviour {
     public TextAsset textFile; // TextAsset: literally text file assets
+	public Image fadeOverlay;
+    public AudioSource finalSong;
     private string[] textLines; // each line of the text asset is assigned to an index
 
     private DialogueManager dialogueManager;
@@ -13,11 +15,10 @@ public class FinalDialogueTrigger : MonoBehaviour {
     //private Animation bubble;
     private int currentLine; // current line on the screen
     private int currentStory; // current random tweet being repeated back
-	private int endLine; // last line in text
+    private int endLine; // last line in text
 
     private CameraController theCamera;
     private GameData gameData;
-    private Image dummyImage;
 
     public System.Action onConversationEnd;
 
@@ -34,7 +35,10 @@ public class FinalDialogueTrigger : MonoBehaviour {
 
         theCamera = FindObjectOfType<CameraController>();
         gameData = FindObjectOfType<GameData>();
-        dummyImage = FindObjectOfType<Image>();
+
+
+        AudioSource gameDataAudioSource = gameData.GetComponent<AudioSource>();
+        gameDataAudioSource.Stop();
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -65,34 +69,36 @@ public class FinalDialogueTrigger : MonoBehaviour {
                 }
                 else
                 {
-					gameData.GetComponent<AudioSource>().Stop();
-                    SceneManager.LoadScene("Credits");
-                    StartCoroutine(Fade(fadeTime:2));
+					//gameData.GetComponent<AudioSource>().Stop();
+					//Destroy(other.gameObject);
+					//Destroy(theCamera.gameObject);
+					//Destroy(gameData.gameObject);
+                    //SceneManager.LoadScene("Credits");
+                    StartCoroutine(Fade(other.gameObject, fadeTime:2));
                 }
             }
         }
     }
 
-    private IEnumerator Fade(float fadeTime)
+    private IEnumerator Fade(GameObject player, float fadeTime)
     {
         // NOTE: Don't let fadeTime be 0.
-        AudioSource gameDataAudioSource = gameData.GetComponent<AudioSource>();
 
         float time = 0f;
         while (time < fadeTime)
         {
             time += Time.deltaTime;
             float t = time / fadeTime;
-            gameDataAudioSource.volume =  1 - t;
-
-            // TODO: Get a reference to a screen-wide UI image.
-
-            dummyImage.color = new Color(0f, 0f, 0f, t);
+            finalSong.volume =  1 - t;
+            fadeOverlay.color = new Color(0f, 0f, 0f, t);
 
             yield return null;
         }
 
-        gameDataAudioSource.Stop();
+        finalSong.Stop();
+        Destroy(player);
+        Destroy(theCamera.gameObject);
+        Destroy(gameData.gameObject);
         SceneManager.LoadScene("Credits");
     }
 
