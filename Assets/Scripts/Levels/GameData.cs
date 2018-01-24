@@ -30,7 +30,7 @@ public class GameData : MonoBehaviour {
             { "North", false },
             { "East", false },
             { "South", false },
-            { "West", false },
+            //{ "West", false },
             { "NorthWest", false },
         };
 
@@ -38,12 +38,12 @@ public class GameData : MonoBehaviour {
 
         if (cheatMode)
         {
-            fireDoors["North"] = fireDoors["East"] = fireDoors["South"] = fireDoors["West"] = fireDoors["NorthWest"] = true;
+            fireDoors["North"] = fireDoors["East"] = fireDoors["South"] = fireDoors["NorthWest"] = true;
             storiesCollected.Add("A good story");
             storiesCollected.Add("A better story");
             storiesCollected.Add("A best story");
             storiesCollected.Add("A worst story");
-            storiesCollected.Add("A terrible story");
+            //storiesCollected.Add("A terrible story");
         }
 
 	}
