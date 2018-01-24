@@ -56,11 +56,6 @@ public class CameraController : MonoBehaviour
             maxBounds = boundsBox.bounds.max;
         }
 
-        // clamp: given a min val and a max val, make sure the current vals do not exceed them
-        // Clamp(value, min, max)
-        float clampedX = Mathf.Clamp(transform.position.x, minBounds.x + halfWidth, maxBounds.x - halfWidth);
-        float clampedY = Mathf.Clamp(transform.position.y, minBounds.y + halfHeight, maxBounds.y - halfHeight);
-
         // new camera position using the clamped values
         if (doPanning)
         {
@@ -77,6 +72,13 @@ public class CameraController : MonoBehaviour
         {
             transform.position = followTarget.transform.position + offset; // follow the target (player or BG)
         }
+		
+        // clamp: given a min val and a max val, make sure the current vals do not exceed them
+        // Clamp(value, min, max)
+        float clampedX = Mathf.Clamp(transform.position.x, minBounds.x + halfWidth, maxBounds.x - halfWidth);
+        float clampedY = Mathf.Clamp(transform.position.y, minBounds.y + halfHeight, maxBounds.y - halfHeight);
+
+        transform.position = new Vector3(clampedX, clampedY, transform.position.z);
     }
 
     public void SetBounds(BoxCollider2D newBounds)
