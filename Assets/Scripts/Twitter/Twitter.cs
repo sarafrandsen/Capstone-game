@@ -36,8 +36,8 @@ namespace Twitter
 
 		public void FormatCreationTime ()
 		{
-			char[] delim = { ' ', ':' };
-			string[] chunks = created_at.Split(delim);
+			//char[] delim = { ' ', ':' };
+			//string[] chunks = created_at.Split(delim);
 
 			//FormatedDateTime.Weekday = chunks [0];
 			//FormatedDateTime.Month = chunks [1];

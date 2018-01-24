@@ -7,13 +7,10 @@ public class DialogueTriggerArea : MonoBehaviour {
     private string[] textLines; // each line of the text asset is assigned to an index
 
     private DialogueManager dialogueManager;
-    private Animator anim;
-    //private Animation bubble;
     private int currentLine; // current line on the screen
 	private int endLine; // last line in text
     private bool turnedOff = false;
 
-    private CameraController theCamera;
     private GameData gameData;
 
     public System.Action onConversationBegin;
@@ -32,10 +29,6 @@ public class DialogueTriggerArea : MonoBehaviour {
         }
 
         dialogueManager = FindObjectOfType<DialogueManager>();
-        anim = GetComponent<Animator>();
-        //bubble = GetComponent<Animation>();
-
-        theCamera = FindObjectOfType<CameraController>();
         gameData = FindObjectOfType<GameData>();
     }
 
@@ -53,7 +46,6 @@ public class DialogueTriggerArea : MonoBehaviour {
                     onConversationBegin();
                 }
 
-                // end bubble anim
                 endLine = textLines.Length;
                 dialogueManager.EnableTextBox(); // open dialogue box
                 dialogueManager.nameText.text = "@" + dialogueManager.nameMagicBot;

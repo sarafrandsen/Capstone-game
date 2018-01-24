@@ -24,7 +24,6 @@ public class DialogueManager : MonoBehaviour {
     public Text nameText; // where to put the character's name in inspector
     public Text dialogueText; // where to put the Dialogue game object in the Inspector
 
-    private CameraController theCamera;
     private PlayerController thePlayer;
 
     public void Start()
@@ -41,7 +40,6 @@ public class DialogueManager : MonoBehaviour {
 		tweetMagicBot = tweetsMagicBot[randomIndex].text; // text of the random tweet
         /*///////////////////////////////////*/
 
-        theCamera = FindObjectOfType<CameraController>();
         thePlayer = FindObjectOfType<PlayerController>();
 
         DisableTextBox();

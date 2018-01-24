@@ -43,38 +43,43 @@ public class FinalDialogueTrigger : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.name == "Player" && Input.GetKeyDown(KeyCode.Space))
+        if (other.name == "Player")
         {
-            // end bubble anim
-            endLine = textLines.Length;
-            dialogueManager.EnableTextBox(); // open dialogue box
-            dialogueManager.nameText.text = "@" + dialogueManager.nameMagicBot;
-
-            if (currentLine < endLine)
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown("joystick button 0"))
             {
-                // pause player animation
-                other.GetComponent<Animator>().speed = 0;
+                {
+                    // end bubble anim
+                    endLine = textLines.Length;
+                    dialogueManager.EnableTextBox(); // open dialogue box
+                    dialogueManager.nameText.text = "@" + dialogueManager.nameMagicBot;
 
-                // scripted dialogue
-                dialogueManager.DisplayNextSentence(textLines[currentLine]);
-                currentLine += 1; // next line in dialogue
-            }
-            else if (currentLine >= endLine)
-            {
-                if (currentStory < gameData.storiesCollected.Count)
-                {
-                    // show random tweet
-                    dialogueManager.DisplayNextSentence(gameData.storiesCollected[currentStory]);
-                    currentStory += 1;
-                }
-                else
-                {
-					//gameData.GetComponent<AudioSource>().Stop();
-					//Destroy(other.gameObject);
-					//Destroy(theCamera.gameObject);
-					//Destroy(gameData.gameObject);
-                    //SceneManager.LoadScene("Credits");
-                    StartCoroutine(Fade(other.gameObject, fadeTime:2));
+                    if (currentLine < endLine)
+                    {
+                        // pause player animation
+                        other.GetComponent<Animator>().speed = 0;
+
+                        // scripted dialogue
+                        dialogueManager.DisplayNextSentence(textLines[currentLine]);
+                        currentLine += 1; // next line in dialogue
+                    }
+                    else if (currentLine >= endLine)
+                    {
+                        if (currentStory < gameData.storiesCollected.Count)
+                        {
+                            // show random tweet
+                            dialogueManager.DisplayNextSentence(gameData.storiesCollected[currentStory]);
+                            currentStory += 1;
+                        }
+                        else
+                        {
+                            //gameData.GetComponent<AudioSource>().Stop();
+                            //Destroy(other.gameObject);
+                            //Destroy(theCamera.gameObject);
+                            //Destroy(gameData.gameObject);
+                            //SceneManager.LoadScene("Credits");
+                            StartCoroutine(Fade(other.gameObject, fadeTime: 5));
+                        }
+                    }
                 }
             }
         }
