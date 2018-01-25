@@ -58,7 +58,7 @@ public class CameraController : MonoBehaviour
         {
             t += Time.deltaTime;
             t = Mathf.Min(t, 1f);
-            transform.position = Vector3.Lerp(panStart, panEnd, t); // New -Jonathan
+            transform.position = Vector3.Lerp(panStart, panEnd, t);
             theCamera.orthographicSize = Mathf.Lerp(zoomStart, zoomEnd, t);
             if (transform.position == panEnd)
             {

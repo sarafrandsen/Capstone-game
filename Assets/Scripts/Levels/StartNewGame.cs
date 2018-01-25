@@ -97,8 +97,8 @@ public class StartNewGame : MonoBehaviour
             yield return null;
         }
 
-        Destroy(theCamera.gameObject);
-		SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Main");
+		Destroy(theCamera.gameObject);
         startSong.Stop();
     }
 }
