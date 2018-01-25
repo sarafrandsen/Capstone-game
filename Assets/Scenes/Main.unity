@@ -1996,7 +1996,7 @@ Prefab:
     - target: {fileID: 61173963912252798, guid: 227a5e60a60f74cae9c325b5db2f6c71,
         type: 2}
       propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 61173963912252798, guid: 227a5e60a60f74cae9c325b5db2f6c71,
         type: 2}
@@ -2017,6 +2017,11 @@ Prefab:
     - target: {fileID: 212074794666205496, guid: 227a5e60a60f74cae9c325b5db2f6c71,
         type: 2}
       propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61173963912252798, guid: 227a5e60a60f74cae9c325b5db2f6c71,
+        type: 2}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2851,7 +2856,7 @@ Prefab:
     - target: {fileID: 68470645216407566, guid: c616f68253279458bbb54759351be886,
         type: 2}
       propertyPath: m_Offset.y
-      value: 10.5
+      value: 10.32
       objectReference: {fileID: 0}
     - target: {fileID: 68990918658437862, guid: c616f68253279458bbb54759351be886,
         type: 2}

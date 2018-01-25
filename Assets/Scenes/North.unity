@@ -394,7 +394,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 394064789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0059999945, y: 0.35200006, z: 0}
+  m_LocalPosition: {x: -0.159, y: 0.31, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 930522375}
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090d680eed4da43a5bc43e4bd235fa0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDirection: {x: 1, y: 0}
+  startDirection: {x: -1, y: 0}
   positionID: NorthEntrance
   worldOriention: 1
   followTarget: {fileID: 1116584047}
