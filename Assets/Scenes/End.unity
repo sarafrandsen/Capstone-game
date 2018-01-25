@@ -290,6 +290,11 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 131
       objectReference: {fileID: 0}
+    - target: {fileID: 114347201611301150, guid: d066476d48eb4443c95f71dad094f382,
+        type: 2}
+      propertyPath: twitterHandle
+      value: dril
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d066476d48eb4443c95f71dad094f382, type: 2}
   m_IsPrefabParent: 0
@@ -549,7 +554,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1042040547422868, guid: 227a5e60a60f74cae9c325b5db2f6c71, type: 2}
       propertyPath: m_Name
-      value: FireFInal
+      value: Fire
       objectReference: {fileID: 0}
     - target: {fileID: 61173963912252798, guid: 227a5e60a60f74cae9c325b5db2f6c71,
         type: 2}
@@ -1110,7 +1115,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1951700449}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c0c38309d53d4c1b901b5217c3cf7dd, type: 3}
   m_Name: 

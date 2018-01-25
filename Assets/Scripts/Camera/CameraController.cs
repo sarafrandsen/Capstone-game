@@ -10,8 +10,6 @@ public class CameraController : MonoBehaviour
 
     private Camera theCamera;
     private static bool cameraExists; // check for duplicate cameras
-    private float halfHeight; // half the view height
-    private float halfWidth; // half the view width
     private Vector3 minBounds; // lower-left point of boundsBox
     private Vector3 maxBounds; // upper-right point of boundsBox
     private Vector3 offset; // z-axis (-10)
@@ -39,8 +37,6 @@ public class CameraController : MonoBehaviour
         minBounds = boundsBox.bounds.min;
         maxBounds = boundsBox.bounds.max;
         theCamera = GetComponent<Camera>();
-        halfHeight = theCamera.orthographicSize;
-        halfWidth = halfHeight * Screen.width / Screen.height;
     }
 
     private float t = 0f;
@@ -75,6 +71,8 @@ public class CameraController : MonoBehaviour
 		
         // clamp: given a min val and a max val, make sure the current vals do not exceed them
         // Clamp(value, min, max)
+        float halfHeight = theCamera.orthographicSize;
+        float halfWidth = halfHeight * Screen.width / Screen.height;
         float clampedX = Mathf.Clamp(transform.position.x, minBounds.x + halfWidth, maxBounds.x - halfWidth);
         float clampedY = Mathf.Clamp(transform.position.y, minBounds.y + halfHeight, maxBounds.y - halfHeight);
 

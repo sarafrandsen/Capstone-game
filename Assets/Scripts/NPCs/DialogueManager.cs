@@ -44,6 +44,11 @@ public class DialogueManager : MonoBehaviour {
         DisableTextBox();
     }
 
+    public string GetTweet()
+    {
+        return !string.IsNullOrEmpty(singleTweet) ? singleTweet : "Some cool text";
+    } 
+
     public void DisplayNextSentence(string nextSentence)
     {
         StopAllCoroutines(); // if a user wants to skip a sentence, stop animating and move on to next sentence
