@@ -51,7 +51,7 @@ public class FinalDialogueTrigger : MonoBehaviour {
                     // end bubble anim
                     endLine = textLines.Length;
                     dialogueManager.EnableTextBox(); // open dialogue box
-                    dialogueManager.nameText.text = "@" + dialogueManager.nameMagicBot;
+                    dialogueManager.nameText.text = "@" + dialogueManager.twitterHandle;
 
                     if (currentLine < endLine)
                     {

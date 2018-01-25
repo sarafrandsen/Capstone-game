@@ -35,7 +35,8 @@ public class SlimeController : MonoBehaviour
 
     void ConversationEnd()
     {
-        dialogueTriggerArea.TurnOff();   
+        dialogueTriggerArea.TurnOff();  
+
         StartCoroutine(MeltBeforeDisappear());
     }
 

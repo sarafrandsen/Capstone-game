@@ -51,7 +51,7 @@ public class DialogueTriggerArea : MonoBehaviour {
 
                 endLine = textLines.Length;
                 dialogueManager.EnableTextBox(); // open dialogue box
-                dialogueManager.nameText.text = "@" + dialogueManager.nameMagicBot;
+                dialogueManager.nameText.text = "@" + dialogueManager.twitterHandle;
 
                 if (currentLine < endLine)
                 {
@@ -65,8 +65,8 @@ public class DialogueTriggerArea : MonoBehaviour {
                 else if (currentLine == endLine)
                 {
                     // show random tweet
-                    dialogueManager.DisplayNextSentence(dialogueManager.tweetMagicBot);
-                    gameData.storiesCollected.Add(dialogueManager.tweetMagicBot);
+                    dialogueManager.DisplayNextSentence(dialogueManager.singleTweet);
+                    gameData.storiesCollected.Add(dialogueManager.singleTweet);
                     currentLine += 1;
                 }
                 else

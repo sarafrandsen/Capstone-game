@@ -7,12 +7,14 @@ using UnityEngine.UI; // necessary for UI objects like Text
 public class DialogueManager : MonoBehaviour {
     /*///////////////////////////////////*/
     public string key, secret, accessToken;
-    public Twitter.TwitterUser userMagicBot;
-    public Twitter.Tweet[] tweetsMagicBot;
+    public Twitter.TwitterUser user;
+    public Twitter.Tweet[] tweets;
 
-    public string nameMagicBot;
-    public string urlMagicBot;
-	public string tweetMagicBot;
+    public string twitterHandle;
+    public string singleTweet;
+    public int numberOfTweets;
+	[HideInInspector]
+	public string profImgURL;
 
     /*///////////////////////////////////*/
 
@@ -27,14 +29,14 @@ public class DialogueManager : MonoBehaviour {
     {
         /*///////////////////////////////////*/
         accessToken = Twitter.API.GetTwitterAccessToken(key, secret); // generate access token
-        userMagicBot = Twitter.API.GetProfileInfo("magicrealismbot", accessToken, false);
-        tweetsMagicBot = Twitter.API.GetUserTimeline("magicrealismbot", 100, accessToken);
+        user = Twitter.API.GetProfileInfo(twitterHandle, accessToken, false);
+        tweets = Twitter.API.GetUserTimeline(twitterHandle, numberOfTweets, accessToken);
 
-        nameMagicBot = userMagicBot.screen_name; // get the user name
-        urlMagicBot = userMagicBot.profile_image_url.Replace("_normal", ""); // get the profile image // original size, not 48x48
+        //twitterHandle = user.screen_name; // get the user name
+        profImgURL = user.profile_image_url.Replace("_normal", ""); // get the profile image // original size, not 48x48
 		
-        int randomIndex = UnityEngine.Random.Range(0, tweetsMagicBot.Length); // random index for tweet
-		tweetMagicBot = tweetsMagicBot[randomIndex].text; // text of the random tweet
+        int randomIndex = UnityEngine.Random.Range(0, tweets.Length); // random index for tweet
+		singleTweet = tweets[randomIndex].text; // text of the random tweet
         /*///////////////////////////////////*/
 
         thePlayer = FindObjectOfType<PlayerController>();
