@@ -40,8 +40,6 @@ public class StartNewGame : MonoBehaviour
         dialogueManager = FindObjectOfType<DialogueManager>();
         theCamera = FindObjectOfType<Camera>();
         startSong = theCamera.GetComponent<AudioSource>();
-        DontDestroyOnLoad(startSong);
-        DontDestroyOnLoad(theCamera);
     }
 
     void Update()
@@ -98,7 +96,5 @@ public class StartNewGame : MonoBehaviour
         }
 
         SceneManager.LoadScene("Main");
-		Destroy(theCamera.gameObject);
-        startSong.Stop();
     }
 }
