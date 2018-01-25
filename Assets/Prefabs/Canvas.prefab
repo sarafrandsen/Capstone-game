@@ -235,8 +235,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5f4e3c0e9a0e54f0ea96b1f6904d873a, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 530bb6c685f414adf999ea95b2084c15, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -257,17 +257,8 @@ MonoBehaviour:
   key: 58Bg23dwvxaR9ZdJfRUACFftm
   secret: B91z9EnPXBRGxrvgSOu7WtNRlIOCZZfzZBENj06VwgycGW0b8D
   accessToken: 
-  userMagicBot:
+  user:
     created_at: 
-    FormatedDateTime:
-      Second: 0
-      Minute: 0
-      Hour: 0
-      Offset: 
-      Day: 0
-      Weekday: 
-      Month: 
-      Year: 0
     id: 
     lang: 
     screen_name: 
@@ -283,618 +274,14 @@ MonoBehaviour:
     geo_enabled: 0
     verified: 0
     statuses_count: 0
-    status:
-      created_at: 
-      FormatedDateTime:
-        Second: 0
-        Minute: 0
-        Hour: 0
-        Offset: 
-        Day: 0
-        Weekday: 
-        Month: 
-        Year: 0
-      id: 
-      lang: 
-      text: 
-      source: 
-      in_reply_to_status_id: 
-      in_reply_to_user_id: 
-      in_reply_to_screen_name: 
-      user:
-        created_at: 
-        FormatedDateTime:
-          Second: 0
-          Minute: 0
-          Hour: 0
-          Offset: 
-          Day: 0
-          Weekday: 
-          Month: 
-          Year: 0
-        id: 
-        lang: 
-        screen_name: 
-        name: 
-        profile_location: 
-        description: 
-        url: 
-        followers_count: 0
-        friends_count: 0
-        favourites_count: 0
-        utc_offset: 
-        time_zone: 
-        geo_enabled: 0
-        verified: 0
-        statuses_count: 0
-        status:
-          created_at: 
-          FormatedDateTime:
-            Second: 0
-            Minute: 0
-            Hour: 0
-            Offset: 
-            Day: 0
-            Weekday: 
-            Month: 
-            Year: 0
-          id: 
-          lang: 
-          text: 
-          source: 
-          in_reply_to_status_id: 
-          in_reply_to_user_id: 
-          in_reply_to_screen_name: 
-          user:
-            created_at: 
-            FormatedDateTime:
-              Second: 0
-              Minute: 0
-              Hour: 0
-              Offset: 
-              Day: 0
-              Weekday: 
-              Month: 
-              Year: 0
-            id: 
-            lang: 
-            screen_name: 
-            name: 
-            profile_location: 
-            description: 
-            url: 
-            followers_count: 0
-            friends_count: 0
-            favourites_count: 0
-            utc_offset: 
-            time_zone: 
-            geo_enabled: 0
-            verified: 0
-            statuses_count: 0
-            status:
-              created_at: 
-              FormatedDateTime:
-                Second: 0
-                Minute: 0
-                Hour: 0
-                Offset: 
-                Day: 0
-                Weekday: 
-                Month: 
-                Year: 0
-              id: 
-              lang: 
-              text: 
-              source: 
-              in_reply_to_status_id: 
-              in_reply_to_user_id: 
-              in_reply_to_screen_name: 
-              user:
-                created_at: 
-                FormatedDateTime:
-                  Second: 0
-                  Minute: 0
-                  Hour: 0
-                  Offset: 
-                  Day: 0
-                  Weekday: 
-                  Month: 
-                  Year: 0
-                id: 
-                lang: 
-                screen_name: 
-                name: 
-                profile_location: 
-                description: 
-                url: 
-                followers_count: 0
-                friends_count: 0
-                favourites_count: 0
-                utc_offset: 
-                time_zone: 
-                geo_enabled: 0
-                verified: 0
-                statuses_count: 0
-                status:
-                  created_at: 
-                  id: 
-                  lang: 
-                  text: 
-                  source: 
-                  in_reply_to_status_id: 
-                  in_reply_to_user_id: 
-                  in_reply_to_screen_name: 
-                  geo: 
-                  coordinates: 
-                  place: 
-                  contributors: 
-                  is_quote_status: 0
-                  retweet_count: 0
-                  favorite_count: 0
-                  retweeted: 0
-                  favourited: 0
-                profile_background_color: 
-                profile_image_url: 
-                profile_banner_url: 
-              geo: 
-              coordinates: 
-              place: 
-              contributors: 
-              is_quote_status: 0
-              retweet_count: 0
-              favorite_count: 0
-              retweeted: 0
-              favourited: 0
-              retweeted_status:
-                created_at: 
-                FormatedDateTime:
-                  Second: 0
-                  Minute: 0
-                  Hour: 0
-                  Offset: 
-                  Day: 0
-                  Weekday: 
-                  Month: 
-                  Year: 0
-                id: 
-                lang: 
-                text: 
-                source: 
-                in_reply_to_status_id: 
-                in_reply_to_user_id: 
-                in_reply_to_screen_name: 
-                user:
-                  created_at: 
-                  id: 
-                  lang: 
-                  screen_name: 
-                  name: 
-                  profile_location: 
-                  description: 
-                  url: 
-                  followers_count: 0
-                  friends_count: 0
-                  favourites_count: 0
-                  utc_offset: 
-                  time_zone: 
-                  geo_enabled: 0
-                  verified: 0
-                  statuses_count: 0
-                  profile_background_color: 
-                  profile_image_url: 
-                  profile_banner_url: 
-                geo: 
-                coordinates: 
-                place: 
-                contributors: 
-                is_quote_status: 0
-                retweet_count: 0
-                favorite_count: 0
-                retweeted: 0
-                favourited: 0
-            profile_background_color: 
-            profile_image_url: 
-            profile_banner_url: 
-          geo: 
-          coordinates: 
-          place: 
-          contributors: 
-          is_quote_status: 0
-          retweet_count: 0
-          favorite_count: 0
-          retweeted: 0
-          favourited: 0
-          retweeted_status:
-            created_at: 
-            FormatedDateTime:
-              Second: 0
-              Minute: 0
-              Hour: 0
-              Offset: 
-              Day: 0
-              Weekday: 
-              Month: 
-              Year: 0
-            id: 
-            lang: 
-            text: 
-            source: 
-            in_reply_to_status_id: 
-            in_reply_to_user_id: 
-            in_reply_to_screen_name: 
-            user:
-              created_at: 
-              FormatedDateTime:
-                Second: 0
-                Minute: 0
-                Hour: 0
-                Offset: 
-                Day: 0
-                Weekday: 
-                Month: 
-                Year: 0
-              id: 
-              lang: 
-              screen_name: 
-              name: 
-              profile_location: 
-              description: 
-              url: 
-              followers_count: 0
-              friends_count: 0
-              favourites_count: 0
-              utc_offset: 
-              time_zone: 
-              geo_enabled: 0
-              verified: 0
-              statuses_count: 0
-              status:
-                created_at: 
-                FormatedDateTime:
-                  Second: 0
-                  Minute: 0
-                  Hour: 0
-                  Offset: 
-                  Day: 0
-                  Weekday: 
-                  Month: 
-                  Year: 0
-                id: 
-                lang: 
-                text: 
-                source: 
-                in_reply_to_status_id: 
-                in_reply_to_user_id: 
-                in_reply_to_screen_name: 
-                user:
-                  created_at: 
-                  id: 
-                  lang: 
-                  screen_name: 
-                  name: 
-                  profile_location: 
-                  description: 
-                  url: 
-                  followers_count: 0
-                  friends_count: 0
-                  favourites_count: 0
-                  utc_offset: 
-                  time_zone: 
-                  geo_enabled: 0
-                  verified: 0
-                  statuses_count: 0
-                  profile_background_color: 
-                  profile_image_url: 
-                  profile_banner_url: 
-                geo: 
-                coordinates: 
-                place: 
-                contributors: 
-                is_quote_status: 0
-                retweet_count: 0
-                favorite_count: 0
-                retweeted: 0
-                favourited: 0
-                retweeted_status:
-                  created_at: 
-                  id: 
-                  lang: 
-                  text: 
-                  source: 
-                  in_reply_to_status_id: 
-                  in_reply_to_user_id: 
-                  in_reply_to_screen_name: 
-                  geo: 
-                  coordinates: 
-                  place: 
-                  contributors: 
-                  is_quote_status: 0
-                  retweet_count: 0
-                  favorite_count: 0
-                  retweeted: 0
-                  favourited: 0
-              profile_background_color: 
-              profile_image_url: 
-              profile_banner_url: 
-            geo: 
-            coordinates: 
-            place: 
-            contributors: 
-            is_quote_status: 0
-            retweet_count: 0
-            favorite_count: 0
-            retweeted: 0
-            favourited: 0
-        profile_background_color: 
-        profile_image_url: 
-        profile_banner_url: 
-      geo: 
-      coordinates: 
-      place: 
-      contributors: 
-      is_quote_status: 0
-      retweet_count: 0
-      favorite_count: 0
-      retweeted: 0
-      favourited: 0
-      retweeted_status:
-        created_at: 
-        FormatedDateTime:
-          Second: 0
-          Minute: 0
-          Hour: 0
-          Offset: 
-          Day: 0
-          Weekday: 
-          Month: 
-          Year: 0
-        id: 
-        lang: 
-        text: 
-        source: 
-        in_reply_to_status_id: 
-        in_reply_to_user_id: 
-        in_reply_to_screen_name: 
-        user:
-          created_at: 
-          FormatedDateTime:
-            Second: 0
-            Minute: 0
-            Hour: 0
-            Offset: 
-            Day: 0
-            Weekday: 
-            Month: 
-            Year: 0
-          id: 
-          lang: 
-          screen_name: 
-          name: 
-          profile_location: 
-          description: 
-          url: 
-          followers_count: 0
-          friends_count: 0
-          favourites_count: 0
-          utc_offset: 
-          time_zone: 
-          geo_enabled: 0
-          verified: 0
-          statuses_count: 0
-          status:
-            created_at: 
-            FormatedDateTime:
-              Second: 0
-              Minute: 0
-              Hour: 0
-              Offset: 
-              Day: 0
-              Weekday: 
-              Month: 
-              Year: 0
-            id: 
-            lang: 
-            text: 
-            source: 
-            in_reply_to_status_id: 
-            in_reply_to_user_id: 
-            in_reply_to_screen_name: 
-            user:
-              created_at: 
-              FormatedDateTime:
-                Second: 0
-                Minute: 0
-                Hour: 0
-                Offset: 
-                Day: 0
-                Weekday: 
-                Month: 
-                Year: 0
-              id: 
-              lang: 
-              screen_name: 
-              name: 
-              profile_location: 
-              description: 
-              url: 
-              followers_count: 0
-              friends_count: 0
-              favourites_count: 0
-              utc_offset: 
-              time_zone: 
-              geo_enabled: 0
-              verified: 0
-              statuses_count: 0
-              status:
-                created_at: 
-                FormatedDateTime:
-                  Second: 0
-                  Minute: 0
-                  Hour: 0
-                  Offset: 
-                  Day: 0
-                  Weekday: 
-                  Month: 
-                  Year: 0
-                id: 
-                lang: 
-                text: 
-                source: 
-                in_reply_to_status_id: 
-                in_reply_to_user_id: 
-                in_reply_to_screen_name: 
-                user:
-                  created_at: 
-                  id: 
-                  lang: 
-                  screen_name: 
-                  name: 
-                  profile_location: 
-                  description: 
-                  url: 
-                  followers_count: 0
-                  friends_count: 0
-                  favourites_count: 0
-                  utc_offset: 
-                  time_zone: 
-                  geo_enabled: 0
-                  verified: 0
-                  statuses_count: 0
-                  profile_background_color: 
-                  profile_image_url: 
-                  profile_banner_url: 
-                geo: 
-                coordinates: 
-                place: 
-                contributors: 
-                is_quote_status: 0
-                retweet_count: 0
-                favorite_count: 0
-                retweeted: 0
-                favourited: 0
-                retweeted_status:
-                  created_at: 
-                  id: 
-                  lang: 
-                  text: 
-                  source: 
-                  in_reply_to_status_id: 
-                  in_reply_to_user_id: 
-                  in_reply_to_screen_name: 
-                  geo: 
-                  coordinates: 
-                  place: 
-                  contributors: 
-                  is_quote_status: 0
-                  retweet_count: 0
-                  favorite_count: 0
-                  retweeted: 0
-                  favourited: 0
-              profile_background_color: 
-              profile_image_url: 
-              profile_banner_url: 
-            geo: 
-            coordinates: 
-            place: 
-            contributors: 
-            is_quote_status: 0
-            retweet_count: 0
-            favorite_count: 0
-            retweeted: 0
-            favourited: 0
-            retweeted_status:
-              created_at: 
-              FormatedDateTime:
-                Second: 0
-                Minute: 0
-                Hour: 0
-                Offset: 
-                Day: 0
-                Weekday: 
-                Month: 
-                Year: 0
-              id: 
-              lang: 
-              text: 
-              source: 
-              in_reply_to_status_id: 
-              in_reply_to_user_id: 
-              in_reply_to_screen_name: 
-              user:
-                created_at: 
-                FormatedDateTime:
-                  Second: 0
-                  Minute: 0
-                  Hour: 0
-                  Offset: 
-                  Day: 0
-                  Weekday: 
-                  Month: 
-                  Year: 0
-                id: 
-                lang: 
-                screen_name: 
-                name: 
-                profile_location: 
-                description: 
-                url: 
-                followers_count: 0
-                friends_count: 0
-                favourites_count: 0
-                utc_offset: 
-                time_zone: 
-                geo_enabled: 0
-                verified: 0
-                statuses_count: 0
-                status:
-                  created_at: 
-                  id: 
-                  lang: 
-                  text: 
-                  source: 
-                  in_reply_to_status_id: 
-                  in_reply_to_user_id: 
-                  in_reply_to_screen_name: 
-                  geo: 
-                  coordinates: 
-                  place: 
-                  contributors: 
-                  is_quote_status: 0
-                  retweet_count: 0
-                  favorite_count: 0
-                  retweeted: 0
-                  favourited: 0
-                profile_background_color: 
-                profile_image_url: 
-                profile_banner_url: 
-              geo: 
-              coordinates: 
-              place: 
-              contributors: 
-              is_quote_status: 0
-              retweet_count: 0
-              favorite_count: 0
-              retweeted: 0
-              favourited: 0
-          profile_background_color: 
-          profile_image_url: 
-          profile_banner_url: 
-        geo: 
-        coordinates: 
-        place: 
-        contributors: 
-        is_quote_status: 0
-        retweet_count: 0
-        favorite_count: 0
-        retweeted: 0
-        favourited: 0
     profile_background_color: 
     profile_image_url: 
     profile_banner_url: 
-  tweetsMagicBot: []
-  nameMagicBot: 
-  urlMagicBot: 
-  tweetMagicBot: 
+  tweets: []
+  twitterHandle: magicrealismbot
+  singleTweet: 
+  numberOfTweets: 10
+  profImgURL: 
   profileImage: {fileID: 1919798486970100}
   dialogueBox: {fileID: 1488707663276440}
   nameText: {fileID: 114706293636925338}
@@ -1004,7 +391,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1605540822059434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.899994, y: 76, z: 0}
+  m_LocalPosition: {x: 2, y: 99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224265749667859264}
@@ -1012,7 +399,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23.899986, y: 76}
+  m_AnchoredPosition: {x: 2, y: 99}
   m_SizeDelta: {x: 698.7, y: 54.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224180156483200372
@@ -1041,7 +428,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1919798486970100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -79.999985, y: 51.299995, z: 0}
+  m_LocalPosition: {x: -65, y: 83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4920683771587328}
@@ -1049,7 +436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -79.999985, y: 51.299995}
+  m_AnchoredPosition: {x: -65, y: 83}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224265749667859264
@@ -1059,7 +446,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1488707663276440}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 227, y: 51.3, z: 0}
+  m_LocalPosition: {x: 227, y: 78.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224112966829803216}
@@ -1069,8 +456,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 227, y: 51.3}
-  m_SizeDelta: {x: 746.5, y: 118.2}
+  m_AnchoredPosition: {x: 227, y: 78.3}
+  m_SizeDelta: {x: 746.5, y: 172.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224356525945925260
 RectTransform:
@@ -1079,7 +466,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1432866871622038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54.799927, y: -3.0110016, z: 0}
+  m_LocalPosition: {x: 61, y: 5, z: 0}
   m_LocalScale: {x: 0.42, y: 0.43, z: 1}
   m_Children: []
   m_Father: {fileID: 224265749667859264}
@@ -1087,6 +474,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 54.8, y: -3.011}
-  m_SizeDelta: {x: 693.2, y: 142.7}
+  m_AnchoredPosition: {x: 61, y: 5}
+  m_SizeDelta: {x: 626.4, y: 142.7}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -11,8 +11,6 @@ public class FinalDialogueTrigger : MonoBehaviour {
     private string[] textLines; // each line of the text asset is assigned to an index
 
     private DialogueManager dialogueManager;
-    private Animator anim;
-    //private Animation bubble;
     private int currentLine; // current line on the screen
     private int currentStory; // current random tweet being repeated back
     private int endLine; // last line in text
@@ -30,8 +28,6 @@ public class FinalDialogueTrigger : MonoBehaviour {
         }
 
         dialogueManager = FindObjectOfType<DialogueManager>();
-        anim = GetComponent<Animator>();
-        //bubble = GetComponent<Animation>();
 
         theCamera = FindObjectOfType<CameraController>();
         gameData = FindObjectOfType<GameData>();
@@ -70,14 +66,6 @@ public class FinalDialogueTrigger : MonoBehaviour {
                             dialogueManager.DisplayNextSentence(gameData.storiesCollected[currentStory]);
                             currentStory += 1;
                         }
-                        else
-                        {
-                            //gameData.GetComponent<AudioSource>().Stop();
-                            //Destroy(other.gameObject);
-                            //Destroy(theCamera.gameObject);
-                            //Destroy(gameData.gameObject);
-                            //SceneManager.LoadScene("Credits");
-                        }
                     }
                     StartCoroutine(Fade(other.gameObject, fadeTime: 5));
                 }
@@ -106,22 +94,4 @@ public class FinalDialogueTrigger : MonoBehaviour {
         Destroy(gameData.gameObject);
         SceneManager.LoadScene("Credits");
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.name == "Player")
-        {
-            // begin bubble anim
-            //bubble.Play(); 
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.name == "Player")
-        {
-            // end bubble anim
-        }
-    }
-
 }

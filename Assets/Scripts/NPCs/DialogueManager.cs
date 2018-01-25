@@ -7,18 +7,14 @@ using UnityEngine.UI; // necessary for UI objects like Text
 public class DialogueManager : MonoBehaviour {
     /*///////////////////////////////////*/
     public string key, secret, accessToken;
-    public Twitter.TwitterUser user;
     public Twitter.Tweet[] tweets;
 
     public string twitterHandle;
     public string singleTweet;
     public int numberOfTweets;
-	[HideInInspector]
-	public string profImgURL;
 
     /*///////////////////////////////////*/
 
-    public GameObject profileImage;
 	public GameObject dialogueBox; // access the dialogue box object
     public Text nameText; // where to put the character's name in inspector
     public Text dialogueText; // where to put the Dialogue game object in the Inspector
@@ -29,11 +25,7 @@ public class DialogueManager : MonoBehaviour {
     {
         /*///////////////////////////////////*/
         accessToken = Twitter.API.GetTwitterAccessToken(key, secret); // generate access token
-        user = Twitter.API.GetProfileInfo(twitterHandle, accessToken, false);
         tweets = Twitter.API.GetUserTimeline(twitterHandle, numberOfTweets, accessToken);
-
-        //twitterHandle = user.screen_name; // get the user name
-        profImgURL = user.profile_image_url.Replace("_normal", ""); // get the profile image // original size, not 48x48
 		
         int randomIndex = UnityEngine.Random.Range(0, tweets.Length); // random index for tweet
 		singleTweet = tweets[randomIndex].text; // text of the random tweet
@@ -44,11 +36,6 @@ public class DialogueManager : MonoBehaviour {
         DisableTextBox();
     }
 
-    public string GetTweet()
-    {
-        return !string.IsNullOrEmpty(singleTweet) ? singleTweet : "Some cool text";
-    } 
-
     public void DisplayNextSentence(string nextSentence)
     {
         StopAllCoroutines(); // if a user wants to skip a sentence, stop animating and move on to next sentence
@@ -58,15 +45,13 @@ public class DialogueManager : MonoBehaviour {
     public void EnableTextBox()
     {
         dialogueBox.SetActive(true);
-        profileImage.GetComponent<Image>().enabled = true;
         thePlayer.canMove = false;
     }
 
     public void DisableTextBox()
     {
         dialogueBox.SetActive(false);
-        profileImage.GetComponent<Image>().enabled = false;
-
+        thePlayer.canMove = true;
     }
 
     IEnumerator TypeSentence(string sentence) // instead of updating text directly, using coroutine

@@ -32,7 +32,7 @@ public class FinalFireObject : MonoBehaviour
 
     IEnumerator BuildFire()
     {
-        theCamera.PopToFollow(this.gameObject, 4f);
+        theCamera.PanToFollow(this.gameObject, 4f);
         yield return new WaitForSeconds(2.0f);
         // change animation to lit fire 
         anim.SetBool("FireExtinguished", false);
