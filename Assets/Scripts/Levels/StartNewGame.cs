@@ -10,7 +10,7 @@ public class StartNewGame : MonoBehaviour
     public string levelToLoad;
     public TextAsset instructionsFile;
     public Image fadeOverlay;
-    //public AudioSource startSong;
+    public AudioSource startSong;
 
     private string[] instructionLines;
     private int currentLine; // current line on the screen
@@ -18,6 +18,7 @@ public class StartNewGame : MonoBehaviour
     private string sceneName;
 
     private DialogueManager dialogueManager;
+    private Camera theCamera;
 
     public System.Action onConversationBegin;
     public System.Action onConversationEnd;
@@ -37,7 +38,10 @@ public class StartNewGame : MonoBehaviour
         }
 
         dialogueManager = FindObjectOfType<DialogueManager>();
-        //DontDestroyOnLoad(startSong);
+        theCamera = FindObjectOfType<Camera>();
+        startSong = theCamera.GetComponent<AudioSource>();
+        DontDestroyOnLoad(startSong);
+        DontDestroyOnLoad(theCamera);
     }
 
     void Update()
@@ -64,7 +68,6 @@ public class StartNewGame : MonoBehaviour
         {
             endLine = instructionLines.Length;
             dialogueManager.dialogueBox.SetActive(true); // open dialogue box
-            dialogueManager.nameText.text = "@sara__eff";
 
             if (currentLine < endLine)
             {
@@ -88,13 +91,14 @@ public class StartNewGame : MonoBehaviour
         {
             time += Time.deltaTime;
             float t = time / fadeTime;
-            //startSong.volume = 1 - t;
+            startSong.volume = 1 - t;
             fadeOverlay.color = new Color(0f, 0f, 0f, t);
 
             yield return null;
         }
 
+        Destroy(theCamera.gameObject);
 		SceneManager.LoadScene("Main");
-        //startSong.Stop();
+        startSong.Stop();
     }
 }

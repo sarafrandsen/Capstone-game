@@ -1875,7 +1875,7 @@ Prefab:
     - target: {fileID: 114180575205903496, guid: 12dbcedf434264bab9ca3d5f00f3383b,
         type: 2}
       propertyPath: cheatMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12dbcedf434264bab9ca3d5f00f3383b, type: 2}

@@ -93,9 +93,9 @@ public class FinalDialogueTrigger : MonoBehaviour {
 
         finalSong.Stop();
         Destroy(player);
-        Destroy(theCamera.gameObject);
         Destroy(gameData.gameObject);
         SceneManager.LoadScene("Credits");
+		Destroy(theCamera.gameObject);
     }
 
 }

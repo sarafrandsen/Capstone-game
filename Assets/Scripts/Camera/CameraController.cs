@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
 
     private Camera theCamera;
     private static bool cameraExists; // check for duplicate cameras
+
     private Vector3 minBounds; // lower-left point of boundsBox
     private Vector3 maxBounds; // upper-right point of boundsBox
     private Vector3 offset; // z-axis (-10)
