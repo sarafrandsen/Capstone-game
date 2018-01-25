@@ -77,9 +77,9 @@ public class FinalDialogueTrigger : MonoBehaviour {
                             //Destroy(theCamera.gameObject);
                             //Destroy(gameData.gameObject);
                             //SceneManager.LoadScene("Credits");
-                            StartCoroutine(Fade(other.gameObject, fadeTime: 5));
                         }
                     }
+                    StartCoroutine(Fade(other.gameObject, fadeTime: 5));
                 }
             }
         }

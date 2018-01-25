@@ -7,10 +7,7 @@ using UnityEngine.UI; // necessary for UI objects like Text
 public class DialogueManager : MonoBehaviour {
     /*///////////////////////////////////*/
     public string key, secret, accessToken;
-    [SerializeField]
     public Twitter.TwitterUser userMagicBot;
-
-    [SerializeField]
     public Twitter.Tweet[] tweetsMagicBot;
 
     public string nameMagicBot;

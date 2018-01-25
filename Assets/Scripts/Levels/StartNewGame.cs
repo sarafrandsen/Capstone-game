@@ -4,14 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class StartNewGame : MonoBehaviour {
+public class StartNewGame : MonoBehaviour
+{
 
     public string levelToLoad;
     public TextAsset instructionsFile;
+    public Image fadeOverlay;
+    //public AudioSource startSong;
 
     private string[] instructionLines;
     private int currentLine; // current line on the screen
     private int endLine; // last line in text
+    private string sceneName;
 
     private DialogueManager dialogueManager;
 
@@ -25,36 +29,39 @@ public class StartNewGame : MonoBehaviour {
             instructionLines = (instructionsFile.text.Split('\n')); // split at line break
         }
 
-        //if (Scene.name == "Instructions")
-        //{
-        //    ShowInstructions();
-        //}
+        sceneName = SceneManager.GetActiveScene().name;
+
+        if (sceneName == "Instructions")
+        {
+            ShowInstructions();
+        }
 
         dialogueManager = FindObjectOfType<DialogueManager>();
+        //DontDestroyOnLoad(startSong);
     }
 
-    void Update () {
-		if (levelToLoad == "Instructions" && (Input.GetKeyDown(KeyCode.Space) || Input.GetKey("joystick button 0")))
-		{
-			// fade
-			SceneManager.LoadScene(levelToLoad);
-		} 
-		else 
-		{
-			ShowInstructions();
-		}
+    void Update()
+    {
+        if (levelToLoad == "Instructions" && (Input.GetKeyDown(KeyCode.Space) || Input.GetKey("joystick button 0")))
+        {
+            // fade
+            SceneManager.LoadScene(levelToLoad);
+        }
+        else
+        {
+            ShowInstructions();
+        }
     }
 
     public void ShowInstructions()
     {
-		if (currentLine == 0 && onConversationBegin != null)
-		{
-			onConversationBegin();
-		}
+        if (currentLine == 0 && onConversationBegin != null)
+        {
+            onConversationBegin();
+        }
 
         if (Input.GetKeyDown("joystick button 0") || Input.GetKeyDown(KeyCode.Space))
         {
-
             endLine = instructionLines.Length;
             dialogueManager.dialogueBox.SetActive(true); // open dialogue box
             dialogueManager.nameText.text = "@sara__eff";
@@ -64,11 +71,30 @@ public class StartNewGame : MonoBehaviour {
                 // scripted dialogue
                 dialogueManager.DisplayNextSentence(instructionLines[currentLine]);
                 currentLine += 1; // next line in dialogue
+            } else {
+                
+				StartCoroutine(Fade(fadeTime: 3));
             }
-            else
-            {
-				SceneManager.LoadScene(levelToLoad);
-            }
+
         }
+    }
+
+    private IEnumerator Fade(float fadeTime)
+    {
+        // NOTE: Don't let fadeTime be 0.
+
+        float time = 0f;
+        while (time < fadeTime)
+        {
+            time += Time.deltaTime;
+            float t = time / fadeTime;
+            //startSong.volume = 1 - t;
+            fadeOverlay.color = new Color(0f, 0f, 0f, t);
+
+            yield return null;
+        }
+
+		SceneManager.LoadScene("Main");
+        //startSong.Stop();
     }
 }

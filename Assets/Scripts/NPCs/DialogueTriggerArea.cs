@@ -40,7 +40,7 @@ public class DialogueTriggerArea : MonoBehaviour {
         if (turnedOff)
             return;
         
-        if (Input.GetKeyDown("joystick button 0") || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown("joystick button 0") || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.A))
         {
             if (other.name == "Player")
             {
