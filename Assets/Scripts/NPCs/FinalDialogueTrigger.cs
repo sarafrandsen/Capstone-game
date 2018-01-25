@@ -47,7 +47,7 @@ public class FinalDialogueTrigger : MonoBehaviour {
                     // end bubble anim
                     endLine = textLines.Length;
                     dialogueManager.EnableTextBox(); // open dialogue box
-                    dialogueManager.nameText.text = "@" + dialogueManager.twitterHandle;
+                    dialogueManager.nameText.text = "@";
 
                     if (currentLine < endLine)
                     {
@@ -66,8 +66,11 @@ public class FinalDialogueTrigger : MonoBehaviour {
                             dialogueManager.DisplayNextSentence(gameData.storiesCollected[currentStory]);
                             currentStory += 1;
                         }
+						else
+						{
+							StartCoroutine(Fade(other.gameObject, fadeTime: 5));
+						}
                     }
-                    StartCoroutine(Fade(other.gameObject, fadeTime: 5));
                 }
             }
         }
@@ -94,4 +97,5 @@ public class FinalDialogueTrigger : MonoBehaviour {
         Destroy(gameData.gameObject);
         SceneManager.LoadScene("Credits");
     }
+
 }
