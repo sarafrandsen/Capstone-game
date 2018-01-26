@@ -38,7 +38,7 @@ public class StartNewGame : MonoBehaviour
         }
 
         dialogueManager = FindObjectOfType<DialogueManager>();
-        theCamera = FindObjectOfType<Camera>();
+        theCamera = FindObjectOfType<Camera>(); // ???
         startSong = theCamera.GetComponent<AudioSource>();
     }
 

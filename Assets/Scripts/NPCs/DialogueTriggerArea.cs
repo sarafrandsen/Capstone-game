@@ -29,9 +29,14 @@ public class DialogueTriggerArea : MonoBehaviour {
             textLines = (textFile.text.Split('\n')); // split at line break
         }
 
-        thePlayer = FindObjectOfType<PlayerController>();
+        var players = GameObject.FindGameObjectsWithTag("Player");
+        thePlayer = players[0].GetComponent<PlayerController>();
+
         dialogueManager = FindObjectOfType<DialogueManager>();
-        gameData = FindObjectOfType<GameData>();
+
+        var gameDatas = GameObject.FindGameObjectsWithTag("GameData");
+        gameData = gameDatas[0].GetComponent<GameData>();
+
         thePlayer.canMove = true;
     }
 
@@ -42,7 +47,7 @@ public class DialogueTriggerArea : MonoBehaviour {
         
         if (Input.GetKeyDown("joystick button 0") || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.A))
         {
-            if (other.name == "Player")
+            if (other.tag == "Player")
             {
                 if (currentLine == 0 && onConversationBegin != null)
                 {

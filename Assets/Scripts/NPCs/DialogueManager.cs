@@ -31,7 +31,8 @@ public class DialogueManager : MonoBehaviour {
 		singleTweet = tweets[randomIndex].text; // text of the random tweet
         /*///////////////////////////////////*/
 
-        thePlayer = FindObjectOfType<PlayerController>();
+        var players = GameObject.FindGameObjectsWithTag("Player");
+        thePlayer = players[0].GetComponent<PlayerController>();
 
         DisableTextBox();
     }

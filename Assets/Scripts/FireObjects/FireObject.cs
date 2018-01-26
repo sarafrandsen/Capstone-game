@@ -12,7 +12,9 @@ public class FireObject : MonoBehaviour {
         // opening dialogue with instructions
         // set dialogue as active?
 
-        gameData = FindObjectOfType<GameData>();
+        var gameDatas = GameObject.FindGameObjectsWithTag("GameData");
+        gameData = gameDatas[0].GetComponent<GameData>();
+
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
 

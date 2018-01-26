@@ -15,6 +15,7 @@ TagManager:
   - Environment
   - NorthWest
   - Coin
+  - SecretHero
   layers:
   - Default
   - TransparentFX

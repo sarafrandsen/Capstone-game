@@ -1877,6 +1877,10 @@ Prefab:
       propertyPath: cheatMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1078523492116784, guid: 12dbcedf434264bab9ca3d5f00f3383b, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12dbcedf434264bab9ca3d5f00f3383b, type: 2}
   m_IsPrefabParent: 0
@@ -4285,6 +4289,10 @@ Prefab:
         type: 2}
       propertyPath: m_Offset.y
       value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481104583404406, guid: ca35a9f702e7a4b3aa376219f8918553, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca35a9f702e7a4b3aa376219f8918553, type: 2}

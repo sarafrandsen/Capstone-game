@@ -30,7 +30,9 @@ public class FinalDialogueTrigger : MonoBehaviour {
         dialogueManager = FindObjectOfType<DialogueManager>();
 
         theCamera = FindObjectOfType<CameraController>();
-        gameData = FindObjectOfType<GameData>();
+
+        var gameDatas = GameObject.FindGameObjectsWithTag("GameData");
+        gameData = gameDatas[0].GetComponent<GameData>();
 
 
         AudioSource gameDataAudioSource = gameData.GetComponent<AudioSource>();
@@ -63,7 +65,7 @@ public class FinalDialogueTrigger : MonoBehaviour {
                         if (currentStory < gameData.storiesCollected.Count)
                         {
                             // show random tweet
-                            dialogueManager.DisplayNextSentence(gameData.storiesCollected[currentStory]);
+                            dialogueManager.DisplayNextSentence('"' + gameData.storiesCollected[currentStory] + '"');
                             currentStory += 1;
                         }
 						else

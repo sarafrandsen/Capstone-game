@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour {
 
         if (!playerExists)
         {
+            transform.gameObject.tag = "Player";
             playerExists = true;
             DontDestroyOnLoad(transform.gameObject);
         } else {

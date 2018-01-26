@@ -20,7 +20,10 @@ public class SlimeController : MonoBehaviour
     {
         dialogueTriggerArea.onConversationBegin = ConversationBegin;
         dialogueTriggerArea.onConversationEnd = ConversationEnd;
-        thePlayer = FindObjectOfType<PlayerController>();
+
+        var players = GameObject.FindGameObjectsWithTag("Player");
+        thePlayer = players[0].GetComponent<PlayerController>();
+
         gameData = FindObjectOfType<GameData>();
         anim = GetComponent<Animator>();
         theCamera = FindObjectOfType<CameraController>();

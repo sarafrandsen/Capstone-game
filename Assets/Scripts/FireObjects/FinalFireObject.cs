@@ -13,11 +13,16 @@ public class FinalFireObject : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        gameData = FindObjectOfType<GameData>();
+        var gameDatas = GameObject.FindGameObjectsWithTag("GameData");
+        gameData = gameDatas[0].GetComponent<GameData>();
+
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
         theCamera = FindObjectOfType<CameraController>();
-        thePlayer = FindObjectOfType<PlayerController>();
+
+        var players = GameObject.FindGameObjectsWithTag("Player");
+        thePlayer = players[0].GetComponent<PlayerController>();
+
         anim.SetBool("FireExtinguished", true);
 
         // check in GameData if true or false

@@ -12,7 +12,8 @@ public class LoadNewArea : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        thePlayer = FindObjectOfType<PlayerController>();
+        var players = GameObject.FindGameObjectsWithTag("Player");
+        thePlayer = players[0].GetComponent<PlayerController>();
 	}
 
     void OnTriggerEnter2D(Collider2D other) // we know it'll be a collider, and will reference it as 'other'
