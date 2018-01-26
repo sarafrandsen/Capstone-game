@@ -651,7 +651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090d680eed4da43a5bc43e4bd235fa0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDirection: {x: -1, y: 0}
+  startDirection: {x: 1, y: 0}
   positionID: EastEntrance
   worldOriention: 1
   followTarget: {fileID: 573338187}
@@ -1342,8 +1342,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2094231406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 300.5, y: 225.5, z: 0}
-  m_LocalScale: {x: 0.75125, y: 0.75125, z: 0.75125}
+  m_LocalPosition: {x: 286, y: 214.5, z: 0}
+  m_LocalScale: {x: 0.715, y: 0.715, z: 0.715}
   m_Children:
   - {fileID: 2045423011}
   m_Father: {fileID: 0}

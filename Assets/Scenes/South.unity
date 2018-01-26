@@ -360,8 +360,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 392316422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 300.5, y: 225.5, z: 0}
-  m_LocalScale: {x: 0.75125, y: 0.75125, z: 0.75125}
+  m_LocalPosition: {x: 286, y: 214.5, z: 0}
+  m_LocalScale: {x: 0.715, y: 0.715, z: 0.715}
   m_Children:
   - {fileID: 1289656804}
   m_Father: {fileID: 0}
@@ -1058,7 +1058,7 @@ MonoBehaviour:
   tweets: []
   twitterHandle: magicrealismbot
   singleTweet: 
-  numberOfTweets: 10
+  numberOfTweets: 100
   startDialogueClosed: 1
   dialogueBox: {fileID: 1233757346}
   dialogueText: {fileID: 784678548}
