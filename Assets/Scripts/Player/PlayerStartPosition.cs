@@ -16,9 +16,9 @@ public class PlayerStartPosition : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        var players = GameObject.FindGameObjectsWithTag("Player");
-        thePlayer = players[0].GetComponent<PlayerController>();
-         if (thePlayer.startPoint == positionID)
+        thePlayer = PlayerController.Instance;
+
+        if (thePlayer.startPoint == positionID)
         {
             thePlayer.transform.position = transform.position;
             thePlayer.lastMove = startDirection; // set the default position the player should face upon entry

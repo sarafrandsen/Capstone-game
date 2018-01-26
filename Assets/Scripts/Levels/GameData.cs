@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GameData : MonoBehaviour {
     [HideInInspector]
-    public Dictionary<string, bool> fireDoors;
+    public Dictionary<string, bool> fireDoors = new Dictionary<string, bool>();
     [SerializeField]
-    public List<string> storiesCollected;
+    public List<string> storiesCollected = new List<string>();
 
     public bool cheatMode = false;
 
@@ -15,8 +15,7 @@ public class GameData : MonoBehaviour {
 
     public static GameData Instance { get; private set; }
 
-    // Use this for initialization
-    void Start()
+    void Awake()
     {
         if (Instance != null)
         {
@@ -36,9 +35,11 @@ public class GameData : MonoBehaviour {
             //{ "West", false },
             { "NorthWest", false },
         };
+    }
 
-        storiesCollected = new List<string>();
-
+    // Use this for initialization
+    void Start()
+    {
         if (cheatMode)
         {
             fireDoors["North"] = fireDoors["East"] = fireDoors["South"] = fireDoors["NorthWest"] = true;

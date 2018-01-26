@@ -39,9 +39,9 @@ public class prototypeTwitterFunctions : MonoBehaviour
 			AccessToken = Twitter.API.GetTwitterAccessToken(consumerKey,consumerSecret);
 		else {
 			if (!string.IsNullOrEmpty(consumerSecret))
-				Debug.Log("Missing Consumer secret");
+				Debug.LogError("Missing Consumer secret");
 			if (!string.IsNullOrEmpty(consumerKey))
-				Debug.Log("Missing Consumer key");
+				Debug.LogError("Missing Consumer key");
 		}
 	}
 

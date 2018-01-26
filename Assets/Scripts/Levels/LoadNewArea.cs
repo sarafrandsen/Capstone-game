@@ -12,16 +12,18 @@ public class LoadNewArea : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        var players = GameObject.FindGameObjectsWithTag("Player");
-        thePlayer = players[0].GetComponent<PlayerController>();
+        thePlayer = PlayerController.Instance;
 	}
 
     void OnTriggerEnter2D(Collider2D other) // we know it'll be a collider, and will reference it as 'other'
     {
         if (other.gameObject.name == "Player") // if the collider entering the trigger is named "Player"
         {
+            if (thePlayer != null)
+            {
+                thePlayer.startPoint = exitPoint;
+            }
             SceneManager.LoadScene(levelToLoad); // load scene (as specified in GUI for collider component)
-            thePlayer.startPoint = exitPoint;
         }
     }
 }

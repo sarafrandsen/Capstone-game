@@ -10,8 +10,9 @@ public class DialogueManager : MonoBehaviour {
     public Twitter.Tweet[] tweets;
 
     public string twitterHandle;
-    public string singleTweet;
+    public string singleTweet = "If only there were a tweet here.";
     public int numberOfTweets;
+    public bool startDialogueClosed = true;
 
     /*///////////////////////////////////*/
 
@@ -23,18 +24,30 @@ public class DialogueManager : MonoBehaviour {
 
     public void Start()
     {
+        if (!string.IsNullOrEmpty(twitterHandle))
+        {
+            StartCoroutine(FindTweet());
+        }
+
+        thePlayer = PlayerController.Instance;
+
+        if (startDialogueClosed)
+        {
+            DisableTextBox();
+        }
+    }
+
+    private IEnumerator FindTweet()
+    {
         /*///////////////////////////////////*/
         accessToken = Twitter.API.GetTwitterAccessToken(key, secret); // generate access token
         tweets = Twitter.API.GetUserTimeline(twitterHandle, numberOfTweets, accessToken);
-		
+
         int randomIndex = UnityEngine.Random.Range(0, tweets.Length); // random index for tweet
-		singleTweet = tweets[randomIndex].text; // text of the random tweet
+        singleTweet = tweets[randomIndex].text; // text of the random tweet
         /*///////////////////////////////////*/
 
-        var players = GameObject.FindGameObjectsWithTag("Player");
-        thePlayer = players[0].GetComponent<PlayerController>();
-
-        DisableTextBox();
+        yield return null;
     }
 
     public void DisplayNextSentence(string nextSentence)
@@ -46,13 +59,21 @@ public class DialogueManager : MonoBehaviour {
     public void EnableTextBox()
     {
         dialogueBox.SetActive(true);
-        thePlayer.canMove = false;
+
+        if (thePlayer != null)
+        {
+            thePlayer.canMove = false;
+        }
     }
 
     public void DisableTextBox()
     {
         dialogueBox.SetActive(false);
-        thePlayer.canMove = true;
+
+        if (thePlayer != null)
+        {
+            thePlayer.canMove = true;
+        }
     }
 
     IEnumerator TypeSentence(string sentence) // instead of updating text directly, using coroutine

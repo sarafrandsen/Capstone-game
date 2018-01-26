@@ -530,7 +530,8 @@ MonoBehaviour:
   levelToLoad: Main
   instructionsFile: {fileID: 4900000, guid: 7e0e008177d2d41729ced9c0310a4d5f, type: 3}
   fadeOverlay: {fileID: 131288986}
-  startSong: {fileID: 0}
+  bgm: {fileID: 0}
+  turnOffMusicAtEnd: 1
 --- !u!4 &1328638529
 Transform:
   m_ObjectHideFlags: 0
@@ -817,6 +818,7 @@ MonoBehaviour:
   twitterHandle: 
   singleTweet: 
   numberOfTweets: 0
+  startDialogueClosed: 0
   dialogueBox: {fileID: 904398469}
   nameText: {fileID: 1705232320}
   dialogueText: {fileID: 70298132}

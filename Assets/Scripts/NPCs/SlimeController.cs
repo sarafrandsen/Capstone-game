@@ -21,8 +21,7 @@ public class SlimeController : MonoBehaviour
         dialogueTriggerArea.onConversationBegin = ConversationBegin;
         dialogueTriggerArea.onConversationEnd = ConversationEnd;
 
-        var players = GameObject.FindGameObjectsWithTag("Player");
-        thePlayer = players[0].GetComponent<PlayerController>();
+        thePlayer = PlayerController.Instance;
 
         gameData = FindObjectOfType<GameData>();
         anim = GetComponent<Animator>();

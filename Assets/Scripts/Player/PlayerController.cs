@@ -15,25 +15,32 @@ public class PlayerController : MonoBehaviour {
     private SpriteRenderer sprite;
     private bool isMoving; // used by animator/setting velocity
     private bool isVertAnimActive = true; // overhead or side scroll
-    private static bool playerExists; // check for player duplicates
     //private Camera theCamera;
 
-/*////////////////////////////////////////////*/
-	// Use this for initialization
-	void Start () {
+    public static PlayerController Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            transform.gameObject.tag = "Player";
+            DontDestroyOnLoad(transform.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    /*////////////////////////////////////////////*/
+    // Use this for initialization
+    void Start () {
         anim = GetComponent<Animator>();
         myRigBod = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         //theCamera = GetComponent<Camera>();
 
-        if (!playerExists)
-        {
-            transform.gameObject.tag = "Player";
-            playerExists = true;
-            DontDestroyOnLoad(transform.gameObject);
-        } else {
-            Destroy(gameObject);
-        }
         canMove = true;
 	}
 	

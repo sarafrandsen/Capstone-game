@@ -29,13 +29,9 @@ public class DialogueTriggerArea : MonoBehaviour {
             textLines = (textFile.text.Split('\n')); // split at line break
         }
 
-        var players = GameObject.FindGameObjectsWithTag("Player");
-        thePlayer = players[0].GetComponent<PlayerController>();
-
+        thePlayer = PlayerController.Instance;
         dialogueManager = FindObjectOfType<DialogueManager>();
-
-        var gameDatas = GameObject.FindGameObjectsWithTag("GameData");
-        gameData = gameDatas[0].GetComponent<GameData>();
+        gameData = GameData.Instance;
 
         thePlayer.canMove = true;
     }
