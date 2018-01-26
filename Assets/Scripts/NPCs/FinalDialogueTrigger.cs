@@ -50,8 +50,6 @@ public class FinalDialogueTrigger : MonoBehaviour {
             {
                 // end bubble anim
                 dialogueManager.EnableTextBox(); // open dialogue box
-                dialogueManager.nameText.text = "@";
-
                 if (currentStory < storiesToRemember.Count)
                 {
                     other.GetComponent<Animator>().speed = 0;

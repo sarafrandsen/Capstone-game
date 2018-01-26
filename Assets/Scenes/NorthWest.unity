@@ -342,8 +342,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 316461545}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 268, y: 201, z: 0}
-  m_LocalScale: {x: 0.67, y: 0.67, z: 0.67}
+  m_LocalPosition: {x: 300.5, y: 225.5, z: 0}
+  m_LocalScale: {x: 0.75125, y: 0.75125, z: 0.75125}
   m_Children:
   - {fileID: 1432989004}
   m_Father: {fileID: 0}
@@ -730,7 +730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d243b019aca49adab34be2c21e304c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textFile: {fileID: 4900000, guid: d7e22910d27a9492895caa1a073021d5, type: 3}
+  textFile: {fileID: 4900000, guid: 6c70cb49c71ba45ffbc0e7c704b40f03, type: 3}
 --- !u!61 &717475264
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -893,8 +893,8 @@ MonoBehaviour:
   twitterHandle: magicrealismbot
   singleTweet: 
   numberOfTweets: 10
+  startDialogueClosed: 1
   dialogueBox: {fileID: 558785298}
-  nameText: {fileID: 1749904565}
   dialogueText: {fileID: 1610944465}
 --- !u!1 &1541406600
 GameObject:
@@ -1290,7 +1290,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name of character
+  m_Text: 8/29/16
 --- !u!222 &1749904566
 CanvasRenderer:
   m_ObjectHideFlags: 0

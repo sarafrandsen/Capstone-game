@@ -150,8 +150,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 353706873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 268, y: 201, z: 0}
-  m_LocalScale: {x: 0.67, y: 0.67, z: 0.67}
+  m_LocalPosition: {x: 300.5, y: 225.5, z: 0}
+  m_LocalScale: {x: 0.75125, y: 0.75125, z: 0.75125}
   m_Children:
   - {fileID: 1522902313}
   - {fileID: 159153009}
@@ -490,7 +490,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59338391d7ed40edbfbfc44f7cf4774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textFile: {fileID: 4900000, guid: d7e22910d27a9492895caa1a073021d5, type: 3}
+  textFile: {fileID: 4900000, guid: 291528aafe4784b7fb3bea7f206d0be9, type: 3}
+  endingFile: {fileID: 4900000, guid: 043c1e2dbb0104a1f93bdfdc8cf3cd42, type: 3}
   fadeOverlay: {fileID: 159153010}
   finalSong: {fileID: 1894397729}
 --- !u!61 &744828891
@@ -760,7 +761,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name of character
+  m_Text: 1/17/2018
 --- !u!222 &898574981
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -967,8 +968,8 @@ MonoBehaviour:
   twitterHandle: dril
   singleTweet: 
   numberOfTweets: 10
+  startDialogueClosed: 1
   dialogueBox: {fileID: 372430962}
-  nameText: {fileID: 898574980}
   dialogueText: {fileID: 298572429}
 --- !u!1001 &1553272655
 Prefab:

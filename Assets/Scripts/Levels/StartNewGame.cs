@@ -19,7 +19,6 @@ public class StartNewGame : MonoBehaviour
     private string sceneName;
 
     private DialogueManager dialogueManager;
-    private Camera theCamera;
 
     public System.Action onConversationBegin;
     public System.Action onConversationEnd;
@@ -39,7 +38,6 @@ public class StartNewGame : MonoBehaviour
         }
 
         dialogueManager = FindObjectOfType<DialogueManager>();
-        theCamera = FindObjectOfType<Camera>(); // ???
 
         if (bgm != null)
             BGMPlayer.Instance.PlayMusic(bgm);

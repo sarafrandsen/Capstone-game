@@ -52,7 +52,6 @@ public class DialogueTriggerArea : MonoBehaviour {
 
                 endLine = textLines.Length;
                 dialogueManager.EnableTextBox(); // open dialogue box
-                dialogueManager.nameText.text = "@" + dialogueManager.twitterHandle;
 
                 if (currentLine < endLine)
                 {

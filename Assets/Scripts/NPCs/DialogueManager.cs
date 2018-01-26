@@ -17,7 +17,6 @@ public class DialogueManager : MonoBehaviour {
     /*///////////////////////////////////*/
 
 	public GameObject dialogueBox; // access the dialogue box object
-    public Text nameText; // where to put the character's name in inspector
     public Text dialogueText; // where to put the Dialogue game object in the Inspector
 
     private PlayerController thePlayer;

@@ -189,7 +189,6 @@ namespace Twitter
 		//Authorization set-up
 		public static string GetTwitterAccessToken (string consumerKey, string consumerSecret)
 		{
-            Debug.LogError("hi i'm here");
 			//Convert the consumer key and secret strings into a format to be added to our header
 			string URL_ENCODED_KEY_AND_SECRET = Convert.ToBase64String(Encoding.UTF8.GetBytes(consumerKey + ":" + consumerSecret));
 
@@ -199,26 +198,23 @@ namespace Twitter
 			Dictionary<string, string> headers = new Dictionary<string, string> ();
 			headers ["Authorization"] = "Basic " + URL_ENCODED_KEY_AND_SECRET;
 
-            //Send a request to the Twitter API for an access token
-            Debug.LogError("tryina");
+			//Send a request to the Twitter API for an access token
 			WWW web = new WWW ("https://api.twitter.com/oauth2/token", body, headers);
 			while (!web.isDone) {
-                Debug.LogError("woof");
 				//Debug.Log("Retrieving access token...");
 			}
 			if (web.error != null) {
 				//If there was a problem with the request, output the error to the debug log
-				Debug.LogError("Web error: " + web.error);
+				Debug.Log("Web error: " + web.error);
 			}
 			else {
-				Debug.LogError("Access token retrieved successfully");
+				Debug.Log("Access token retrieved successfully");
 				//Format string response into something more useable.
 				string output = web.text.Replace("{\"token_type\":\"bearer\",\"access_token\":\"","");
 				output = output.Replace("\"}","");
 				return output;
 			}
-            //In the event of failure
-            Debug.LogError("nothing happened");
+			//In the event of failure
 			return null;
 		}
 
