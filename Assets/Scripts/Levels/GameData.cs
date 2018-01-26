@@ -13,19 +13,20 @@ public class GameData : MonoBehaviour {
     private static bool showInstructions; // instructions scene
     private static bool gameDataExists; // game data state saved between scenes
 
+    public static GameData Instance { get; private set; }
+
     // Use this for initialization
     void Start()
     {
-        
-        if (!gameDataExists)
+        if (Instance != null)
         {
-            transform.gameObject.tag = "GameData";
-            gameDataExists = true;
-            DontDestroyOnLoad(transform.gameObject);
+            Destroy(gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            Instance = this;
+            transform.gameObject.tag = "GameData";
+            DontDestroyOnLoad(transform.gameObject);
         }
 
         fireDoors = new Dictionary<string, bool>() {

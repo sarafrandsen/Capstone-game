@@ -6,34 +6,37 @@ using UnityEngine.UI;
 
 public class FinalDialogueTrigger : MonoBehaviour {
     public TextAsset textFile; // TextAsset: literally text file assets
+    public TextAsset endingFile;
 	public Image fadeOverlay;
     public AudioSource finalSong;
-    private string[] textLines; // each line of the text asset is assigned to an index
 
     private DialogueManager dialogueManager;
-    private int currentLine; // current line on the screen
     private int currentStory; // current random tweet being repeated back
-    private int endLine; // last line in text
+    private List<string> storiesToRemember = new List<string>();
 
     private CameraController theCamera;
     private GameData gameData;
-
-    public System.Action onConversationEnd;
 
     void Start()
     {
         if (textFile != null) // check if there is a textFile available
         {
-            textLines = (textFile.text.Split('\n')); // split at line break
+            storiesToRemember.AddRange(textFile.text.Split('\n'));
+        }
+
+        gameData = GameObject.FindWithTag("GameData").GetComponent<GameData>();
+        foreach (string story in gameData.storiesCollected)
+        {
+            storiesToRemember.Add('"' + story + '"');
+        }
+
+        if (endingFile != null)
+        {
+            storiesToRemember.AddRange(endingFile.text.Split('\n'));
         }
 
         dialogueManager = FindObjectOfType<DialogueManager>();
-
         theCamera = FindObjectOfType<CameraController>();
-
-        var gameDatas = GameObject.FindGameObjectsWithTag("GameData");
-        gameData = gameDatas[0].GetComponent<GameData>();
-
 
         AudioSource gameDataAudioSource = gameData.GetComponent<AudioSource>();
         gameDataAudioSource.Stop();
@@ -45,34 +48,21 @@ public class FinalDialogueTrigger : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown("joystick button 0"))
             {
+                // end bubble anim
+                dialogueManager.EnableTextBox(); // open dialogue box
+                dialogueManager.nameText.text = "@";
+
+                if (currentStory < storiesToRemember.Count)
                 {
-                    // end bubble anim
-                    endLine = textLines.Length;
-                    dialogueManager.EnableTextBox(); // open dialogue box
-                    dialogueManager.nameText.text = "@";
+                    other.GetComponent<Animator>().speed = 0;
 
-                    if (currentLine < endLine)
-                    {
-                        // pause player animation
-                        other.GetComponent<Animator>().speed = 0;
-
-                        // scripted dialogue
-                        dialogueManager.DisplayNextSentence(textLines[currentLine]);
-                        currentLine += 1; // next line in dialogue
-                    }
-                    else if (currentLine >= endLine)
-                    {
-                        if (currentStory < gameData.storiesCollected.Count)
-                        {
-                            // show random tweet
-                            dialogueManager.DisplayNextSentence('"' + gameData.storiesCollected[currentStory] + '"');
-                            currentStory += 1;
-                        }
-						else
-						{
-							StartCoroutine(Fade(other.gameObject, fadeTime: 5));
-						}
-                    }
+                    // scripted dialogue
+                    dialogueManager.DisplayNextSentence(storiesToRemember[currentStory]);
+                    currentStory += 1; // next line in dialogue
+                }
+                else
+                {
+                    StartCoroutine(Fade(other.gameObject, fadeTime: 5));
                 }
             }
         }
