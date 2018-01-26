@@ -1875,7 +1875,7 @@ Prefab:
     - target: {fileID: 114180575205903496, guid: 12dbcedf434264bab9ca3d5f00f3383b,
         type: 2}
       propertyPath: cheatMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1078523492116784, guid: 12dbcedf434264bab9ca3d5f00f3383b, type: 2}
       propertyPath: m_TagString
@@ -2863,6 +2863,7 @@ MonoBehaviour:
   boundsBox: {fileID: 1843102375}
   followTarget: {fileID: 1646912906}
   doPanning: 0
+  secondsToPan: 3
 --- !u!1 &1417835361
 GameObject:
   m_ObjectHideFlags: 0

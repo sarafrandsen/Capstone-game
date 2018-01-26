@@ -16,6 +16,7 @@ public class CameraController : MonoBehaviour
     private Vector3 offset; // z-axis (-10)
 
     public bool doPanning = false;
+    public float secondsToPan = 2f;
     private Vector3 panStart; //New - Jonathan
     private Vector3 panEnd; //New - Jonathan
     private float zoomStart;
@@ -40,7 +41,7 @@ public class CameraController : MonoBehaviour
         theCamera = GetComponent<Camera>();
     }
 
-    private float t = 0f;
+    private float time = 0f;
 
     /*////////////////////////////////////////////*/
     private void LateUpdate()
@@ -56,8 +57,8 @@ public class CameraController : MonoBehaviour
         // new camera position using the clamped values
         if (doPanning)
         {
-            t += Time.deltaTime;
-            t = Mathf.Min(t, 1f);
+            time += Time.deltaTime;
+            float t = Mathf.Min(time/secondsToPan, 1f);
             transform.position = Vector3.Lerp(panStart, panEnd, t);
             theCamera.orthographicSize = Mathf.Lerp(zoomStart, zoomEnd, t);
             if (transform.position == panEnd)
@@ -122,6 +123,6 @@ public class CameraController : MonoBehaviour
         followTarget = newFollowTarget;
 
         doPanning = true;
-        t = 0f;
+        time = 0f;
     }
 }
