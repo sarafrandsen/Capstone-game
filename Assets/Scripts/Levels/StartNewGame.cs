@@ -10,7 +10,8 @@ public class StartNewGame : MonoBehaviour
     public string levelToLoad;
     public TextAsset instructionsFile;
     public Image fadeOverlay;
-    public AudioSource startSong;
+    public AudioClip bgm;
+    public bool turnOffMusicAtEnd = true;
 
     private string[] instructionLines;
     private int currentLine; // current line on the screen
@@ -39,7 +40,9 @@ public class StartNewGame : MonoBehaviour
 
         dialogueManager = FindObjectOfType<DialogueManager>();
         theCamera = FindObjectOfType<Camera>(); // ???
-        startSong = theCamera.GetComponent<AudioSource>();
+
+        if (bgm != null)
+            BGMPlayer.Instance.PlayMusic(bgm);
     }
 
     void Update()
@@ -89,12 +92,20 @@ public class StartNewGame : MonoBehaviour
         {
             time += Time.deltaTime;
             float t = time / fadeTime;
-            startSong.volume = 1 - t;
+
+            if (turnOffMusicAtEnd)
+            {
+                BGMPlayer.Instance.SetVolume(1 - t);
+            }
             fadeOverlay.color = new Color(0f, 0f, 0f, t);
 
             yield return null;
         }
 
+        if (turnOffMusicAtEnd)
+        {
+            BGMPlayer.Instance.Stop();
+        }
         SceneManager.LoadScene("Main");
     }
 }
