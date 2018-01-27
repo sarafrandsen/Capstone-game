@@ -6,7 +6,7 @@ In this game, you play as a character collecting randomized tweets in a Mad Libs
 The concept behind this little game is a demonstration of how technology can be used as an emotional and personal art experience.
 
 ## How do I play it?
-You can download the zip file to play on your own desktop (currently only on MacOS X) at http://www.superprincessparty.com
+You can download the zip file to play on your own desktop (currently MacOS X and Windows) at http://www.superprincessparty.com
 
 ## How can I make changes, or check out your code?
 You will need to install the Unity3D Engine software. This project was made using Unity3D 2017.2Of3. Get a free version of Unity at their website. https://store.unity.com/
