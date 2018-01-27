@@ -1,9 +1,9 @@
 # Deer Twitter,
 
 ## What is Deer Twitter?
-'Deer Twitter,' is my capstone project for Ada Developers Academy, displaying a culmination of the skills and tools learned in 6 months of programming education.
+'Deer Twitter,' is my capstone project for Ada Developers Academy, displaying the culmination of the skills and tools learned in 6 months of programming education.
 In this game, you play as a character collecting randomized tweets in a Mad Libs style story.
-The concept behind this little game is demonstration how technology can be used as an emotional and personal art experience.
+The concept behind this little game is a demonstration how technology can be used as an emotional and personal art experience.
 
 ## How do I play it?
 You can download the zip file to play on your own desktop (currently only on MacOS X) at http://www.superprincessparty.com
