@@ -9,7 +9,7 @@ The concept behind this little game is a demonstration of how technology can be 
 You can download the zip file to play on your own desktop (currently MacOS X and Windows) at http://www.superprincessparty.com
 
 ## How can I make changes, or check out your code?
-You will need to install the Unity3D Engine software. This project was made using Unity3D 2017.2Of3. Get a free version of Unity at their website. https://store.unity.com/
+You will need to install the Unity3D Engine software. This project was made using Unity3D 2017.3Of3. Get a free version of Unity at their website. https://store.unity.com/
 
 You will also need to set up Git Large File Storage (LFS) in order to pull/push the bigger files created by Unity. To set it up, download and install the Git LFS command line extension as documented on the Git LFS site. https://git-lfs.github.com/
 
