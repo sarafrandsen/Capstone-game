@@ -26,4 +26,4 @@ Players can add Twitter accounts of their choosing
 Multiple Twitter accounts to pull randomized tweets from
 More depth to environments (animals, fixed images, more consistent styling)
 
-** If you'd like to contact me with any questions or comments, you can use the comments section at the itch.io page https://sarafrandsen.itch.io/deer-twitter ** 
+**If you'd like to contact me with any questions or comments, you can use the comments section at the itch.io page https://sarafrandsen.itch.io/deer-twitter
